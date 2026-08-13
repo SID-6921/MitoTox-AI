@@ -60,6 +60,9 @@ since some single model has to be picked for those; no hyperparameter, threshold
 endpoint definition was changed based on that choice, and all three models' full test
 metrics are reported above regardless of which one is picked.)*
 
+![ROC curve](../results/figures/roc_curve.png)
+![Precision-recall curve](../results/figures/pr_curve.png)
+
 ## Calibration
 
 10-bin calibration table for the best model (random_forest, scaffold-test set) - mean
@@ -81,6 +84,8 @@ in the table above for all six model/regime combinations):
 
 Full calibration bins for all six model/regime combinations in
 `data/processed/step2_calibration_bins.csv`.
+
+![Calibration plot](../results/figures/calibration_plot.png)
 
 ## Cytotoxicity-aware sensitivity analysis
 
@@ -140,6 +145,8 @@ Referring the most uncertain 20% of predictions for experimental confirmation ro
 triples AUROC on the retained 80% (0.796 -> 0.909) and cuts the error rate by an order
 of magnitude (20.4% -> 1.4%) - concrete evidence that the uncertainty score identifies
 unreliable predictions rather than being noise.
+
+![Risk-coverage plot](../results/figures/risk_coverage_plot.png)
 
 ## Seahorse orthogonal concordance
 
