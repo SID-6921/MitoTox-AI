@@ -13,6 +13,17 @@ OUT_CHEM_PATH = "data/processed/mito_chemicals_clean.csv"
 OUT_FP_PATH = "data/processed/mito_chemicals_fingerprints.csv"
 DROPPED_LOG_PATH = "data/processed/mito_chemicals_dropped.csv"
 
+# ponytail: heuristic, not exhaustive. UVCB substances (variable-composition
+# mixtures like ethoxylates/polymers) often get a single arbitrary "average"
+# structure in DSSTox that RDKit parses as a perfectly clean molecule with no
+# wildcard atom, so the structural checks in standardize() can't catch them -
+# only the name gives it away. Catches known cases (e.g. DTXSID1027714,
+# DTXSID3027950); a keyword list will always miss some.
+UVCB_NAME_KEYWORDS = [
+    "ethoxylate", "propoxylate", "copolymer", "polymer", "polymeric",
+    "uvcb", "reaction product", "distillate", "condensate",
+]
+
 DESCRIPTOR_FUNCS = {
     "mol_weight": Descriptors.MolWt,
     "logp": Descriptors.MolLogP,
@@ -29,6 +40,13 @@ DESCRIPTOR_FUNCS = {
 def largest_fragment(mol):
     frags = Chem.GetMolFrags(mol, asMols=True, sanitizeFrags=False)
     return max(frags, key=lambda m: m.GetNumHeavyAtoms())
+
+
+def is_uvcb_by_name(name):
+    if not isinstance(name, str):
+        return False
+    lowered = name.lower()
+    return any(kw in lowered for kw in UVCB_NAME_KEYWORDS)
 
 
 def standardize(smiles):
@@ -82,6 +100,9 @@ def main():
     records = []
     dropped = []
     for row in df.itertuples(index=False):
+        if is_uvcb_by_name(row.PREFERRED_NAME):
+            dropped.append({"DTXSID": row.DTXSID, "PREFERRED_NAME": row.PREFERRED_NAME, "reason": "likely_uvcb_name_pattern"})
+            continue
         smiles = row.QSAR_READY_SMILES if isinstance(row.QSAR_READY_SMILES, str) and row.QSAR_READY_SMILES.strip() else row.SMILES
         canonical, mol, reason = standardize(smiles)
         if reason:

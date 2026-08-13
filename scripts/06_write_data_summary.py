@@ -67,10 +67,14 @@ def main():
         pct = 100 * active / tested if tested else float("nan")
         lines.append(f"| {name} (aeid {aeid}) | {tested} | {active} | {pct:.1f}% |")
 
-    # dedup to one row per chemical-endpoint pair first - the raw enriched
-    # table includes test replicates, which would double-count hits otherwise
+    # scope to the clean/deduped chemical set actually used for modeling (not
+    # the full pre-cleaning tested population), then dedup to one row per
+    # chemical-endpoint pair (the raw enriched table includes test replicates,
+    # which would double-count hits otherwise)
+    clean_ids = set(modeling_table["DTXSID"])
     enriched_dedup = (
-        enriched.sort_values("hitcall", ascending=False)
+        enriched[enriched["dsstox_substance_id"].isin(clean_ids)]
+        .sort_values("hitcall", ascending=False)
         .drop_duplicates(subset=["dsstox_substance_id", "aeid"])
     )
     n_hits = int((enriched_dedup["hitcall"] >= HITCALL_THRESHOLD).sum())

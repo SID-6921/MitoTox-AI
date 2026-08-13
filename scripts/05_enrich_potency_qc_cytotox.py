@@ -14,9 +14,6 @@ INVITRODB_ZIP = "data/raw/invitrodb_v4_3/INVITRODB_SUMMARY.zip"
 CYTOTOX_XLSX = "data/raw/invitrodb_v4_3/cytotox_invitrodb_v4_3_AUG2024.xlsx"
 
 OUT_LONG_PATH = "data/processed/mito_hitcalls_enriched.csv"
-# ponytail: reads and overwrites the same file 04 produces, so rerunning this
-# script twice in a row without rerunning 04 first double-merges and breaks.
-# Always run 04 then 05, not 05 alone.
 OUT_MODELING_PATH = "data/processed/mito_modeling_table.csv"
 
 ENDPOINT_LABELS = {
@@ -39,6 +36,15 @@ def decode_flags(flag_str, flag_lookup):
 
 
 def main():
+    modeling = pd.read_csv(MODELING_TABLE_PATH, low_memory=False)
+    if any(c.endswith("_ac50_um") for c in modeling.columns):
+        raise SystemExit(
+            f"{MODELING_TABLE_PATH} already has enrichment columns from a previous run of "
+            "this script - rerun scripts/04_build_modeling_table.py first to get a clean "
+            "base table, then run this script once against that."
+        )
+    clean_ids = set(modeling["DTXSID"])
+
     hitcalls = pd.read_csv(HITCALLS_PATH, low_memory=False)
 
     # decode QC flags
@@ -69,11 +75,15 @@ def main():
     dedup = dedup.copy()
     dedup["endpoint"] = dedup["aeid"].map(ENDPOINT_LABELS)
 
-    n_hits = int((dedup["hitcall"] >= 0.9).sum())
-    n_confound = int(dedup["likely_cytotox_confound"].sum())
-    print(f"unique chemical-endpoint pairs: {len(dedup):,}; active hits: {n_hits:,}; "
-          f"of those, at/above the chemical's cytotoxicity burst threshold: "
-          f"{n_confound:,} ({100*n_confound/n_hits:.1f}%)")
+    # scope the headline stat to the clean/deduped chemical set actually used for
+    # modeling, not the full pre-cleaning population (9,398 chemicals tested vs
+    # 8,060 that survived structure cleaning + dedup)
+    dedup_clean = dedup[dedup["dsstox_substance_id"].isin(clean_ids)]
+    n_hits = int((dedup_clean["hitcall"] >= 0.9).sum())
+    n_confound = int(dedup_clean["likely_cytotox_confound"].sum())
+    print(f"unique chemical-endpoint pairs (clean chemicals only): {len(dedup_clean):,}; "
+          f"active hits: {n_hits:,}; of those, at/above the chemical's cytotoxicity burst "
+          f"threshold: {n_confound:,} ({100*n_confound/n_hits:.1f}%)")
 
     ac50_wide = dedup.pivot_table(index="dsstox_substance_id", columns="endpoint", values="ac50", aggfunc="first")
     ac50_wide.columns = [f"{c}_ac50_um" for c in ac50_wide.columns]
@@ -82,7 +92,6 @@ def main():
     confound_wide = dedup.pivot_table(index="dsstox_substance_id", columns="endpoint", values="likely_cytotox_confound", aggfunc="first")
     confound_wide.columns = [f"{c}_cytotox_confound" for c in confound_wide.columns]
 
-    modeling = pd.read_csv(MODELING_TABLE_PATH, low_memory=False)
     modeling = modeling.merge(ac50_wide, left_on="DTXSID", right_index=True, how="left")
     modeling = modeling.merge(efficacy_wide, left_on="DTXSID", right_index=True, how="left")
     modeling = modeling.merge(confound_wide, left_on="DTXSID", right_index=True, how="left")
