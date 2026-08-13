@@ -36,6 +36,22 @@ Endpoint definitions: see `docs/endpoint_definitions.md`.
 | mitoticarrest_24hr (aeid 34) | 990 | 176 | 17.8% |
 | mitoticarrest_72hr (aeid 54) | 976 | 250 | 25.6% |
 
+## Potency, QC, and cytotoxicity (added after initial draft)
+
+- Per-endpoint AC50 (potency, µM) and a decoded QC-flag column (`mc6_flags_decoded`,
+  from invitrodb's `method_list` mc6 lookup) are in
+  `data/processed/mito_hitcalls_enriched.csv` (long format) and as `<endpoint>_ac50_um`
+  columns in the wide modeling table.
+- **Cytotoxicity sensitivity check:** joined each chemical's cytotoxicity burst
+  threshold (`cytotox_invitrodb_v4_3_AUG2024.xlsx`, median AC50 across all
+  `burst_assay=1` endpoints minus 3x global MAD). Of the 9,795 active hits across all
+  19 endpoints, **65.6% occur at or above the chemical's own cytotoxicity burst
+  threshold** — meaning a majority of raw hits in this endpoint set are plausibly
+  driven by general cytotoxicity rather than a mitochondria-specific mechanism. This
+  is flagged per-hit (`likely_cytotox_confound`) and per-chemical/endpoint
+  (`<endpoint>_cytotox_confound` in the modeling table) so Step 2 modeling can filter
+  or stratify on it rather than being surprised by it later.
+
 ## Notes
 - Primary endpoint (bioenergetic dysfunction / Seahorse respirometry) has a much
   smaller tested chemical set (~270-280 chemicals) than the Tox21 qHTS reporter
