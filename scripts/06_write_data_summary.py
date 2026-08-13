@@ -35,7 +35,12 @@ def main():
     enriched = pd.read_csv(ENRICHED_HITCALLS_PATH, low_memory=False)
 
     n_tested = len(structures)
-    n_standardized = len(structures) - len(dropped)
+    # dropped now includes both standardize()-failures and post-standardization
+    # canonical-structure duplicates (task: log the 647 dedup collisions) - only
+    # the former counts against "passed standardization", the latter is a
+    # separate later stage (dedup) that "unique after dedup" already reports
+    n_failed_standardize = (dropped["reason"] != "duplicate_canonical_structure").sum()
+    n_standardized = n_tested - n_failed_standardize
     n_unique = len(clean_chem)
 
     lines = [
@@ -71,10 +76,12 @@ def main():
     # the full pre-cleaning tested population), then dedup to one row per
     # chemical-endpoint pair (the raw enriched table includes test replicates,
     # which would double-count hits otherwise)
+    # tie-break ties in hitcall (~4.5% of pairs) by lower rmse (better fit),
+    # matching the same rule used in scripts/04 and scripts/05
     clean_ids = set(modeling_table["DTXSID"])
     enriched_dedup = (
         enriched[enriched["dsstox_substance_id"].isin(clean_ids)]
-        .sort_values("hitcall", ascending=False)
+        .sort_values(["hitcall", "rmse"], ascending=[False, True])
         .drop_duplicates(subset=["dsstox_substance_id", "aeid"])
     )
     n_hits = int((enriched_dedup["hitcall"] >= HITCALL_THRESHOLD).sum())
@@ -109,7 +116,13 @@ def main():
     for reason, count in dropped["reason"].value_counts().items():
         lines.append(f"  - {reason}: {count}")
     lines += [
-        "  Full list in `data/processed/mito_chemicals_dropped.csv`.",
+        "  Full list (including canonical-structure duplicates) in",
+        "  `data/processed/mito_chemicals_dropped.csv`.",
+        "- A small number of rows (28 of 61,664, hitcall == -1) are a distinct tcpl",
+        "  'unreliable fit' sentinel rather than a graded inactive probability, but are",
+        "  currently counted as tested/inactive in the class-balance table above since",
+        "  -1 < 0.9. QC flags (`mc6_flags_decoded`) let Step 2 filter these out explicitly",
+        "  if that distinction matters for a given endpoint.",
         "- These endpoint definitions are a draft for review, not locked (per project brief).",
     ]
 

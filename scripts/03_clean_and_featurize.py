@@ -120,6 +120,22 @@ def main():
 
     clean_df = pd.DataFrame(records)
     before_dedup = len(clean_df)
+
+    # log every chemical whose structure matches one already kept under a
+    # different DTXSID, before dropping them - these never showed up in
+    # `dropped` above (standardize() succeeded for them), so without this
+    # they'd vanish from mito_chemicals_dropped.csv with no record at all
+    first_seen = clean_df.drop_duplicates(subset="canonical_smiles", keep="first")
+    kept_dtxsid_by_smiles = dict(zip(first_seen["canonical_smiles"], first_seen["DTXSID"]))
+    is_dup = clean_df.duplicated(subset="canonical_smiles", keep="first")
+    for row in clean_df[is_dup].itertuples(index=False):
+        dropped.append({
+            "DTXSID": row.DTXSID,
+            "PREFERRED_NAME": row.PREFERRED_NAME,
+            "reason": "duplicate_canonical_structure",
+            "collided_with_dtxsid": kept_dtxsid_by_smiles[row.canonical_smiles],
+        })
+
     clean_df = clean_df.drop_duplicates(subset="canonical_smiles", keep="first").reset_index(drop=True)
     print(f"deduped by canonical structure: {before_dedup:,} -> {len(clean_df):,}")
 

@@ -39,8 +39,13 @@ def main():
     hitcalls["active"] = (hitcalls["hitcall"] >= HITCALL_THRESHOLD).astype(int)
     hitcalls["endpoint"] = hitcalls["aeid"].map(ENDPOINT_LABELS)
 
-    # one chemical can appear more than once per aeid across model reruns; keep max hitcall
-    dedup = hitcalls.sort_values("hitcall", ascending=False).drop_duplicates(subset=["dsstox_substance_id", "aeid"])
+    # one chemical can appear more than once per aeid across model reruns; keep
+    # highest hitcall, and among exact hitcall ties (common near hitcall=1.0,
+    # ~4.5% of pairs) prefer the replicate with the better curve fit (lower
+    # rmse) rather than leaving the tie-break to incidental row order
+    dedup = hitcalls.sort_values(["hitcall", "rmse"], ascending=[False, True]).drop_duplicates(
+        subset=["dsstox_substance_id", "aeid"]
+    )
 
     wide = dedup.pivot_table(index="dsstox_substance_id", columns="endpoint", values="active", aggfunc="max")
     wide = wide.reset_index().rename(columns={"dsstox_substance_id": "DTXSID"})

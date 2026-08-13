@@ -70,8 +70,14 @@ def main():
 
     # dedup to one row per chemical-endpoint pair (keep highest hitcall) before
     # computing any aggregate stat or building the wide table - 61,664 raw rows
-    # include 10,186 replicate retests, which would otherwise double-count hits
-    dedup = hitcalls.sort_values("hitcall", ascending=False).drop_duplicates(subset=["dsstox_substance_id", "aeid"])
+    # include 10,186 replicate retests, which would otherwise double-count hits.
+    # Among exact hitcall ties (~4.5% of pairs, common near hitcall=1.0), prefer
+    # the replicate with the better curve fit (lower rmse) so the AC50/efficacy/
+    # cytotox-confound value carried forward is a principled choice, not
+    # whatever row happened to sort first.
+    dedup = hitcalls.sort_values(["hitcall", "rmse"], ascending=[False, True]).drop_duplicates(
+        subset=["dsstox_substance_id", "aeid"]
+    )
     dedup = dedup.copy()
     dedup["endpoint"] = dedup["aeid"].map(ENDPOINT_LABELS)
 

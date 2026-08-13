@@ -27,10 +27,12 @@ A full download at ~20MB/s (~6 min for the 7.5GB zip) was faster and more reliab
 than trying to range-read just the needed member out of the remote zip's central
 directory, which hung on tail seeks against this particular file server.
 
-From inside `INVITRODB_SUMMARY.zip`, only one member is used:
+From inside `INVITRODB_SUMMARY.zip`, two members are used:
 `mc5-6_winning_model_fits-flags_invitrodbv4_3_AUG2024.csv` (2.55 GB uncompressed) — the
 hit-call / AC50 / efficacy / QC-flag summary table ("winning model" per assay endpoint
-per chemical sample).
+per chemical sample) — and `methods_invitrodb_v4_3_AUG2024.xlsx`'s `method_list` sheet
+(read directly from the zip in `scripts/05_enrich_potency_qc_cytotox.py`), which maps
+mc6 QC-flag ids to human-readable descriptions.
 
 ## DSSTox chemical structures (Dec 2025 dump, version 8 of the DSSTox Figshare dataset)
 

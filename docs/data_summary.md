@@ -55,7 +55,8 @@ Endpoint definitions: see `docs/endpoint_definitions.md`.
   smaller tested chemical set (~250-270 chemicals) than the Tox21 qHTS reporter
   assays (~6,600-7,300) used for the secondary endpoints - this caps the primary
   model's training set size regardless of scaffold-split strategy.
-- 693 chemicals dropped at structure-cleaning. Reasons:
+- 1,340 chemicals dropped at structure-cleaning. Reasons:
+  - duplicate_canonical_structure: 647
   - empty_smiles: 566
   - inorganic_no_carbon: 72
   - mixture_no_dominant_fragment: 26
@@ -63,5 +64,11 @@ Endpoint definitions: see `docs/endpoint_definitions.md`.
   - ambiguous_wildcard_atom: 9
   - too_small: 5
   - likely_uvcb_name_pattern: 4
-  Full list in `data/processed/mito_chemicals_dropped.csv`.
+  Full list (including canonical-structure duplicates) in
+  `data/processed/mito_chemicals_dropped.csv`.
+- A small number of rows (28 of 61,664, hitcall == -1) are a distinct tcpl
+  'unreliable fit' sentinel rather than a graded inactive probability, but are
+  currently counted as tested/inactive in the class-balance table above since
+  -1 < 0.9. QC flags (`mc6_flags_decoded`) let Step 2 filter these out explicitly
+  if that distinction matters for a given endpoint.
 - These endpoint definitions are a draft for review, not locked (per project brief).
