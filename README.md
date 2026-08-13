@@ -22,8 +22,12 @@ Step 2 (modeling) complete: LR/RF/XGBoost baselines on the locked scaffold split
 Best model (Random Forest) scores AUROC 0.796 on the locked scaffold-held-out test
 set (vs 0.892 under a random split - the expected inflation a scaffold split is meant
 to catch). Performance persists when cytotoxicity-confounded actives are excluded
-(0.796 -> 0.797), and uncertainty-based referral of the most uncertain 20% of
-predictions raises retained-set AUROC to 0.909. Seahorse orthogonal concordance is
+(0.796 -> 0.797). Uncertainty-based referral: retaining the 80% most-confident chemicals
+and referring the most uncertain 20% gives AUROC 0.796 and a 15.7% error rate (vs 20.4%
+with no referral) - a real but modest gain; a more conservative retain-20%/refer-80% cut
+gets error down to 1.4% (AUROC 0.909). Full 9-row coverage table in `docs/step2_results.md`
+(an earlier draft conflated these two operating points - Kolliputi caught it). Seahorse
+orthogonal concordance is
 weak on the genuinely held-out subset (AUROC 0.47-0.56, n=100) - a real, disclosed
 limitation, not papered over. Full results: `docs/step2_results.md`. External validation
 attempted against a literature-curated Tox21-independent dataset (147 compounds); 82%
@@ -46,9 +50,9 @@ inactive) - too small to draw a confident conclusion from (`docs/external_valida
 - Positive-hit rule and cytotoxicity filtering/stratification rule documented in `docs/endpoint_definitions.md` before running final models
 - Metrics: AUROC, AUPRC, sensitivity, specificity, balanced accuracy, F1, MCC, confusion matrix, calibration/Brier score - all reported per model/regime
 - Cytotoxicity-aware sensitivity analysis: performance persists (0.796 -> 0.797 AUROC) when cytotoxicity-confounded actives are excluded
-- Uncertainty/domain-of-applicability: forest-disagreement uncertainty is significantly enriched among errors (p<1e-32); risk-coverage referral of the most uncertain 20% raises AUROC 0.796 -> 0.909
+- Uncertainty/domain-of-applicability: forest-disagreement uncertainty is significantly enriched among errors (p<1e-32); referring the most uncertain 20% (retaining 80%) gives AUROC 0.796, error rate 15.7% vs 20.4% with no referral - full 9-row coverage table in `docs/step2_results.md`
 - Seahorse respiration endpoints analyzed separately - concordance is weak on the genuinely held-out subset (AUROC 0.47-0.56, n=100), a disclosed limitation
-- External validation: candidate dataset identified but inaccessible this round (`docs/external_validation_search.md`) - no claim forced
+- External validation: obtained and applied a literature-curated Tox21-independent dataset without retraining; 82% overlapped with training data, leaving 26 unseen chemicals - too few negatives for a confident claim, reported as exploratory (`docs/external_validation_search.md`)
 
 ### Step 3 — Preliminary-data package
 - Workflow diagram, ROC/PR curves, calibration plot, risk-coverage plot, chemical-space/AD visualization

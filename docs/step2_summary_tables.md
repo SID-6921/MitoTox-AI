@@ -31,3 +31,22 @@ oxidative-stress proxy respectively, not as separately-trained classifiers.
 | Seahorse primary_basal_resp_rate (held-out chemicals only) | 100 | 0.470 |
 | Seahorse primary_max_resp_rate (held-out chemicals only) | 100 | 0.558 |
 | Seahorse primary_inhib_resp_rate (held-out chemicals only) | 100 | 0.508 |
+
+## Selective-prediction (risk-coverage) table
+
+"Coverage" = % of test chemicals *retained* (the most confident ones); the rest are
+*referred* for experimental confirmation (the most uncertain ones). 80% coverage - refer
+the most uncertain 20% - is the operating point flagged as the more commercially realistic
+one.
+
+| Coverage | Retained | Referred | % referred | AUROC | AUPRC | Sensitivity | Specificity | Balanced acc | Error rate |
+|---|---|---|---|---|---|---|---|---|---|
+| 100% | 1091 | 0 | 0.0% | 0.796 | 0.451 | 0.352 | 0.914 | 0.633 | 0.204 |
+| 90% | 982 | 109 | 10.0% | 0.796 | 0.424 | 0.302 | 0.934 | 0.618 | 0.181 |
+| 80% | 873 | 218 | 20.0% | 0.796 | 0.397 | 0.241 | 0.951 | 0.596 | 0.157 |
+| 70% | 764 | 327 | 30.0% | 0.776 | 0.343 | 0.261 | 0.964 | 0.613 | 0.116 |
+| 60% | 655 | 436 | 40.0% | 0.743 | 0.268 | 0.214 | 0.975 | 0.595 | 0.090 |
+| 50% | 546 | 545 | 50.0% | 0.764 | 0.274 | 0.195 | 0.984 | 0.590 | 0.075 |
+| 40% | 436 | 655 | 60.0% | 0.785 | 0.280 | 0.269 | 0.993 | 0.631 | 0.050 |
+| 30% | 327 | 764 | 70.0% | 0.848 | 0.327 | 0.267 | 0.990 | 0.629 | 0.043 |
+| 20% | 218 | 873 | 80.0% | 0.909 | 0.482 | 0.667 | 0.995 | 0.831 | 0.014 |

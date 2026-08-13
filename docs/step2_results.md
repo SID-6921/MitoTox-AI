@@ -82,6 +82,12 @@ cost of a 40% false-positive rate among inactives); higher thresholds do the rev
 0.4 happens to edge out 0.5 on both balanced accuracy and F1 here - reported for
 completeness, not adopted as a new headline number after the fact.
 
+**Per Kolliputi:** 0.5 is not to be treated as the required product threshold. Since
+MitoTox AI is intended as a screening/prioritization tool, a final operating threshold
+may instead be selected on the validation set to prioritize sensitivity, then locked
+before test/prospective evaluation - that selection has not been made yet; the table
+above exists to show the tradeoff is real and tunable, not to pre-commit to one.
+
 ## Calibration
 
 10-bin calibration table for the best model (random_forest, scaffold-test set) - mean
@@ -155,26 +161,35 @@ position in this projection.
 
 ### Risk-coverage (selective prediction)
 
-Ranking test chemicals by ascending uncertainty (most confident first) and referring the
-most uncertain out:
+**Terminology, made explicit after an earlier mislabeling:** "coverage" = the % of test
+chemicals *retained* (the most confident ones, ranked by ascending forest-disagreement
+uncertainty). The rest are *referred* for experimental confirmation (the most uncertain
+ones). An earlier draft of this section described "referring the most uncertain 20%,
+retaining 80%" as giving AUROC 0.909 / 1.4% error - that was backwards. Those numbers are
+the *20% coverage* row below (retain only the most-confident 20%, refer the other 80%).
+The retain-80%/refer-uncertain-20% operating point is the *80% coverage* row: AUROC 0.796,
+15.7% error - a much smaller improvement over the no-referral baseline than originally
+reported. Kolliputi flagged this discrepancy directly; full corrected table below.
 
-| coverage | n retained | AUROC | error rate |
-|---|---|---|---|
-| 10% | 109 | n/a (single class) | 0.000 |
-| 20% | 218 | 0.909 | 0.014 |
-| 30% | 327 | 0.848 | 0.043 |
-| 40% | 436 | 0.785 | 0.050 |
-| 50% | 545 | 0.766 | 0.075 |
-| 60% | 654 | 0.744 | 0.090 |
-| 70% | 763 | 0.774 | 0.117 |
-| 80% | 872 | 0.795 | 0.157 |
-| 90% | 981 | 0.796 | 0.181 |
-| 100% | 1091 | 0.796 | 0.204 |
+| coverage (retained) | n retained | n referred | % referred | AUROC | AUPRC | sensitivity | specificity | balanced acc | error rate |
+|---|---|---|---|---|---|---|---|---|---|
+| 100% | 1091 | 0 | 0.0% | 0.796 | 0.451 | 0.352 | 0.914 | 0.633 | 0.204 |
+| 90% | 982 | 109 | 10.0% | 0.796 | 0.424 | 0.302 | 0.934 | 0.618 | 0.181 |
+| 80% | 873 | 218 | 20.0% | 0.796 | 0.397 | 0.241 | 0.951 | 0.596 | 0.157 |
+| 70% | 764 | 327 | 30.0% | 0.776 | 0.343 | 0.261 | 0.964 | 0.613 | 0.116 |
+| 60% | 655 | 436 | 40.0% | 0.743 | 0.268 | 0.214 | 0.975 | 0.595 | 0.090 |
+| 50% | 546 | 545 | 50.0% | 0.764 | 0.274 | 0.195 | 0.984 | 0.590 | 0.075 |
+| 40% | 436 | 655 | 60.0% | 0.785 | 0.280 | 0.269 | 0.993 | 0.631 | 0.050 |
+| 30% | 327 | 764 | 70.0% | 0.848 | 0.327 | 0.267 | 0.990 | 0.629 | 0.043 |
+| 20% | 218 | 873 | 80.0% | 0.909 | 0.482 | 0.667 | 0.995 | 0.831 | 0.014 |
 
-Referring the most uncertain 20% of predictions for experimental confirmation roughly
-triples AUROC on the retained 80% (0.796 -> 0.909) and cuts the error rate by an order
-of magnitude (20.4% -> 1.4%) - concrete evidence that the uncertainty score identifies
-unreliable predictions rather than being noise.
+**At 80% coverage (referring the most uncertain 20% for experimental confirmation) -** the
+operating point Kolliputi asked to see specifically as the more commercially realistic one:
+AUROC 0.796, sensitivity 0.241, specificity 0.951, error rate 0.157 (15.7%),
+versus 20.4% with no
+referral at all - a real but modest improvement, not the dramatic one in the earlier draft.
+At the far more conservative 20% coverage (referring 80%), error rate drops to 1.4% - useful context, but not the number that answers
+"what if we refer roughly a fifth of chemicals."
 
 ![Risk-coverage plot](../results/figures/risk_coverage_plot.png)
 
@@ -250,7 +265,11 @@ strong evidence of predicting Seahorse-measured bioenergetic disruption in chemi
 wasn't trained on. Membrane-potential disruption and direct respirometry impairment may
 be more mechanistically distinct than initially assumed, or n=100 held-out Seahorse
 chemicals is simply too small to detect a real but modest effect - this analysis cannot
-distinguish between those two explanations.
+distinguish between those two explanations. **Decision (Kolliputi):** no further effort
+will go into forcing concordance between the two. The weak concordance itself supports
+treating mitochondrial membrane-potential liability and respiratory/bioenergetic
+dysfunction as distinct mitochondrial phenotype modules rather than one composite
+endpoint - that design choice carries into Aim 2's scope, not just a caveat here.
 
 ## External validation (exploratory only - not a Phase I substitute)
 

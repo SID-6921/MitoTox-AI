@@ -13,9 +13,10 @@ active chemicals whose activity occurred at or above their own cytotoxicity thre
 (AUROC 0.797 versus 0.796 overall), indicating the model is not simply learning general
 cytotoxicity. We built an uncertainty-quantification component using prediction disagreement
 across the Random Forest's constituent trees: predictions on which the model disagreed with
-itself were significantly more likely to be wrong, and referring the most uncertain 20% of
-chemicals for experimental confirmation raised AUROC on the remaining predictions to 0.909
-while reducing the error rate roughly fourteen-fold. Comparing model predictions against an
+itself were significantly more likely to be wrong. Referring the most uncertain 20% of
+chemicals for experimental confirmation, while retaining the remaining 80%, brought the
+error rate down from 20.4% to 15.7%; a more conservative referral of 80% of chemicals
+brought the error rate on the retained 20% down to 1.4%. Comparing model predictions against an
 orthogonal Seahorse respirometry assay measuring direct mitochondrial bioenergetic function
 showed only weak concordance in chemicals the model had not seen during training, suggesting
 membrane-potential disruption and respiratory-chain dysfunction reflect at least partially

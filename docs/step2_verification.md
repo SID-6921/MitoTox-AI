@@ -22,6 +22,15 @@ referred chemicals scored as correct or excluded some other way). The reduction 
 not an artifact of a shifting reference population inflating the improvement - the
 numerator (raw error count) also drops in absolute terms, from 223 to 3 misclassified chemicals, even though the denominator dropped too.
 
+**Addendum, per Kolliputi's follow-up:** this 20%-coverage row is the conservative end of
+the spectrum - retain only the most-confident 20%, refer the other 80%. It is a different
+operating point from retaining 80% and referring the most-uncertain 20%, which was
+conflated with this one in earlier prose (docs/step2_results.md, README, the preliminary
+paragraph, and two emails all described 'referring the most uncertain 20%' while showing
+these 20%-coverage numbers - backwards). The full corrected 9-row table, including the
+80%-coverage operating point Kolliputi specifically asked about, is in
+`docs/step2_results.md` under Risk-coverage.
+
 ## 2. Random-split MCC correction
 
 **The 0.098 figure in the earlier email was a transcription error, not a pipeline bug.**

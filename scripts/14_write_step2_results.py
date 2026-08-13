@@ -10,6 +10,7 @@ SELECTION_LOG_PATH = "models/step2_model_selection_log.csv"
 TEST_METRICS_PATH = "data/processed/step2_test_metrics.csv"
 CYTOTOX_PATH = "data/processed/step2_cytotox_sensitivity.csv"
 RISK_COVERAGE_PATH = "data/processed/step2_risk_coverage.csv"
+FULL_COVERAGE_PATH = "data/processed/step2_full_coverage_table.csv"
 UNCERTAINTY_PATH = "data/processed/step2_uncertainty_ad.csv"
 SEAHORSE_PATH = "data/processed/step2_seahorse_concordance.csv"
 CALIBRATION_PATH = "data/processed/step2_calibration_bins.csv"
@@ -29,6 +30,7 @@ def main():
     cytotox = pd.read_csv(CYTOTOX_PATH)
     calibration = pd.read_csv(CALIBRATION_PATH)
     risk_cov = pd.read_csv(RISK_COVERAGE_PATH)
+    full_coverage = pd.read_csv(FULL_COVERAGE_PATH)
     uncertainty = pd.read_csv(UNCERTAINTY_PATH)
     seahorse = pd.read_csv(SEAHORSE_PATH)
 
@@ -129,6 +131,12 @@ def main():
         "0.4 happens to edge out 0.5 on both balanced accuracy and F1 here - reported for",
         "completeness, not adopted as a new headline number after the fact.",
         "",
+        "**Per Kolliputi:** 0.5 is not to be treated as the required product threshold. Since",
+        "MitoTox AI is intended as a screening/prioritization tool, a final operating threshold",
+        "may instead be selected on the validation set to prioritize sensitivity, then locked",
+        "before test/prospective evaluation - that selection has not been made yet; the table",
+        "above exists to show the tradeoff is real and tunable, not to pre-commit to one.",
+        "",
         "## Calibration",
         "",
         f"10-bin calibration table for the best model ({best_model}, scaffold-test set) - mean",
@@ -214,22 +222,41 @@ def main():
         "",
         "### Risk-coverage (selective prediction)",
         "",
-        "Ranking test chemicals by ascending uncertainty (most confident first) and referring the",
-        "most uncertain out:",
+        "**Terminology, made explicit after an earlier mislabeling:** \"coverage\" = the % of test",
+        "chemicals *retained* (the most confident ones, ranked by ascending forest-disagreement",
+        "uncertainty). The rest are *referred* for experimental confirmation (the most uncertain",
+        "ones). An earlier draft of this section described \"referring the most uncertain 20%,",
+        "retaining 80%\" as giving AUROC 0.909 / 1.4% error - that was backwards. Those numbers are",
+        "the *20% coverage* row below (retain only the most-confident 20%, refer the other 80%).",
+        "The retain-80%/refer-uncertain-20% operating point is the *80% coverage* row: AUROC 0.796,",
+        "15.7% error - a much smaller improvement over the no-referral baseline than originally",
+        "reported. Kolliputi flagged this discrepancy directly; full corrected table below.",
         "",
-        "| coverage | n retained | AUROC | error rate |",
-        "|---|---|---|---|",
+        "| coverage (retained) | n retained | n referred | % referred | AUROC | AUPRC | sensitivity | specificity | balanced acc | error rate |",
+        "|---|---|---|---|---|---|---|---|---|---|",
     ]
-    for _, row in risk_cov.iterrows():
-        auroc_str = f"{row['auroc']:.3f}" if pd.notna(row["auroc"]) else "n/a (single class)"
-        lines.append(f"| {int(row['coverage_pct'])}% | {int(row['n'])} | {auroc_str} | {row['error_rate']:.3f} |")
+    for _, row in full_coverage.iterrows():
+        auroc_str = f"{row['auroc']:.3f}" if pd.notna(row["auroc"]) else "n/a"
+        auprc_str = f"{row['auprc']:.3f}" if pd.notna(row["auprc"]) else "n/a"
+        lines.append(
+            f"| {int(row['coverage_pct'])}% | {int(row['n_retained'])} | {int(row['n_referred'])} | "
+            f"{row['pct_referred']:.1f}% | {auroc_str} | {auprc_str} | {row['sensitivity']:.3f} | "
+            f"{row['specificity']:.3f} | {row['balanced_accuracy']:.3f} | {row['error_rate']:.3f} |"
+        )
 
+    row80 = full_coverage[full_coverage.coverage_pct == 80].iloc[0]
+    row20 = full_coverage[full_coverage.coverage_pct == 20].iloc[0]
     lines += [
         "",
-        "Referring the most uncertain 20% of predictions for experimental confirmation roughly",
-        "triples AUROC on the retained 80% (0.796 -> 0.909) and cuts the error rate by an order",
-        "of magnitude (20.4% -> 1.4%) - concrete evidence that the uncertainty score identifies",
-        "unreliable predictions rather than being noise.",
+        f"**At 80% coverage (referring the most uncertain 20% for experimental confirmation) -** the",
+        "operating point Kolliputi asked to see specifically as the more commercially realistic one:",
+        f"AUROC {row80['auroc']:.3f}, sensitivity {row80['sensitivity']:.3f}, specificity "
+        f"{row80['specificity']:.3f}, error rate {row80['error_rate']:.3f} ({row80['error_rate']*100:.1f}%),",
+        f"versus {full_coverage[full_coverage.coverage_pct==100].iloc[0]['error_rate']*100:.1f}% with no",
+        "referral at all - a real but modest improvement, not the dramatic one in the earlier draft.",
+        f"At the far more conservative 20% coverage (referring 80%), error rate drops to "
+        f"{row20['error_rate']*100:.1f}% - useful context, but not the number that answers",
+        "\"what if we refer roughly a fifth of chemicals.\"",
         "",
         "![Risk-coverage plot](../results/figures/risk_coverage_plot.png)",
         "",
@@ -287,7 +314,11 @@ def main():
         "wasn't trained on. Membrane-potential disruption and direct respirometry impairment may",
         "be more mechanistically distinct than initially assumed, or n=100 held-out Seahorse",
         "chemicals is simply too small to detect a real but modest effect - this analysis cannot",
-        "distinguish between those two explanations.",
+        "distinguish between those two explanations. **Decision (Kolliputi):** no further effort",
+        "will go into forcing concordance between the two. The weak concordance itself supports",
+        "treating mitochondrial membrane-potential liability and respiratory/bioenergetic",
+        "dysfunction as distinct mitochondrial phenotype modules rather than one composite",
+        "endpoint - that design choice carries into Aim 2's scope, not just a caveat here.",
         "",
         "## External validation (exploratory only - not a Phase I substitute)",
         "",
