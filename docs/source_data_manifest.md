@@ -45,6 +45,22 @@ chemicals: DTXSID, CASRN, INCHIKEY, SMILES, QSAR_READY_SMILES, MS_READY_SMILES).
 13 `DSSToxCCDdumpN.csv` split files in the same zip are the same data pre-split into
 chunks — not needed, the master file has everything.
 
+## External validation dataset (Step 2, Garcia de Lomana et al. 2023)
+
+DOI: `10.1021/acs.chemrestox.3c00086` (PMC10354797, open access). Supplementary file
+`tx3c00086_si_002.xlsx` (`mitotox_dataset` sheet), 50.8 MB, downloaded to
+`data/raw/external_validation/`.
+
+Download note: `https://pmc.ncbi.nlm.nih.gov/articles/instance/10354797/bin/tx3c00086_si_002.xlsx`
+is gated by NCBI PMC's "cloudpmc-viewer" bot-detection (a client-side proof-of-work JS
+challenge) - plain `curl` and direct browser navigation both get served a "Preparing to
+download..." interstitial indefinitely. It resolves via a normal browser session:
+load the article page (`https://pmc.ncbi.nlm.nih.gov/articles/PMC10354797/`), let the
+page's own JS solve the PoW challenge (sets a `cloudpmc-viewer-pow` cookie), then
+`fetch()`/click the actual link from within that authenticated session. See
+`docs/external_validation_search.md` for how this dataset was filtered down to a
+genuinely Tox21-independent subset and used in `scripts/15_external_validation.py`.
+
 ## Not used / not available
 
 - `api-ccte.epa.gov` CompTox APIs: require an API key requested by email

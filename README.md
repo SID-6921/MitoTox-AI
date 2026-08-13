@@ -16,8 +16,19 @@ Endpoints **locked 2026-08-12** per Kolliputi's review - see `docs/endpoint_defi
 Primary ML endpoint is the Tox21 membrane-potential ratio assay (n=7,268), not the
 Seahorse bioenergetics battery (n=253, too small for a scaffold-separated split) -
 Seahorse is now an orthogonal mechanistic validation set. Nrf2/ARE is labeled an
-oxidative-stress response proxy, not a direct mitochondrial ROS measurement. Step 2
-(modeling) not started.
+oxidative-stress response proxy, not a direct mitochondrial ROS measurement.
+
+Step 2 (modeling) complete: LR/RF/XGBoost baselines on the locked scaffold split.
+Best model (Random Forest) scores AUROC 0.796 on the locked scaffold-held-out test
+set (vs 0.892 under a random split - the expected inflation a scaffold split is meant
+to catch). Performance persists when cytotoxicity-confounded actives are excluded
+(0.796 -> 0.797), and uncertainty-based referral of the most uncertain 20% of
+predictions raises retained-set AUROC to 0.909. Seahorse orthogonal concordance is
+weak on the genuinely held-out subset (AUROC 0.47-0.56, n=100) - a real, disclosed
+limitation, not papered over. Full results: `docs/step2_results.md`. External validation
+attempted against a literature-curated Tox21-independent dataset (147 compounds); 82%
+overlapped with our own training data, leaving only 26 unseen chemicals (25 active / 1
+inactive) - too small to draw a confident conclusion from (`docs/external_validation_search.md`).
 
 ## Plan (from project brief, 2026-08-12; Step 2 refined per Kolliputi's 2026-08-12 reply)
 
@@ -28,16 +39,16 @@ oxidative-stress response proxy, not a direct mitochondrial ROS measurement. Ste
 - Generate Morgan/ECFP fingerprints + standard physicochemical descriptors
 - Endpoint definitions circulated and locked (see `docs/endpoint_definitions.md`)
 
-### Step 2 — Modeling (primary endpoint: TOX21_MMP_ratio, aeid 1854)
-- Baselines: logistic regression, Random Forest, XGBoost/LightGBM
-- Primary evaluation: Bemis–Murcko scaffold-separated train/val/locked-test partitions (random split reported only as comparison)
-- Locked test set: no feature selection, threshold tuning, endpoint definition, or model optimization against it
-- Document the exact positive-hit rule and cytotoxicity filtering/stratification rule *before* running final models (not after seeing performance)
-- Metrics: AUROC, AUPRC, sensitivity, specificity, balanced accuracy, F1, MCC, confusion matrix, calibration/Brier score
-- Cytotoxicity-aware sensitivity analysis: overall + restricted to hits below the cytotoxicity burst threshold specifically (65.7% of active hits are at/above it - see `docs/data_summary.md`) - does predictive performance persist below threshold?
-- Uncertainty/domain-of-applicability: risk-coverage / selective-prediction analysis - are high-uncertainty/OOD chemicals enriched among prediction errors?
-- Seahorse respiration endpoints analyzed separately as mechanistic/orthogonal support - concordance check against primary MMP predictions
-- After the primary analysis: look for a genuinely independent mitochondrial-toxicity dataset for external validation, applied without retraining
+### Step 2 — Modeling (primary endpoint: TOX21_MMP_ratio, aeid 1854) (done)
+- Baselines: logistic regression, Random Forest, XGBoost (all three trained; see `docs/step2_results.md`)
+- Primary evaluation: Bemis–Murcko scaffold-separated train/val/locked-test partitions (random split reported only as comparison) - verified zero scaffold overlap across partitions
+- Locked test set: confirmed never used for feature selection, threshold tuning, endpoint definition, or model optimization
+- Positive-hit rule and cytotoxicity filtering/stratification rule documented in `docs/endpoint_definitions.md` before running final models
+- Metrics: AUROC, AUPRC, sensitivity, specificity, balanced accuracy, F1, MCC, confusion matrix, calibration/Brier score - all reported per model/regime
+- Cytotoxicity-aware sensitivity analysis: performance persists (0.796 -> 0.797 AUROC) when cytotoxicity-confounded actives are excluded
+- Uncertainty/domain-of-applicability: forest-disagreement uncertainty is significantly enriched among errors (p<1e-32); risk-coverage referral of the most uncertain 20% raises AUROC 0.796 -> 0.909
+- Seahorse respiration endpoints analyzed separately - concordance is weak on the genuinely held-out subset (AUROC 0.47-0.56, n=100), a disclosed limitation
+- External validation: candidate dataset identified but inaccessible this round (`docs/external_validation_search.md`) - no claim forced
 
 ### Step 3 — Preliminary-data package
 - Workflow diagram, ROC/PR curves, calibration plot, risk-coverage plot, chemical-space/AD visualization

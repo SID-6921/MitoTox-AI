@@ -79,10 +79,17 @@ covariates/context for the multi-parametric HCS profile, not as modeling targets
 (median AC50 across all `burst_assay=1` endpoints, minus 3x global MAD). 65.7% of active
 hits across the 19 mitochondrial-relevant endpoints occur at/above this threshold (see
 `docs/data_summary.md`), so Step 2 must report both the overall analysis and performance
-restricted to hits below the cytotoxicity threshold specifically. The exact
-filtering/stratification rule must be documented before running final models, per
-Kolliputi - see `data/processed/mito_modeling_table.csv`'s
-`mmp_ratio_tox21_cytotox_confound` column (computed in `scripts/05_enrich_potency_qc_cytotox.py`).
+restricted to hits below the cytotoxicity threshold specifically.
+
+**Exact filtering/stratification rule (fixed here, before any Step 2 model is trained):**
+a test-set chemical is EXCLUDED from the "below cytotoxicity threshold" subset if and only
+if it is a labeled active (hitcall >= 0.9) AND its `mmp_ratio_tox21_cytotox_confound` flag
+is true (i.e. its AC50 on the primary endpoint is at/above its own cytotoxicity burst
+lower-bound, computed in `scripts/05_enrich_potency_qc_cytotox.py`). All negatives are
+kept unconditionally in both the overall and below-threshold subsets - the confound flag
+is only meaningful for actives. This is a data-filtering rule for a specific comparison,
+not a threshold/hyperparameter tuned on any result, and the underlying confound flag was
+computed in Step 1 before any Step 2 model existed.
 
 ## What's intentionally excluded
 
