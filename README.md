@@ -8,28 +8,36 @@ Can chemical structure predict experimentally measured mitochondrial liability i
 
 ## Status
 
-Step 1 (dataset) draft complete: 8,058 clean, deduped, structure-standardized
-chemicals across 19 mitochondrial-relevant ToxCast/Tox21 endpoints, with ECFP4
-fingerprints and physicochemical descriptors. See `docs/data_summary.md` for
-yield/class-balance and `docs/endpoint_definitions.md` for the proposed endpoint
-set (draft, pending Kolliputi/Lakshmi review before locking). Modeling (Step 2)
-not started.
+Step 1 (dataset) complete: 8,058 clean, deduped, structure-standardized chemicals
+across 19 mitochondrial-relevant ToxCast/Tox21 endpoints, with ECFP4 fingerprints
+and physicochemical descriptors. See `docs/data_summary.md` for yield/class-balance.
 
-## Plan (from project brief, 2026-08-12)
+Endpoints **locked 2026-08-12** per Kolliputi's review - see `docs/endpoint_definitions.md`.
+Primary ML endpoint is the Tox21 membrane-potential ratio assay (n=7,268), not the
+Seahorse bioenergetics battery (n=253, too small for a scaffold-separated split) -
+Seahorse is now an orthogonal mechanistic validation set. Nrf2/ARE is labeled an
+oxidative-stress response proxy, not a direct mitochondrial ROS measurement. Step 2
+(modeling) not started.
 
-### Step 1 — Dataset
+## Plan (from project brief, 2026-08-12; Step 2 refined per Kolliputi's 2026-08-12 reply)
+
+### Step 1 — Dataset (done)
 - Source: EPA ToxCast/invitrodb, EPA CompTox APIs
-- Identify chemicals with usable structures + mitochondrial-relevant assay data (bioenergetic dysfunction primary; membrane-potential disruption and oxidative stress secondary modules)
+- Identify chemicals with usable structures + mitochondrial-relevant assay data
 - Clean/standardize structures, dedupe, drop unusable mixtures/ambiguous structures
 - Generate Morgan/ECFP fingerprints + standard physicochemical descriptors
-- Endpoint definitions to be circulated for review before locking
+- Endpoint definitions circulated and locked (see `docs/endpoint_definitions.md`)
 
-### Step 2 — Modeling
-- Baselines first: logistic regression, Random Forest, XGBoost/LightGBM (deep learning only if justified)
-- Primary evaluation: Bemis–Murcko scaffold-aware train/val/test split (random split shown only as comparison)
-- Locked scaffold-held-out test metrics: AUROC, AUPRC, sensitivity, specificity, balanced accuracy, F1, MCC, confusion matrix, calibration/Brier score
-- Cytotoxicity sensitivity analysis (is the model learning general cytotoxicity vs. mitochondrial-specific liability?)
-- Uncertainty / domain-of-applicability component + risk-coverage analysis (referring uncertain 10%/20%/... to experimental testing)
+### Step 2 — Modeling (primary endpoint: TOX21_MMP_ratio, aeid 1854)
+- Baselines: logistic regression, Random Forest, XGBoost/LightGBM
+- Primary evaluation: Bemis–Murcko scaffold-separated train/val/locked-test partitions (random split reported only as comparison)
+- Locked test set: no feature selection, threshold tuning, endpoint definition, or model optimization against it
+- Document the exact positive-hit rule and cytotoxicity filtering/stratification rule *before* running final models (not after seeing performance)
+- Metrics: AUROC, AUPRC, sensitivity, specificity, balanced accuracy, F1, MCC, confusion matrix, calibration/Brier score
+- Cytotoxicity-aware sensitivity analysis: overall + restricted to hits below the cytotoxicity burst threshold specifically (65.7% of active hits are at/above it - see `docs/data_summary.md`) - does predictive performance persist below threshold?
+- Uncertainty/domain-of-applicability: risk-coverage / selective-prediction analysis - are high-uncertainty/OOD chemicals enriched among prediction errors?
+- Seahorse respiration endpoints analyzed separately as mechanistic/orthogonal support - concordance check against primary MMP predictions
+- After the primary analysis: look for a genuinely independent mitochondrial-toxicity dataset for external validation, applied without retraining
 
 ### Step 3 — Preliminary-data package
 - Workflow diagram, ROC/PR curves, calibration plot, risk-coverage plot, chemical-space/AD visualization
