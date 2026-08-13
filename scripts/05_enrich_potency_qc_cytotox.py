@@ -14,7 +14,10 @@ INVITRODB_ZIP = "data/raw/invitrodb_v4_3/INVITRODB_SUMMARY.zip"
 CYTOTOX_XLSX = "data/raw/invitrodb_v4_3/cytotox_invitrodb_v4_3_AUG2024.xlsx"
 
 OUT_LONG_PATH = "data/processed/mito_hitcalls_enriched.csv"
-OUT_MODELING_PATH = "data/processed/mito_modeling_table.csv"  # overwrite with potency columns added
+# ponytail: reads and overwrites the same file 04 produces, so rerunning this
+# script twice in a row without rerunning 04 first double-merges and breaks.
+# Always run 04 then 05, not 05 alone.
+OUT_MODELING_PATH = "data/processed/mito_modeling_table.csv"
 
 ENDPOINT_LABELS = {
     2442: "primary_basal_resp_rate", 2444: "primary_max_resp_rate",
@@ -70,11 +73,14 @@ def main():
 
     ac50_wide = dedup.pivot_table(index="dsstox_substance_id", columns="endpoint", values="ac50", aggfunc="first")
     ac50_wide.columns = [f"{c}_ac50_um" for c in ac50_wide.columns]
+    efficacy_wide = dedup.pivot_table(index="dsstox_substance_id", columns="endpoint", values="top", aggfunc="first")
+    efficacy_wide.columns = [f"{c}_efficacy_top" for c in efficacy_wide.columns]
     confound_wide = dedup.pivot_table(index="dsstox_substance_id", columns="endpoint", values="likely_cytotox_confound", aggfunc="first")
     confound_wide.columns = [f"{c}_cytotox_confound" for c in confound_wide.columns]
 
     modeling = pd.read_csv(MODELING_TABLE_PATH, low_memory=False)
     modeling = modeling.merge(ac50_wide, left_on="DTXSID", right_index=True, how="left")
+    modeling = modeling.merge(efficacy_wide, left_on="DTXSID", right_index=True, how="left")
     modeling = modeling.merge(confound_wide, left_on="DTXSID", right_index=True, how="left")
     modeling = modeling.merge(
         cytotox.rename(columns={"dsstox_substance_id": "DTXSID"}), on="DTXSID", how="left"
