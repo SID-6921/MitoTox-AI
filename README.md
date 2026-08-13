@@ -8,7 +8,12 @@ Can chemical structure predict experimentally measured mitochondrial liability i
 
 ## Status
 
-Project scaffold only — no data pulled or models trained yet.
+Step 1 (dataset) draft complete: 8,067 clean, deduped, structure-standardized
+chemicals across 19 mitochondrial-relevant ToxCast/Tox21 endpoints, with ECFP4
+fingerprints and physicochemical descriptors. See `docs/data_summary.md` for
+yield/class-balance and `docs/endpoint_definitions.md` for the proposed endpoint
+set (draft, pending Kolliputi/Lakshmi review before locking). Modeling (Step 2)
+not started.
 
 ## Plan (from project brief, 2026-08-12)
 
