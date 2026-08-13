@@ -37,8 +37,8 @@ agreeing to floating-point precision):
 | MCC | 0.098 | 0.535 |
 | Brier | (not shown) | 0.098 |
 
-MCC of 0.535 is consistent with the previously-reported sensitivity (0.626),
-specificity (0.919), and F1 - which is what looked wrong about 0.098 in the first place.
+MCC of 0.535 is consistent with the previously-reported sensitivity (0.626), specificity (0.919), and F1 - which is
+what looked wrong about 0.098 in the first place.
 `docs/step2_results.md` had the correct numbers throughout; only the email table was wrong.
 
 ## 3. Seahorse discordance power analysis

@@ -38,6 +38,12 @@ def main():
     mcc_correct = matthews_corrcoef(y_true, y_pred)
     f1_correct = f1_score(y_true, y_pred)
     brier_correct = brier_score_loss(y_true, y_prob)
+    tp = int(((y_pred == 1) & (y_true == 1)).sum())
+    fn = int(((y_pred == 0) & (y_true == 1)).sum())
+    tn = int(((y_pred == 0) & (y_true == 0)).sum())
+    fp = int(((y_pred == 1) & (y_true == 0)).sum())
+    sensitivity_correct = tp / (tp + fn)
+    specificity_correct = tn / (tn + fp)
 
     power_output = subprocess.run(
         ["python3", "scripts/17_seahorse_power_analysis.py"], capture_output=True, text=True
@@ -94,8 +100,9 @@ def main():
         f"| MCC | 0.098 | {mcc_correct:.3f} |",
         f"| Brier | (not shown) | {brier_correct:.3f} |",
         "",
-        f"MCC of {mcc_correct:.3f} is consistent with the previously-reported sensitivity (0.626),",
-        "specificity (0.919), and F1 - which is what looked wrong about 0.098 in the first place.",
+        f"MCC of {mcc_correct:.3f} is consistent with the previously-reported sensitivity "
+        f"({sensitivity_correct:.3f}), specificity ({specificity_correct:.3f}), and F1 - which is",
+        "what looked wrong about 0.098 in the first place.",
         "`docs/step2_results.md` had the correct numbers throughout; only the email table was wrong.",
         "",
         "## 3. Seahorse discordance power analysis",
