@@ -55,6 +55,12 @@ def standardize(smiles):
     if mol.GetNumHeavyAtoms() < 3:
         return None, None, "too_small"
 
+    # wildcard/dummy atoms (atomic number 0, SMILES "*") mark an undefined
+    # substituent - almost always a polymer repeat unit or R-group notation,
+    # not a real single structure. ECFP/descriptors on these are meaningless.
+    if any(atom.GetAtomicNum() == 0 for atom in mol.GetAtoms()):
+        return None, None, "ambiguous_wildcard_atom"
+
     # organic-only check: require at least one carbon (excludes pure
     # inorganics/metals that ECFP/physicochemical descriptors aren't meant for)
     if not any(atom.GetSymbol() == "C" for atom in mol.GetAtoms()):

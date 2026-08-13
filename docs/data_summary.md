@@ -6,9 +6,9 @@ Endpoint definitions: see `docs/endpoint_definitions.md`.
 ## Pipeline yield
 - Chemicals tested across the 19 mitochondrial-relevant endpoints: 9,398
 - Structures found in DSSTox: 9,398 / 9,398 (100%)
-- Passed structure standardization (parseable, organic, non-mixture): 8,716
-- Unique after canonical-structure dedup: 8,067
-- Chemicals with at least one mitochondrial-endpoint label in the final table: 8,067
+- Passed structure standardization (parseable, organic, non-mixture): 8,707
+- Unique after canonical-structure dedup: 8,060
+- Chemicals with at least one mitochondrial-endpoint label in the final table: 8,060
 
 (Hit-call threshold for 'active': hitcall >= 0.9, the standard EPA/tcpl convention.)
 
@@ -23,12 +23,12 @@ Endpoint definitions: see `docs/endpoint_definitions.md`.
 | mmp_1hr (aeid 12) | 295 | 22 | 7.5% |
 | mmp_24hr (aeid 32) | 990 | 155 | 15.7% |
 | mmp_72hr (aeid 52) | 976 | 107 | 11.0% |
-| mmp_ratio_tox21 (aeid 1854) | 7277 | 1160 | 15.9% |
-| oxstress_nrf2_are_cis (aeid 97) | 3464 | 1207 | 34.8% |
-| oxstress_are_bla_ratio (aeid 1110) | 6626 | 1261 | 19.0% |
-| oxstress_are_bla_viability (aeid 1185) | 6626 | 589 | 8.9% |
-| oxstress_are_ks_luc (aeid 3324) | 6935 | 1026 | 14.8% |
-| oxstress_are_ks_luc_viability (aeid 3325) | 6935 | 961 | 13.9% |
+| mmp_ratio_tox21 (aeid 1854) | 7270 | 1159 | 15.9% |
+| oxstress_nrf2_are_cis (aeid 97) | 3462 | 1207 | 34.9% |
+| oxstress_are_bla_ratio (aeid 1110) | 6619 | 1260 | 19.0% |
+| oxstress_are_bla_viability (aeid 1185) | 6619 | 587 | 8.9% |
+| oxstress_are_ks_luc (aeid 3324) | 6928 | 1025 | 14.8% |
+| oxstress_are_ks_luc_viability (aeid 3325) | 6928 | 959 | 13.8% |
 | mitomass_1hr (aeid 10) | 295 | 8 | 2.7% |
 | mitomass_24hr (aeid 30) | 990 | 127 | 12.8% |
 | mitomass_72hr (aeid 50) | 976 | 132 | 13.5% |
@@ -36,28 +36,31 @@ Endpoint definitions: see `docs/endpoint_definitions.md`.
 | mitoticarrest_24hr (aeid 34) | 990 | 176 | 17.8% |
 | mitoticarrest_72hr (aeid 54) | 976 | 250 | 25.6% |
 
-## Potency, QC, and cytotoxicity (added after initial draft)
+## Potency, QC, and cytotoxicity
 
-- Per-endpoint AC50 (potency, µM) and a decoded QC-flag column (`mc6_flags_decoded`,
-  from invitrodb's `method_list` mc6 lookup) are in
-  `data/processed/mito_hitcalls_enriched.csv` (long format) and as `<endpoint>_ac50_um`
-  columns in the wide modeling table.
+- Per-endpoint AC50 (potency, µM) and efficacy (`top`) are in the wide modeling
+  table as `<endpoint>_ac50_um` / `<endpoint>_efficacy_top`. Decoded QC flags
+  (`mc6_flags_decoded`, from invitrodb's `method_list` mc6 lookup) are in the
+  long-format `data/processed/mito_hitcalls_enriched.csv`.
 - **Cytotoxicity sensitivity check:** joined each chemical's cytotoxicity burst
   threshold (`cytotox_invitrodb_v4_3_AUG2024.xlsx`, median AC50 across all
-  `burst_assay=1` endpoints minus 3x global MAD). Of the 9,795 active hits across all
-  19 endpoints, **65.6% occur at or above the chemical's own cytotoxicity burst
-  threshold** — meaning a majority of raw hits in this endpoint set are plausibly
-  driven by general cytotoxicity rather than a mitochondria-specific mechanism. This
-  is flagged per-hit (`likely_cytotox_confound`) and per-chemical/endpoint
-  (`<endpoint>_cytotox_confound` in the modeling table) so Step 2 modeling can filter
-  or stratify on it rather than being surprised by it later.
+  `burst_assay=1` endpoints minus 3x global MAD). Of the 9,795 active hits across all 19 endpoints, **65.6% occur at or above the chemical's own cytotoxicity burst threshold** - meaning a majority of
+  raw hits in this endpoint set are plausibly driven by general cytotoxicity rather
+  than a mitochondria-specific mechanism. Flagged per-hit (`likely_cytotox_confound`)
+  and per-chemical/endpoint (`<endpoint>_cytotox_confound`) so Step 2 modeling can
+  filter or stratify on it.
 
 ## Notes
 - Primary endpoint (bioenergetic dysfunction / Seahorse respirometry) has a much
-  smaller tested chemical set (~270-280 chemicals) than the Tox21 qHTS reporter
-  assays (~9,000+) used for the secondary endpoints - this caps the primary model's
-  training set size regardless of scaffold-split strategy.
-- 682 chemicals dropped at structure-cleaning (568 no SMILES, 72 inorganic/no carbon,
-  26 mixtures with no dominant fragment, 11 unparseable, 5 too small). Full list in
-  `data/processed/mito_chemicals_dropped.csv`.
+  smaller tested chemical set (~250-270 chemicals) than the Tox21 qHTS reporter
+  assays (~6,600-7,300) used for the secondary endpoints - this caps the primary
+  model's training set size regardless of scaffold-split strategy.
+- 691 chemicals dropped at structure-cleaning. Reasons:
+  - empty_smiles: 568
+  - inorganic_no_carbon: 72
+  - mixture_no_dominant_fragment: 26
+  - unparseable_smiles: 11
+  - ambiguous_wildcard_atom: 9
+  - too_small: 5
+  Full list in `data/processed/mito_chemicals_dropped.csv`.
 - These endpoint definitions are a draft for review, not locked (per project brief).
