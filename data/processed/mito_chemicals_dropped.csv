@@ -1,0 +1,1341 @@
+DTXSID,PREFERRED_NAME,reason,collided_with_dtxsid
+DTXSID0020101,Aroclor 1260,empty_smiles,
+DTXSID0020103,Arsenic oxide (As2O3),mixture_no_dominant_fragment,
+DTXSID8020121,Sodium azide,inorganic_no_carbon,
+DTXSID2020131,Barium chloride dihydrate,mixture_no_dominant_fragment,
+DTXSID2020181,Bismuth oxychloride,inorganic_no_carbon,
+DTXSID1020194,Boric acid (H3BO3),inorganic_no_carbon,
+DTXSID6020226,Cadmium chloride,mixture_no_dominant_fragment,
+DTXSID5020235,Calcium chloride,mixture_no_dominant_fragment,
+DTXSID9020326,Chromic oxide pigment,empty_smiles,
+DTXSID7020340,Cobalt sulfate heptahydrate,inorganic_no_carbon,
+DTXSID8020622,Ferric chloride,mixture_no_dominant_fragment,
+DTXSID8020703,Hydrazine sulfate,inorganic_no_carbon,
+DTXSID0020789,Magnesium chloride hexahydrate,mixture_no_dominant_fragment,
+DTXSID5020811,Mercuric chloride,mixture_no_dominant_fragment,
+DTXSID5020813,Methylmercuric(II) chloride,mixture_no_dominant_fragment,
+DTXSID9020875,Methylhydrazine sulfate,inorganic_no_carbon,
+DTXSID7020899,Molybdenum trioxide,inorganic_no_carbon,
+DTXSID7020928,Nickel(II) sulfate hexahydrate,inorganic_no_carbon,
+DTXSID6020937,Sodium nitrate,inorganic_no_carbon,
+DTXSID0020941,Sodium nitrite,inorganic_no_carbon,
+DTXSID6021084,Gamma-Oryzanol,empty_smiles,
+DTXSID6021113,Peppermint oil,empty_smiles,
+DTXSID5021174,Polybrominated biphenyls (PBB),ambiguous_wildcard_atom,
+DTXSID0021175,Polysorbate 80,empty_smiles,
+DTXSID4021264,Selenium dioxide,empty_smiles,
+DTXSID8021272,Sodium chlorite,inorganic_no_carbon,
+DTXSID8021276,Sodium hypochlorite,mixture_no_dominant_fragment,
+DTXSID7021283,Strobane,empty_smiles,
+DTXSID1021291,Sodium sulfate anhydrous,inorganic_no_carbon,
+DTXSID8021351,Stannous chloride,mixture_no_dominant_fragment,
+DTXSID3021354,Titanocene dichloride,unparseable_smiles,
+DTXSID7021368,Toxaphene,empty_smiles,
+DTXSID4021391,Tris(methylphenyl) phosphate,empty_smiles,
+DTXSID9021477,Sodium tetrafluoroborate,inorganic_no_carbon,
+DTXSID8021486,"1,​2,​3-​Benzenetricarboxylic acid, hydrate (1:x)",empty_smiles,
+DTXSID2021731,Methanol,too_small,
+DTXSID3021988,"1-Chloro-2-propanol, technical grade (~75% 1-chloro-2-propanol; ~25% 2-chloro-1-propanol)",empty_smiles,
+DTXSID5023825,Indium arsenide,too_small,
+DTXSID9023833,Poly[oxy(dimethylsilylene)],ambiguous_wildcard_atom,
+DTXSID9023837,Sodium bromate,inorganic_no_carbon,
+DTXSID5023875,Ammonium sulfamate,inorganic_no_carbon,
+DTXSID9023883,Aroclor 1016,empty_smiles,
+DTXSID8023892,Abamectin,empty_smiles,
+DTXSID5023954,Technical chlordane,empty_smiles,
+DTXSID7023986,Copper cyanide,too_small,
+DTXSID8024236,Octabromodiphenyl ether,ambiguous_wildcard_atom,
+DTXSID2024246,Pentabromodiphenyl ether,ambiguous_wildcard_atom,
+DTXSID5024263,Phosphoric acid,inorganic_no_carbon,
+DTXSID9024300,Selenious acid,inorganic_no_carbon,
+DTXSID1024334,Thallium nitrate,inorganic_no_carbon,
+DTXSID4024515,Ammonium perchlorate,inorganic_no_carbon,
+DTXSID3024528,Anise oil,empty_smiles,
+DTXSID7024534,Annatto,empty_smiles,
+DTXSID3024603,Beryllium sulfate tetrahydrate,inorganic_no_carbon,
+DTXSID7024615,Bis(cyclopentadiene)chromium(II),unparseable_smiles,
+DTXSID2024616,Vanadocene dichloride,unparseable_smiles,
+DTXSID0024715,Cadmium oxide,mixture_no_dominant_fragment,
+DTXSID7024740,Casanthrol,empty_smiles,
+DTXSID7024742,Castor oil,empty_smiles,
+DTXSID2024824,"Chlorinated paraffins (C12, 60% chlorine)",empty_smiles,
+DTXSID0024840,Cobaltocene,unparseable_smiles,
+DTXSID9024853,"Creosote, wood",empty_smiles,
+DTXSID7024906,D & C Yellow 11,empty_smiles,
+DTXSID4024983,Cisplatin,inorganic_no_carbon,
+DTXSID5025071,"1,2-Dihydro-2,2,4-trimethylquinoline, polymer",likely_uvcb_name_pattern,
+DTXSID7025219,Sodium dodecylbenzenesulfonate,empty_smiles,
+DTXSID9025326,Ferrocene,unparseable_smiles,
+DTXSID2025424,Hydroxylamine sulfate (2:1),inorganic_no_carbon,
+DTXSID7025425,Hydroxylamine hydrochloride,mixture_no_dominant_fragment,
+DTXSID8025709,Nickelocene,unparseable_smiles,
+DTXSID4025824,Palladium(II) chloride,mixture_no_dominant_fragment,
+DTXSID1025934,Poly(2-hydroxypropyl methacrylate),ambiguous_wildcard_atom,
+DTXSID5025948,Potassium dichromate,inorganic_no_carbon,
+DTXSID7026025,Sodium chlorate,inorganic_no_carbon,
+DTXSID9026051,Stoddard solvent,empty_smiles,
+DTXSID4026054,Styrax balsam,empty_smiles,
+DTXSID2026076,Tannic acid,empty_smiles,
+DTXSID5026124,"N,N,N',N'-Tetramethyl-p-phenylenediamine",empty_smiles,
+DTXSID7026318,Zirconocene dichloride,unparseable_smiles,
+DTXSID1027394,Naphthenic acids,empty_smiles,
+DTXSID6027395,Sorbitan monododecanoate,empty_smiles,
+DTXSID1027396,Anhydrosorbitol stearate,empty_smiles,
+DTXSID6027634,1-Propene tetramer,empty_smiles,
+DTXSID1027714,9-Octadecen-1-ol-ethylene oxide copolymer,likely_uvcb_name_pattern,
+DTXSID0027729,Isomethyltetrahydrophthalic anhydride,empty_smiles,
+DTXSID9027738,(Methylcyclopentadienyl)tricarbonylmanganese,unparseable_smiles,
+DTXSID3027740,2-Ethylhexyl acid phosphate,empty_smiles,
+DTXSID1027841,Isooctyl 2-mercaptoacetate,empty_smiles,
+DTXSID6027844,"1,2,3,6-Tetrahydromethyl-3,6-methanophthalic anhydride",empty_smiles,
+DTXSID5027851,"2,4,4-Trimethylpentene",empty_smiles,
+DTXSID5027857,Texanol,unparseable_smiles,
+DTXSID9027863,Polypropylene glycol,empty_smiles,
+DTXSID4027868,tert-Nonanethiol,empty_smiles,
+DTXSID8027870,"3-(Dodecenyl)dihydro-2,5-furandione",empty_smiles,
+DTXSID3027875,Glyceryl monooleate,empty_smiles,
+DTXSID3027877,Diisodecylphenyl phosphite,empty_smiles,
+DTXSID8027878,"2-Propenoic acid, monoester with 1,2-propanediol",empty_smiles,
+DTXSID1027891,Calcium dodecylbenzene sulfonate,empty_smiles,
+DTXSID3027902,Methylcyclopentadiene dimer,empty_smiles,
+DTXSID8027905,"Dihydro-3-(tetrapropenyl)-2,5-furandione",empty_smiles,
+DTXSID7027916,Neodecanoic acid,empty_smiles,
+DTXSID6027923,Dodecylbenzenesulfonic acid,empty_smiles,
+DTXSID1027926,n-Dodecylphenol,ambiguous_wildcard_atom,
+DTXSID5027932,Dodecylbenzene sulfonate triethanolamine(1:1),ambiguous_wildcard_atom,
+DTXSID5027936,"2-Propenoic acid, 2-methyl-, monoester with 1,2-propanediol",empty_smiles,
+DTXSID9027948,"Dihydro-3-(octadecenyl)-2,5-furandione",empty_smiles,
+DTXSID3027950,Trimethylolpropane ethoxylate triacrylate,likely_uvcb_name_pattern,
+DTXSID8027955,Isooctyl acrylate,empty_smiles,
+DTXSID2027963,Isooctadecanoic acid,empty_smiles,
+DTXSID5027982,Diisononyl adipate,empty_smiles,
+DTXSID7028015,Tripropylene glycol diacrylate,empty_smiles,
+DTXSID5028033,Triisononyl trimellitate,empty_smiles,
+DTXSID7028306,"Fatty acids, C16-18",empty_smiles,
+DTXSID0028323,"Alcohols, C16-18",empty_smiles,
+DTXSID4028460,Benzyl-C12-18-alkyldimethylammonium chlorides,empty_smiles,
+DTXSID5028665,DINP branched,empty_smiles,
+DTXSID0028666,"1,2-Benzenedicarboxylic acid, di-C9-11-branched alkyl esters, C10-rich",empty_smiles,
+DTXSID2028723,(C10-C16) Alkylbenzenesulfonic acid,ambiguous_wildcard_atom,
+DTXSID7028774,Alkyl (C12-C14) glycidyl ether,empty_smiles,
+DTXSID7028776,"Phenol, 4-methyl-, reaction products with dicyclopentadiene and isobutylene",likely_uvcb_name_pattern,
+DTXSID8028842,Sodium polyphosphate,empty_smiles,
+DTXSID4028880,Triphenyl phosphates isopropylated,empty_smiles,
+DTXSID9029017,"1,2-Benzenedicarboxylic acid, di-C6-8-branched alkyl esters, C7-rich",empty_smiles,
+DTXSID5029055,"4-Nonylphenol, branched",empty_smiles,
+DTXSID5029059,"Perfluoro compounds, C5-18",empty_smiles,
+DTXSID9029061,"Hexanol, acetate, branched and linear",empty_smiles,
+DTXSID4029062,Dipropyleneglycol methyl ether acetate,empty_smiles,
+DTXSID0029214,Methylionone,empty_smiles,
+DTXSID3029237,"Siloxanes and Silicones, di-Me, hydroxy-terminated, hydrolysis products with silica and 3-(trimethoxysilyl)propyl methacrylate",empty_smiles,
+DTXSID9029300,Polysorbate 60,empty_smiles,
+DTXSID9029304,Glyceryl stearate,empty_smiles,
+DTXSID2029329,Tripropylene glycol monomethyl ether,empty_smiles,
+DTXSID6029335,Sorbitan monohexadecanoate,empty_smiles,
+DTXSID8029369,Vinyl neodecanoate,empty_smiles,
+DTXSID0029474,"Alkyl (C8,C10) glycidyl ether",empty_smiles,
+DTXSID4029565,"1,2-Benzenedicarboxylic acid, diundecyl ester, branched and linear",empty_smiles,
+DTXSID2029668,Ammonium nitrate,inorganic_no_carbon,
+DTXSID1029677,Silica,inorganic_no_carbon,
+DTXSID1029679,Tetrachlorostannane,inorganic_no_carbon,
+DTXSID5029683,Sulfuric acid,inorganic_no_carbon,
+DTXSID0029688,Iron(II) sulfate,inorganic_no_carbon,
+DTXSID4029690,Potassium persulfate,inorganic_no_carbon,
+DTXSID9029691,Diammonium peroxydisulfate,inorganic_no_carbon,
+DTXSID4029692,Potassium nitrate,inorganic_no_carbon,
+DTXSID9029695,Ferrous chloride,mixture_no_dominant_fragment,
+DTXSID4029698,Sodium persulfate,inorganic_no_carbon,
+DTXSID6029703,Ammonium thiosulfate,inorganic_no_carbon,
+DTXSID6029707,Sulfuryl chloride,inorganic_no_carbon,
+DTXSID5029710,Phosphoric trichloride,inorganic_no_carbon,
+DTXSID8029739,Fluoboric acid,inorganic_no_carbon,
+DTXSID6029755,"1,2-Propanediol monobutyl ether",empty_smiles,
+DTXSID4029806,"Benzenesulfonic acid, C10-14-alkyl derivs., sodium salts",empty_smiles,
+DTXSID3029815,"Tridecylamine, branched and linear",empty_smiles,
+DTXSID0029848,"Acetic acid, C8-10-branched alkyl esters, C9-rich",empty_smiles,
+DTXSID2030857,Black cohosh,empty_smiles,
+DTXSID6031209,tert-Butyl hydroperoxide (70% Solution in Water),empty_smiles,
+DTXSID8031366,Ginkgo biloba extract,empty_smiles,
+DTXSID5031428,Dihydroergotoxine mesylate,empty_smiles,
+DTXSID3031444,Indium phosphide,too_small,
+DTXSID2031532,Lime oil,empty_smiles,
+DTXSID6032061,Sodium dichromate dihydrate,inorganic_no_carbon,
+DTXSID0032077,Sodium selenite,inorganic_no_carbon,
+DTXSID9033264,Boron trifluoride dihydrate,inorganic_no_carbon,
+DTXSID6033326,Chlorowax 500C,empty_smiles,
+DTXSID3033511,Fluorosulfonic acid,inorganic_no_carbon,
+DTXSID8033566,Indium trichloride,inorganic_no_carbon,
+DTXSID9033896,Phosphorus pentachloride,inorganic_no_carbon,
+DTXSID3033983,Sodium hydrogen sulfate,inorganic_no_carbon,
+DTXSID6034005,Sulfamic acid,inorganic_no_carbon,
+DTXSID9034317,Benzalkonium chloride,empty_smiles,
+DTXSID0034566,Emamectin benzoate,empty_smiles,
+DTXSID7034672,Iodine,too_small,
+DTXSID9034737,Metiram,empty_smiles,
+DTXSID8034742,"Milbemectin (mixture of 70% Milbemycin A4, 30% Milbemycin A3)",empty_smiles,
+DTXSID7034836,Potassium iodide,mixture_no_dominant_fragment,
+DTXSID8034873,Pyrethrins,empty_smiles,
+DTXSID3034903,Sodium bromide,mixture_no_dominant_fragment,
+DTXSID2035013,Zinc chloride,mixture_no_dominant_fragment,
+DTXSID9036933,Sodium hexafluorosilicate,inorganic_no_carbon,
+DTXSID6037015,Potassium tetrafluoroborate,inorganic_no_carbon,
+DTXSID0037235,Gentamicin sulfate,empty_smiles,
+DTXSID7037684,Polybrene,empty_smiles,
+DTXSID1039719,"Nitric acid, calcium salt (2:1)",inorganic_no_carbon,
+DTXSID7040316,Nickel chloride,mixture_no_dominant_fragment,
+DTXSID3040352,Dinocap,empty_smiles,
+DTXSID7040449,Copper(II) chloride,mixture_no_dominant_fragment,
+DTXSID4040688,Nystatin,empty_smiles,
+DTXSID8040775,Terpineol,empty_smiles,
+DTXSID4041074,Neomycin sulfate,empty_smiles,
+DTXSID2041125,Sodium iodide,mixture_no_dominant_fragment,
+DTXSID6041557,Dihydromyrcenol,empty_smiles,
+DTXSID2041703,Butylnaphthalenesulfonic acid sodium salt,empty_smiles,
+DTXSID0041721,C.I. Acid Yellow 3 disodium salt,empty_smiles,
+DTXSID5041803,Copper(I) iodide,mixture_no_dominant_fragment,
+DTXSID8041909,Dysprosium(III) chloride,mixture_no_dominant_fragment,
+DTXSID8042006,Glyceryl monooctanoate,empty_smiles,
+DTXSID3042007,Glyceryl monoricinoleate,empty_smiles,
+DTXSID9042124,Mercuric iodide,mixture_no_dominant_fragment,
+DTXSID5042320,Potassium nitrite,inorganic_no_carbon,
+DTXSID0042327,Dipropylene glycol dimethyl ether,empty_smiles,
+DTXSID9042338,Di(propylene glycol) tert-butyl ether,empty_smiles,
+DTXSID9042465,Tetrasodium pyrophosphate,inorganic_no_carbon,
+DTXSID4044161,Antimony trichloride,inorganic_no_carbon,
+DTXSID8044175,Clove leaf oil,empty_smiles,
+DTXSID8044177,Nutmeg oil,empty_smiles,
+DTXSID0044317,8-Hydroxyquinoline-5-sulfonic acid hydrate (1:x),empty_smiles,
+DTXSID5044318,Chloramine T hydrate (1:x),empty_smiles,
+DTXSID4044379,Gold trichloride,inorganic_no_carbon,
+DTXSID6044484,Isononanamine,empty_smiles,
+DTXSID7044504,Cadmium dinitrate,inorganic_no_carbon,
+DTXSID7044508,Barium chloride,mixture_no_dominant_fragment,
+DTXSID4044537,Sodium triisopropyl naphthalene sulfonate,empty_smiles,
+DTXSID8044541,Isocyclocitral,empty_smiles,
+DTXSID0044577,Calcium bromide,mixture_no_dominant_fragment,
+DTXSID9044580,Pentaerythritol allyl ether,empty_smiles,
+DTXSID7044760,Neodymium(III) chloride,inorganic_no_carbon,
+DTXSID0044783,"2-Silylpropyl-urea, Si-(ethoxy and methoxy) derivs",empty_smiles,
+DTXSID9044900,Tricyclodecanedimethanol,empty_smiles,
+DTXSID9044902,Calcium neodecanoate,empty_smiles,
+DTXSID9044904,C.I. Acid Blue 22,empty_smiles,
+DTXSID8044911,Isooctyl 3-mercaptopropionate,empty_smiles,
+DTXSID6044935,"Chromium acetate, basic",empty_smiles,
+DTXSID4044951,2-Hydroxyethyl methacrylate phosphate,empty_smiles,
+DTXSID9044958,Trimethylsilyl silicate,empty_smiles,
+DTXSID7044978,"Bis[(2-ethyl-2,5-dimethylhexanoyl)oxy](dimethyl)stannane",empty_smiles,
+DTXSID6045111,Adriamycin hydrochloride-DNA complex,empty_smiles,
+DTXSID3045352,Colistin sulfate,empty_smiles,
+DTXSID3045354,Vancomycin hydrochloride,empty_smiles,
+DTXSID8045355,Bacitracin,empty_smiles,
+DTXSID6045406,Vitamin K2,empty_smiles,
+DTXSID0045414,Alcuronium chloride,unparseable_smiles,
+DTXSID2045604,Verteporfin,empty_smiles,
+DTXSID2045735,Cochineal,empty_smiles,
+DTXSID5045750,Amperozide hydrochloride,empty_smiles,
+DTXSID6045822,Colistimethate sodium,empty_smiles,
+DTXSID5045839,Polymixin B sulfate,empty_smiles,
+DTXSID4045846,Tyrothricin,empty_smiles,
+DTXSID4045848,Acriflavine hydrochloride,empty_smiles,
+DTXSID1045900,Mepartricin,empty_smiles,
+DTXSID0045969,Enoxaparin sodium,empty_smiles,
+DTXSID3045984,Cellobiose,empty_smiles,
+DTXSID8046290,Viomycin sulfate (1:x),empty_smiles,
+DTXSID9046318,(+/-) -Niguldipine hydrochloride (1:x),empty_smiles,
+DTXSID2046414,Muromonab-CD3,empty_smiles,
+DTXSID8046537,Bismuth oxide (Bi2O3),inorganic_no_carbon,
+DTXSID8046583,Antimony(V) sulfide,inorganic_no_carbon,
+DTXSID9046605,Sodium triphosphate hydrate (5:1:6),inorganic_no_carbon,
+DTXSID8046666,C.I. Basic Violet 1,empty_smiles,
+DTXSID6046688,"1,2-Benzenediol, 4,4′-[1,6-hexanediylbis[imino(1-hydroxy-2,1-ethanediyl)]]bis-, sulfate (salt)",empty_smiles,
+DTXSID7046750,Hyaluronic acid,empty_smiles,
+DTXSID9046819,Diethylaminoethyl-sephacel,empty_smiles,
+DTXSID8046826,Uricase from Bacillus fastidiosus,empty_smiles,
+DTXSID3046829,Hydroxyethyl starch,empty_smiles,
+DTXSID6046894,Cytochrome C,empty_smiles,
+DTXSID1046978,C12-14-Alkyldimethyl betaines,empty_smiles,
+DTXSID3047003,Potassium perchlorate,inorganic_no_carbon,
+DTXSID1047027,Ditridecyl phthalate (mixture of branched chain isomers),empty_smiles,
+DTXSID4047040,Zinc neodecanoate,empty_smiles,
+DTXSID9047043,Potassium tetrathionate,inorganic_no_carbon,
+DTXSID3047051,Ocimene-Limonene mixture,empty_smiles,
+DTXSID6047076,Ammonium hexafluorosilicate,unparseable_smiles,
+DTXSID0047117,Ytterbium(III) chloride,mixture_no_dominant_fragment,
+DTXSID7047140,Isopropyl citrate (Mixture),empty_smiles,
+DTXSID4047179,Isocetyl stearate,empty_smiles,
+DTXSID3047180,Triisodecyl trimellitate,empty_smiles,
+DTXSID8047218,"Sodium bisulfite, mixture of NaHSO3 and Na2S2O5",empty_smiles,
+DTXSID0047242,"2,4-Diaminoanisole sulfate hydrate (1:1:x)",empty_smiles,
+DTXSID5047245,Corexit 9500,empty_smiles,
+DTXSID1047364,SSR 103800,empty_smiles,
+DTXSID3047394,Grinstad Soft-N-Safe,empty_smiles,
+DTXSID8047395,"Diisononyl cyclohexane-1,2-dicarboxylate",empty_smiles,
+DTXSID3047427,"2,4-DB-isooctyl ester",empty_smiles,
+DTXSID6047448,Potassium chlorate,inorganic_no_carbon,
+DTXSID3047473,Polymethylene polyphenyl polyisocyanate,empty_smiles,
+DTXSID2047484,Magnesium dinitrate hexahydrate,inorganic_no_carbon,
+DTXSID2047486,Methoxybenzyl alcohol,empty_smiles,
+DTXSID8047501,Poly[oxy(methylsilylene)],ambiguous_wildcard_atom,
+DTXSID7047512,Indium(III) chloride hydrate,inorganic_no_carbon,
+DTXSID2047517,"Hexanedioic acid, di-C7-9-branched and linear alkyl esters",empty_smiles,
+DTXSID1047526,C10-21 alkanesulfonic acids phenyl esters,empty_smiles,
+DTXSID6047527,"Adipic acid, polypropyleneglycol, laurate",empty_smiles,
+DTXSID4047597,Poloxalene,empty_smiles,
+DTXSID8047630,Tetronic 701,empty_smiles,
+DTXSID1047657,"1,3-Nonanediol monoacetate",empty_smiles,
+DTXSID2047696,Cremophor EL,empty_smiles,
+DTXSID9047708,Igepal CO-890,empty_smiles,
+DTXSID4047709,Cananga oil,empty_smiles,
+DTXSID8047711,"Oils, bran",empty_smiles,
+DTXSID3047712,Cornmint oil,empty_smiles,
+DTXSID2047721,Petitgrain oil,empty_smiles,
+DTXSID1047730,Orange terpenes,empty_smiles,
+DTXSID5047796,Formalin,empty_smiles,
+DTXSID2047800,Bleomycin sulfate,empty_smiles,
+DTXSID5047829,Paromomycin sulfate,empty_smiles,
+DTXSID9047831,Levamisole resinate,empty_smiles,
+DTXSID7047853,Vinrosidine sulfate (1:x),empty_smiles,
+DTXSID0047901,Ethylammonium nitrate,inorganic_no_carbon,
+DTXSID0047903,Dimethylammonium nitrate,inorganic_no_carbon,
+DTXSID3047924,Methylammonium nitrate,inorganic_no_carbon,
+DTXSID1048122,Benzyl-C8-18-alkyldimethylammonium chlorides,empty_smiles,
+DTXSID7048584,Aviptadil,empty_smiles,
+DTXSID8048604,Leucomycin tartrate,empty_smiles,
+DTXSID8048608,Lysozyme hydrochloride,empty_smiles,
+DTXSID0048630,Sevelamer hydrochloride,empty_smiles,
+DTXSID4048642,Teicoplanin,empty_smiles,
+DTXSID5048683,"Eprinomectin (B1a, B1b mixture)",empty_smiles,
+DTXSID1048702,Diisopropylaminomethyl-polystyrene,empty_smiles,
+DTXSID3048738,"1,1'-Tetramethylenediguanidine sulfate",empty_smiles,
+DTXSID6048755,Aloin,empty_smiles,
+DTXSID9048776,Zanapezil fumarate (1:x),empty_smiles,
+DTXSID7048877,Ibogaine hydrochloride (1:x),empty_smiles,
+DTXSID7048954,Gonadorelin hydrochloride,empty_smiles,
+DTXSID0049020,Poly-L-ornithine hydrochloride,empty_smiles,
+DTXSID5049023,Potassium antimony(III) tartrate hydrate,empty_smiles,
+DTXSID8049200,Barium nitrate,inorganic_no_carbon,
+DTXSID3049201,Lithium sulfate,inorganic_no_carbon,
+DTXSID2049216,Ammonium tetrachloroplatinate(II),inorganic_no_carbon,
+DTXSID4049402,Zirconyl chloride octahydrate,inorganic_no_carbon,
+DTXSID5049445,NTP Mix57 CT1 62-EQP,empty_smiles,
+DTXSID0049446,NTP Mix58 CT1 62-GP,empty_smiles,
+DTXSID5049447,NTP Mix59 CT1 62-GP,empty_smiles,
+DTXSID0049448,NTP Mix60 CT1 62-GP,empty_smiles,
+DTXSID5049449,NTP Mix61 CT1 62-GP,empty_smiles,
+DTXSID4049450,NTP Mix62 CT1 62-GP,empty_smiles,
+DTXSID9049451,NTP Mix63 CT1 62-GP,empty_smiles,
+DTXSID4049452,NTP Mix64 CT1 62-GP,empty_smiles,
+DTXSID9049453,NTP Mix65 CT1 62-GP,empty_smiles,
+DTXSID4049454,NTP Mix66 CT1 62-GP,empty_smiles,
+DTXSID9049455,NTP Mix67 CT1 62-GP,empty_smiles,
+DTXSID4049456,NTP Mix68 CT1 62-GP,empty_smiles,
+DTXSID9049457,NTP Mix69 CT1 62-GP,empty_smiles,
+DTXSID4049458,NTP Mix70 CT1 62-GP,empty_smiles,
+DTXSID9049459,NTP Mix71 CT1 62-GP,empty_smiles,
+DTXSID8049460,NTP Mix72 CT1 62-GP,empty_smiles,
+DTXSID3049461,NTP Mix73 CT1 62-GP,empty_smiles,
+DTXSID8049462,NTP Mix74 CT1 62-GP,empty_smiles,
+DTXSID3049463,NTP Mix75 CT1 62-GP,empty_smiles,
+DTXSID8049464,NTP Mix76 CT1 62-GP,empty_smiles,
+DTXSID3049465,NTP Mix77 CT1 62-GP,empty_smiles,
+DTXSID8049466,NTP Mix78 CT1 62-GP,empty_smiles,
+DTXSID3049467,NTP Mix79 CT1 62-GP,empty_smiles,
+DTXSID8049468,NTP Mix80 CT1 62-GP,empty_smiles,
+DTXSID3049469,NTP Mix81 CT1 62-GP,empty_smiles,
+DTXSID2049470,NTP Mix52 CT1 3-EQP,empty_smiles,
+DTXSID7049471,NTP Mix39 CT1 2-EQP,empty_smiles,
+DTXSID2049472,NTP Mix53 CT1 3-EQP,empty_smiles,
+DTXSID7049473,NTP Mix54 CT1 3-EQP,empty_smiles,
+DTXSID2049474,NTP Mix55 CT1 3-EQP,empty_smiles,
+DTXSID7049475,NTP Mix56 CT1 3-EQP,empty_smiles,
+DTXSID2049476,NTP Mix40 CT1 3-EQP,empty_smiles,
+DTXSID7049477,NTP Mix41 CT1 3-EQP,empty_smiles,
+DTXSID2049478,NTP Mix42 CT1 3-EQP,empty_smiles,
+DTXSID7049479,NTP Mix33 CT1 1-EQP,empty_smiles,
+DTXSID6049480,NTP Mix43 CT1 3-EQP,empty_smiles,
+DTXSID1049481,NTP Mix44 CT1 3-EQP,empty_smiles,
+DTXSID6049482,NTP Mix45 CT1 3-EQP,empty_smiles,
+DTXSID1049483,NTP Mix36 CT1 2-EQP,empty_smiles,
+DTXSID6049484,NTP Mix37 CT1 2-EQP,empty_smiles,
+DTXSID1049485,NTP Mix46 CT1 3-EQP,empty_smiles,
+DTXSID6049486,NTP Mix34 CT1 1-EQP,empty_smiles,
+DTXSID1049487,NTP Mix47 CT1 3-EQP,empty_smiles,
+DTXSID6049488,NTP Mix48 CT1 3-EQP,empty_smiles,
+DTXSID1049489,NTP Mix49 CT1 3-EQP,empty_smiles,
+DTXSID0049490,NTP Mix38 CT1 2-EQP,empty_smiles,
+DTXSID5049491,NTP Mix50 CT1 3-EQP,empty_smiles,
+DTXSID0049492,NTP Mix35 CT1 1-EQP,empty_smiles,
+DTXSID5049493,NTP Mix51 CT1 3-EQP,empty_smiles,
+DTXSID0049494,NTP Mix1 AR1 4-EQP,empty_smiles,
+DTXSID5049495,NTP Mix2 AR1 4-EQP,empty_smiles,
+DTXSID0049496,NTP Mix3 AR1 8-EQP,empty_smiles,
+DTXSID5049497,NTP Mix4 AR1 8-EQC,empty_smiles,
+DTXSID0049498,NTP Mix5 AR1 8-7EQP,empty_smiles,
+DTXSID5049499,NTP Mix6 AR1 8-7EQP,empty_smiles,
+DTXSID7049500,NTP Mix7 AR1 8-7EQP,empty_smiles,
+DTXSID2049501,NTP Mix8 AR1 8-7EQP,empty_smiles,
+DTXSID7049502,NTP Mix9 AR1 8-7EQP,empty_smiles,
+DTXSID2049503,NTP Mix10 AR1 8-7EQP,empty_smiles,
+DTXSID7049504,NTP Mix11 AR1 8-7EQP,empty_smiles,
+DTXSID2049505,NTP Mix12 AR1 8-7EQP,empty_smiles,
+DTXSID7049506,NTP Mix13 AR1 8-GP,empty_smiles,
+DTXSID2049507,NTP Mix14 AR1 8-GP,empty_smiles,
+DTXSID7049508,NTP Mix15 AR1 8-GP,empty_smiles,
+DTXSID2049509,NTP Mix16 AR1 8-GP,empty_smiles,
+DTXSID1049510,NTP Mix17 AR1 8-GP,empty_smiles,
+DTXSID6049511,NTP Mix18 AR1 8-GP,empty_smiles,
+DTXSID1049512,NTP Mix19 AR1 8-GP,empty_smiles,
+DTXSID6049513,NTP Mix20 AR1 8-GP,empty_smiles,
+DTXSID1049514,NTP Mix118 ER1 5-EQP,empty_smiles,
+DTXSID6049515,NTP Mix117 ER1 5-EQP,empty_smiles,
+DTXSID1049516,NTP Mix96 ER1 10-EQP,empty_smiles,
+DTXSID6049517,NTP Mix97 ER1 10-EQC,empty_smiles,
+DTXSID1049518,NTP Mix99 ER1 10-EQP,empty_smiles,
+DTXSID6049519,NTP Mix98 ER1 10-EQP,empty_smiles,
+DTXSID5049520,NTP Mix100 ER1 10-EQP,empty_smiles,
+DTXSID0049521,NTP Mix101 ER1 10-EQP,empty_smiles,
+DTXSID5049522,NTP Mix102 ER1 10-EQP,empty_smiles,
+DTXSID0049523,NTP Mix103 ER1 10-EQP,empty_smiles,
+DTXSID5049524,NTP Mix104 ER1 10-EQP,empty_smiles,
+DTXSID0049525,NTP Mix105 ER1 10-EQP,empty_smiles,
+DTXSID5049526,NTP Mix106 ER1 10-EQP,empty_smiles,
+DTXSID0049527,NTP Mix107 ER1 10-EQP,empty_smiles,
+DTXSID5049528,NTP Mix108 ER1 10-GP,empty_smiles,
+DTXSID0049529,NTP Mix109 ER1 10-GP,empty_smiles,
+DTXSID9049530,NTP Mix110 ER1 10-GP,empty_smiles,
+DTXSID4049531,NTP Mix111 ER1 10-GP,empty_smiles,
+DTXSID9049532,NTP Mix112 ER1 10-GP,empty_smiles,
+DTXSID4049533,NTP Mix113 ER1 10-GP,empty_smiles,
+DTXSID9049534,NTP Mix114 ER1 10-GP,empty_smiles,
+DTXSID4049535,NTP Mix115 ER1 10-GP,empty_smiles,
+DTXSID9049536,NTP Mix116 ER1 10-GP,empty_smiles,
+DTXSID4049537,NTP Mix82 ER AR1 18-EQP,empty_smiles,
+DTXSID9049538,NTP Mix83 ER AR1 18-EQC,empty_smiles,
+DTXSID4049539,NTP Mix84 ER AR1 18-EQP,empty_smiles,
+DTXSID3049540,NTP Mix85 ER AR1 18-EQP,empty_smiles,
+DTXSID8049541,NTP Mix86 ER AR1 18-EQP,empty_smiles,
+DTXSID3049542,NTP Mix87 ER AR1 18-EQP,empty_smiles,
+DTXSID8049543,NTP Mix88 ER AR1 18-GP,empty_smiles,
+DTXSID3049544,NTP Mix89 ER AR1 18-GP,empty_smiles,
+DTXSID8049545,NTP Mix90 ER AR1 18-GP,empty_smiles,
+DTXSID3049546,NTP Mix91 ER AR1 18-GP,empty_smiles,
+DTXSID8049547,NTP Mix92 ER AR1 18-GP,empty_smiles,
+DTXSID3049548,NTP Mix93 ER AR1 18-GP,empty_smiles,
+DTXSID8049549,NTP Mix94 ER AR1 18-GP,empty_smiles,
+DTXSID7049550,NTP Mix95 ER AR1 18-GP,empty_smiles,
+DTXSID2049551,NTP Mix21 AR2 2-EQP,empty_smiles,
+DTXSID7049552,NTP Mix22 AR2 2-EQP,empty_smiles,
+DTXSID2049553,NTP Mix23 AR2 2-EQP,empty_smiles,
+DTXSID7049554,NTP Mix24 AR2 2-EQP,empty_smiles,
+DTXSID2049555,NTP Mix25 AR2 2-EQP,empty_smiles,
+DTXSID7049556,NTP Mix26 AR2 2-EQP,empty_smiles,
+DTXSID2049557,NTP Mix27 AR2 2-EQP,empty_smiles,
+DTXSID7049558,NTP Mix32 AR2 7-EQP,empty_smiles,
+DTXSID2049559,NTP Mix28 AR2 3-EQP,empty_smiles,
+DTXSID1049560,NTP Mix29 AR2 5-EQP,empty_smiles,
+DTXSID6049561,NTP Mix31 AR2 7-EQC,empty_smiles,
+DTXSID1049562,NTP Mix30 AR2 7-EQP,empty_smiles,
+DTXSID6051695,Europium(III) chloride hexahydrate,inorganic_no_carbon,
+DTXSID0051738,Dysprosium(III) chloride hexahydrate,inorganic_no_carbon,
+DTXSID1051808,C.I. Basic Green 4 oxalate (1:x),empty_smiles,
+DTXSID1051850,Scandium chloride hexahydrate,inorganic_no_carbon,
+DTXSID7052866,cis-Permethrin in cyclohexane,empty_smiles,
+DTXSID9052890,AKIA112012,empty_smiles,
+DTXSID4052891,ZRMN-120612,empty_smiles,
+DTXSID9052892,SPCO-121212,empty_smiles,
+DTXSID4052893,SCGA-041713,empty_smiles,
+DTXSID9052894,RFPR-032713,empty_smiles,
+DTXSID4052895,C111HS-041013,empty_smiles,
+DTXSID9052896,PSNJ-121112,empty_smiles,
+DTXSID4052897,IRIA-052113,empty_smiles,
+DTXSID9052898,FAR-UP,empty_smiles,
+DTXSID4052899,US-WWTP,empty_smiles,
+DTXSID6052900,MX-WWTP,empty_smiles,
+DTXSID1052901,DS-WWTP,empty_smiles,
+DTXSID6052902,EF-WWTP,empty_smiles,
+DTXSID1052903,Extraction blank,empty_smiles,
+DTXSID6052904,Sappi 2013_WLSSD-EF,empty_smiles,
+DTXSID1052905,Sappi 2013_Proximal,empty_smiles,
+DTXSID6052906,DSH fall 2012_Prox,empty_smiles,
+DTXSID1052907,DSH fall 2012_Dist,empty_smiles,
+DTXSID6052908,DSH fall 2012_Rice,empty_smiles,
+DTXSID1052909,DSH fall 2012_Erie,empty_smiles,
+DTXSID0052910,DSH spr 2012_Prox,empty_smiles,
+DTXSID5052911,DSH spr 2012_LSW,empty_smiles,
+DTXSID0052912,DSH spr 2012_SMTP,empty_smiles,
+DTXSID5052913,DSH spr 2012_Knife,empty_smiles,
+DTXSID3057727,dl-Furfenorex,empty_smiles,
+DTXSID7057814,Ethyl eicosapentaenoate,empty_smiles,
+DTXSID9057890,Anti-OP-18/Stathmin antibody produced in rabbit,empty_smiles,
+DTXSID1057907,MED_ChemMix_7EQC,empty_smiles,
+DTXSID6057908,MED_ChemMix_7EnvC,empty_smiles,
+DTXSID1057909,MED_IVEDCMix_4EQC,empty_smiles,
+DTXSID0057910,MED_IVEDCMix_4EnvC,empty_smiles,
+DTXSID5057911,MED_EnvEDCMix_9EQC,empty_smiles,
+DTXSID0057912,MED_EnvEDCMix_9EnvC,empty_smiles,
+DTXSID5057913,MED_ChemSTMix_5EQC,empty_smiles,
+DTXSID0057914,MED_ChemSTMix_5EnvC,empty_smiles,
+DTXSID5057915,MED_ERAntagonMix_4EQC,empty_smiles,
+DTXSID0057916,MED_ERAgonMix_4EQC,empty_smiles,
+DTXSID5057917,MED_ERBothMix_8EQC,empty_smiles,
+DTXSID90274132,DOWANOL DiPPH Glycol Ether,empty_smiles,
+DTXSID60858867,EPAMED_Water_Set2-1,empty_smiles,
+DTXSID20858868,EPAMED_Water_Set2-2,empty_smiles,
+DTXSID80858869,EPAMED_Water_Set2-3,empty_smiles,
+DTXSID90858870,EPAMED_Water_Set2-4,empty_smiles,
+DTXSID50858871,EPAMED_Water_Set2-5,empty_smiles,
+DTXSID10858872,EPAMED_Water_Set2-6,empty_smiles,
+DTXSID70858873,EPAMED_Water_Set2-7,empty_smiles,
+DTXSID30858874,EPAMED_Water_Set2-8,empty_smiles,
+DTXSID90858875,EPAMED_Water_Set2-9,empty_smiles,
+DTXSID50858876,EPAMED_Water_Set2-10,empty_smiles,
+DTXSID10858877,EPAMED_Water_Set2-11,empty_smiles,
+DTXSID70858878,EPAMED_Water_Set2-12,empty_smiles,
+DTXSID30858879,EPAMED_Water_Set2-13,empty_smiles,
+DTXSID40858880,EPAMED_Water_Set2-14,empty_smiles,
+DTXSID00858881,EPAMED_Water_Set2-15,empty_smiles,
+DTXSID60858882,EPAMED_Water_Set2-16,empty_smiles,
+DTXSID20858883,EPAMED_Water_Set2-17,empty_smiles,
+DTXSID80858884,EPAMED_Water_Set2-18,empty_smiles,
+DTXSID40858885,EPAMED_Water_Set2-19,empty_smiles,
+DTXSID00858886,EPAMED_Water_Set2-20,empty_smiles,
+DTXSID60858887,EPAMED_Water_Set2-21,empty_smiles,
+DTXSID20858888,EPAMED_Water_Set2-22,empty_smiles,
+DTXSID80858889,EPAMED_Water_Set2-23,empty_smiles,
+DTXSID90858890,EPAMED_Water_Set2-24,empty_smiles,
+DTXSID50858891,EPAMED_Water_Set2-25,empty_smiles,
+DTXSID10858892,EPAMED_Water_Set2-26,empty_smiles,
+DTXSID70858893,EPAMED_Water_Set2-27,empty_smiles,
+DTXSID30858894,EPAMED_Water_Set2-28,empty_smiles,
+DTXSID90858895,EPAMED_Water_Set2-29,empty_smiles,
+DTXSID50858896,EPAMED_Water_Set2-30,empty_smiles,
+DTXSID10858897,EPAMED_Water_Set2-31,empty_smiles,
+DTXSID70858898,EPAMED_Water_Set2-32,empty_smiles,
+DTXSID30858899,EPAMED_Water_Set2-33,empty_smiles,
+DTXSID80858900,EPAMED_Water_Set2-34,empty_smiles,
+DTXSID40858901,EPAMED_Water_Set2-35,empty_smiles,
+DTXSID00858902,EPAMED_Water_Set2-36,empty_smiles,
+DTXSID60858903,EPAMED_Water_Set2-37,empty_smiles,
+DTXSID20858904,EPAMED_Water_Set2-38,empty_smiles,
+DTXSID80858905,EPAMED_Water_Set2-39,empty_smiles,
+DTXSID40858906,EPAMED_Water_Set2-40,empty_smiles,
+DTXSID00858907,EPAMED_Water_Set2-41,empty_smiles,
+DTXSID60858908,EPAMED_Water_Set2-42,empty_smiles,
+DTXSID20858909,EPAMED_Water_Set2-43,empty_smiles,
+DTXSID30858910,EPAMED_Water_Set2-44,empty_smiles,
+DTXSID90858911,EPAMED_Water_Set2-45,empty_smiles,
+DTXSID50858912,EPAMED_Water_Set2-46,empty_smiles,
+DTXSID10858913,EPAMED_Water_Set2-47,empty_smiles,
+DTXSID70858914,EPAMED_Water_Set2-48,empty_smiles,
+DTXSID30858915,EPAMED_Water_Set2-49,empty_smiles,
+DTXSID90858916,EPAMED_Water_Set2-50,empty_smiles,
+DTXSID50858917,EPAMED_Water_Set2-51,empty_smiles,
+DTXSID10858918,EPAMED_Water_Set2-52,empty_smiles,
+DTXSID70858919,EPAMED_Water_Set2-53,empty_smiles,
+DTXSID80858920,EPAMED_Water_Set2-54,empty_smiles,
+DTXSID40858921,EPAMED_Water_Set2-55,empty_smiles,
+DTXSID00858922,EPAMED_Water_Set2-56,empty_smiles,
+DTXSID20872706,EPAMED_Water_Set3-1,empty_smiles,
+DTXSID80872707,EPAMED_Water_Set3-2,empty_smiles,
+DTXSID40872708,EPAMED_Water_Set3-3,empty_smiles,
+DTXSID00872709,EPAMED_Water_Set3-4,empty_smiles,
+DTXSID10872710,EPAMED_Water_Set3-5,empty_smiles,
+DTXSID70872711,EPAMED_Water_Set3-6,empty_smiles,
+DTXSID30872712,EPAMED_Water_Set3-7,empty_smiles,
+DTXSID90872713,EPAMED_Water_Set3-8,empty_smiles,
+DTXSID50872714,EPAMED_Water_Set3-9,empty_smiles,
+DTXSID10872715,EPAMED_Water_Set3-10,empty_smiles,
+DTXSID70872716,EPAMED_Water_Set3-11,empty_smiles,
+DTXSID30872717,EPAMED_Water_Set3-12,empty_smiles,
+DTXSID90872718,EPAMED_Water_Set3-13,empty_smiles,
+DTXSID50872719,EPAMED_Water_Set3-14,empty_smiles,
+DTXSID60872720,EPAMED_Water_Set3-15,empty_smiles,
+DTXSID20872721,EPAMED_Water_Set3-16,empty_smiles,
+DTXSID80872722,EPAMED_Water_Set3-17,empty_smiles,
+DTXSID40872723,EPAMED_Water_Set3-18,empty_smiles,
+DTXSID00872724,EPAMED_Water_Set3-19,empty_smiles,
+DTXSID60872725,EPAMED_Water_Set3-20,empty_smiles,
+DTXSID20872726,EPAMED_Water_Set3-21,empty_smiles,
+DTXSID80872727,EPAMED_Water_Set3-22,empty_smiles,
+DTXSID40872728,EPAMED_Water_Set3-23,empty_smiles,
+DTXSID00872729,EPAMED_Water_Set3-24,empty_smiles,
+DTXSID10872730,EPAMED_Water_Set3-25,empty_smiles,
+DTXSID70872731,EPAMED_Water_Set3-26,empty_smiles,
+DTXSID30872732,EPAMED_Water_Set3-27,empty_smiles,
+DTXSID90872733,EPAMED_Water_Set3-28,empty_smiles,
+DTXSID50872734,EPAMED_Water_Set3-29,empty_smiles,
+DTXSID10872735,EPAMED_Water_Set3-30,empty_smiles,
+DTXSID70872736,EPAMED_Water_Set3-31,empty_smiles,
+DTXSID30872737,EPAMED_Water_Set3-32,empty_smiles,
+DTXSID90872738,EPAMED_Water_Set3-33,empty_smiles,
+DTXSID50872739,EPAMED_Water_Set3-34,empty_smiles,
+DTXSID60872740,EPAMED_Water_Set3-35,empty_smiles,
+DTXSID20872741,EPAMED_Water_Set3-36,empty_smiles,
+DTXSID80872742,EPAMED_Water_Set3-37,empty_smiles,
+DTXSID40872743,EPAMED_Water_Set3-38,empty_smiles,
+DTXSID00872744,EPAMED_Water_Set3-39,empty_smiles,
+DTXSID60872745,EPAMED_Water_Set3-40,empty_smiles,
+DTXSID20872746,EPAMED_Water_Set3-41,empty_smiles,
+DTXSID80872747,EPAMED_Water_Set3-42,empty_smiles,
+DTXSID40872748,EPAMED_Water_Set3-43,empty_smiles,
+DTXSID00872749,EPAMED_Water_Set3-44,empty_smiles,
+DTXSID10872750,EPAMED_Water_Set3-45,empty_smiles,
+DTXSID70872751,EPAMED_Water_Set3-46,empty_smiles,
+DTXSID30872752,EPAMED_Water_Set3-47,empty_smiles,
+DTXSID90872753,EPAMED_Water_Set3-48,empty_smiles,
+DTXSID50872754,EPAMED_Water_Set3-49,empty_smiles,
+DTXSID10872755,EPAMED_Water_Set3-50,empty_smiles,
+DTXSID70872756,EPAMED_Water_Set3-51,empty_smiles,
+DTXSID30872757,EPAMED_Water_Set3-52,empty_smiles,
+DTXSID00903825,EPAMED_Water_Set4-1,empty_smiles,
+DTXSID60903826,EPAMED_Water_Set4-2,empty_smiles,
+DTXSID20903827,EPAMED_Water_Set4-3,empty_smiles,
+DTXSID80903828,EPAMED_Water_Set4-4,empty_smiles,
+DTXSID40903829,EPAMED_Water_Set4-5,empty_smiles,
+DTXSID50903830,EPAMED_Water_Set4-6,empty_smiles,
+DTXSID10903831,EPAMED_Water_Set4-7,empty_smiles,
+DTXSID70903832,EPAMED_Water_Set4-8,empty_smiles,
+DTXSID30903833,EPAMED_Water_Set4-9,empty_smiles,
+DTXSID90903834,EPAMED_Water_Set4-10,empty_smiles,
+DTXSID50903835,EPAMED_Water_Set4-11,empty_smiles,
+DTXSID10903836,EPAMED_Water_Set4-12,empty_smiles,
+DTXSID70903837,EPAMED_Water_Set4-13,empty_smiles,
+DTXSID30903838,EPAMED_Water_Set4-14,empty_smiles,
+DTXSID90903839,EPAMED_Water_Set4-15,empty_smiles,
+DTXSID00903840,EPAMED_Water_Set4-16,empty_smiles,
+DTXSID60903841,EPAMED_Water_Set4-17,empty_smiles,
+DTXSID20903842,EPAMED_Water_Set4-18,empty_smiles,
+DTXSID80903843,EPAMED_Water_Set4-19,empty_smiles,
+DTXSID40903844,EPAMED_Water_Set4-20,empty_smiles,
+DTXSID00903845,EPAMED_Water_Set4-21,empty_smiles,
+DTXSID60903846,EPAMED_Water_Set4-22,empty_smiles,
+DTXSID20903847,EPAMED_Water_Set4-23,empty_smiles,
+DTXSID80903848,EPAMED_Water_Set4-24,empty_smiles,
+DTXSID40903849,EPAMED_Water_Set4-25,empty_smiles,
+DTXSID50903850,EPAMED_Water_Set4-26,empty_smiles,
+DTXSID10903851,EPAMED_Water_Set4-27,empty_smiles,
+DTXSID70903852,EPAMED_Water_Set4-28,empty_smiles,
+DTXSID30903853,EPAMED_Water_Set4-29,empty_smiles,
+DTXSID90903854,EPAMED_Water_Set4-30,empty_smiles,
+DTXSID50903855,EPAMED_Water_Set4-41,empty_smiles,
+DTXSID10903856,EPAMED_Water_Set4-42,empty_smiles,
+DTXSID70903857,EPAMED_Water_Set4-43,empty_smiles,
+DTXSID30903858,EPAMED_Water_Set4-44,empty_smiles,
+DTXSID90903859,EPAMED_Water_Set4-45,empty_smiles,
+DTXSID00903860,EPAMED_Water_Set5-1,empty_smiles,
+DTXSID60903861,EPAMED_Water_Set5-2,empty_smiles,
+DTXSID20903862,EPAMED_Water_Set5-3,empty_smiles,
+DTXSID80903863,EPAMED_Water_Set5-4,empty_smiles,
+DTXSID40903864,EPAMED_Water_Set5-5,empty_smiles,
+DTXSID00903865,EPAMED_Water_Set5-6,empty_smiles,
+DTXSID60903866,EPAMED_Water_Set5-7,empty_smiles,
+DTXSID20903867,EPAMED_Water_Set5-8,empty_smiles,
+DTXSID80903868,EPAMED_Water_Set5-9,empty_smiles,
+DTXSID40903869,EPAMED_Water_Set5-10,empty_smiles,
+DTXSID50903870,EPAMED_Water_Set5-11,empty_smiles,
+DTXSID10903871,EPAMED_Water_Set5-12,empty_smiles,
+DTXSID70903872,EPAMED_Water_Set5-13,empty_smiles,
+DTXSID30903873,EPAMED_Water_Set5-14,empty_smiles,
+DTXSID90903874,EPAMED_Water_Set5-15,empty_smiles,
+DTXSID50903875,EPAMED_Water_Set5-16,empty_smiles,
+DTXSID10903876,EPAMED_Water_Set5-17,empty_smiles,
+DTXSID70903877,EPAMED_Water_Set5-18,empty_smiles,
+DTXSID30903878,EPAMED_Water_Set5-19,empty_smiles,
+DTXSID90903879,EPAMED_Water_Set5-20,empty_smiles,
+DTXSID00903880,EPAMED_Water_Set5-21,empty_smiles,
+DTXSID60903881,EPAMED_Water_Set5-22,empty_smiles,
+DTXSID20903882,EPAMED_Water_Set5-23,empty_smiles,
+DTXSID80903883,EPAMED_Water_Set5-24,empty_smiles,
+DTXSID40903884,EPAMED_Water_Set5-25,empty_smiles,
+DTXSID00903885,EPAMED_Water_Set5-26,empty_smiles,
+DTXSID60903886,EPAMED_Water_Set5-27,empty_smiles,
+DTXSID20903887,EPAMED_Water_Set5-28,empty_smiles,
+DTXSID80903888,EPAMED_Water_Set5-29,empty_smiles,
+DTXSID40903889,EPAMED_Water_Set5-30,empty_smiles,
+DTXSID50903890,EPAMED_Water_Set5-31,empty_smiles,
+DTXSID10903891,EPAMED_Water_Set5-32,empty_smiles,
+DTXSID70903892,EPAMED_Water_Set5-33,empty_smiles,
+DTXSID30903893,EPAMED_Water_Set5-34,empty_smiles,
+DTXSID90903894,EPAMED_Water_Set5-35,empty_smiles,
+DTXSID50903895,EPAMED_Water_Set5-36,empty_smiles,
+DTXSID10903896,EPAMED_Water_Set5-37,empty_smiles,
+DTXSID401339551,AFFF Solberg Unfractionated (1X),empty_smiles,
+DTXSID801339553,AFFF Solberg F1 (1X),empty_smiles,
+DTXSID501339554,AFFF Solberg F2 (1X),empty_smiles,
+DTXSID201339555,AFFF Solberg F3 (1X),empty_smiles,
+DTXSID901339556,AFFF Solberg F1 (0.33X) + F2 (0.33X) + F3 (0.33X),empty_smiles,
+DTXSID601339557,AFFF Solberg F1 (0.5X) +  F2 (0.5X),empty_smiles,
+DTXSID301339558,AFFF Solberg F1 (0.5X) + F3 (0.5X),empty_smiles,
+DTXSID001339559,AFFF Solberg F2(0.5X) + F3(0.5X),empty_smiles,
+DTXSID301339560,AFFF Solberg H20 blank,empty_smiles,
+DTXSID201339593,AFFF Solberg F1 blank,empty_smiles,
+DTXSID601339595,AFFF Solberg F2 blank,empty_smiles,
+DTXSID701339598,AFFF Solberg F3 blank,empty_smiles,
+DTXSID201351484,Propylparaben; 2-(Phenylmethylene)octanal (33:67),empty_smiles,
+DTXSID901351485,Propylparaben; 2-(Phenylmethylene)octanal (67:33),empty_smiles,
+DTXSID101351786,Propylparaben; Butylated hydroxytoluene (33:67),empty_smiles,
+DTXSID801351787,Propylparaben; Butylated hydroxytoluene (67:33),empty_smiles,
+DTXSID501351788,2-(Phenylmethylene)octanal; Butylated hydroxytoluene (33:67),empty_smiles,
+DTXSID201351789,2-(Phenylmethylene)octanal; Butylated hydroxytoluene (67:33),empty_smiles,
+DTXSID501351790,Citric acid; Butylated hydroxytoluene (33:67),empty_smiles,
+DTXSID201351791,Citric acid; Butylated hydroxytoluene (67:33),empty_smiles,
+DTXSID601351793,Dodecanoic acid; Propylparaben (67:33),empty_smiles,
+DTXSID301351794,Dodecanoic acid; Propylparaben (33:67),empty_smiles,
+DTXSID001351795,1-Phenyl-3-methyl-5-pyrazolone; Propylparaben (33:67),empty_smiles,
+DTXSID701351796,1-Phenyl-3-methyl-5-pyrazolone; Propylparaben (67:33),empty_smiles,
+DTXSID101351798,Propylparaben; Bisphenol A (50:50),empty_smiles,
+DTXSID801351799,Propylparaben and Triclosan (50:50),empty_smiles,
+DTXSID301351801,Propylparaben; Rifampicin (50:50),empty_smiles,
+DTXSID001351802,2-(Phenylmethylene)octanal; Bisphenol A (50:50),empty_smiles,
+DTXSID701351803,2-(Phenylmethylene)octanal and Triclosan (50:50),empty_smiles,
+DTXSID401351804,2-(Phenylmethylene)octanal; Pioglitazone hydrochloride (50:50),empty_smiles,
+DTXSID101351805,2-(Phenylmethylene)octanal; Bexarotene (50:50),empty_smiles,
+DTXSID801351806,Citric acid; Bexarotene (50:50),empty_smiles,
+DTXSID501351807,Butylated hydroxytoluene; Bexarotene (50:50),empty_smiles,
+DTXSID0020072,4-Biphenylamine hydrochloride,duplicate_canonical_structure,DTXSID5020071
+DTXSID9020087,(E)-Anethole,duplicate_canonical_structure,DTXSID4020086
+DTXSID3020091,Aniline hydrochloride,duplicate_canonical_structure,DTXSID8020090
+DTXSID5020106,L-Ascorbic acid,duplicate_canonical_structure,DTXSID0020105
+DTXSID7020138,Benzidine dihydrochloride,duplicate_canonical_structure,DTXSID2020137
+DTXSID6020143,Benzoic acid,duplicate_canonical_structure,DTXSID1020140
+DTXSID4020296,4-Chloroaniline hydrochloride,duplicate_canonical_structure,DTXSID9020295
+DTXSID3020332,Citric acid,duplicate_canonical_structure,DTXSID5020079
+DTXSID1020433,"3,3'-Dichlorobenzidine dihydrochloride",duplicate_canonical_structure,DTXSID6020432
+DTXSID6020513,"Dimethyldithiocarbamic acid, dimethylamine",duplicate_canonical_structure,DTXSID2020345
+DTXSID6020561,Endrin,duplicate_canonical_structure,DTXSID9020453
+DTXSID5020570,Sodium erythorbate,duplicate_canonical_structure,DTXSID0020105
+DTXSID8020624,Ferbam,duplicate_canonical_structure,DTXSID2020345
+DTXSID7020685,beta-Hexachlorocyclohexane,duplicate_canonical_structure,DTXSID2020684
+DTXSID2020686,Lindane,duplicate_canonical_structure,DTXSID2020684
+DTXSID7020687,"1,2,3,4,5,6-Hexachlorocyclohexane",duplicate_canonical_structure,DTXSID2020684
+DTXSID8020709,4-Hydrazinobenzoic acid hydrochloride,duplicate_canonical_structure,DTXSID3020708
+DTXSID9020794,Maneb,duplicate_canonical_structure,DTXSID5020603
+DTXSID4020828,4-Methoxyphenol,duplicate_canonical_structure,DTXSID7020215
+DTXSID4021139,"1,3-Benzenediamine dihydrochloride",duplicate_canonical_structure,DTXSID4021137
+DTXSID8021141,"1,4-Benzenediamine dihydrochloride",duplicate_canonical_structure,DTXSID9021138
+DTXSID3021148,Phenylhydrazine hydrochloride,duplicate_canonical_structure,DTXSID8021147
+DTXSID3021190,Procarbazine hydrochloride,duplicate_canonical_structure,DTXSID4021189
+DTXSID9021219,Quercetin dihydrate,duplicate_canonical_structure,DTXSID4021218
+DTXSID5021253,Sodium saccharin,duplicate_canonical_structure,DTXSID5021251
+DTXSID0021331,Tetrakis(hydroxymethyl)phosphonium sulfate,duplicate_canonical_structure,DTXSID5021330
+DTXSID9021342,Bithionol,duplicate_canonical_structure,DTXSID8021270
+DTXSID5021419,L-Tryptophan,duplicate_canonical_structure,DTXSID0021418
+DTXSID2021446,Xylenes,duplicate_canonical_structure,DTXSID7021360
+DTXSID5021461,Zinc(II) acetate dihydrate,duplicate_canonical_structure,DTXSID4020327
+DTXSID0021462,Zinc dibutyldithiocarbamate,duplicate_canonical_structure,DTXSID2020927
+DTXSID5021463,Zinc diethyldithiocarbamate,duplicate_canonical_structure,DTXSID3021275
+DTXSID3021518,Fumaric acid,duplicate_canonical_structure,DTXSID8021517
+DTXSID8021725,Nicotine sulfate (2:1),duplicate_canonical_structure,DTXSID1020930
+DTXSID6021872,4-Methylbenzenamine,duplicate_canonical_structure,DTXSID2021365
+DTXSID7021992,Sodium saccharin hydrate,duplicate_canonical_structure,DTXSID5021251
+DTXSID1022138,trans-Hex-3-en-1-ol,duplicate_canonical_structure,DTXSID6022137
+DTXSID1022180,"(1R,2S,5R)-(-)-Menthol",duplicate_canonical_structure,DTXSID1020805
+DTXSID0022307,Chloromethyl styrene,duplicate_canonical_structure,DTXSID0020153
+DTXSID8022371,Testosterone,duplicate_canonical_structure,DTXSID8022329
+DTXSID8022377,17alpha-Estradiol,duplicate_canonical_structure,DTXSID0020573
+DTXSID6022420,Dopamine,duplicate_canonical_structure,DTXSID7020550
+DTXSID4022521,Diisononyl phthalate,duplicate_canonical_structure,DTXSID1021956
+DTXSID4022602,Ampicillin,duplicate_canonical_structure,DTXSID9020083
+DTXSID5022643,Barbital,duplicate_canonical_structure,DTXSID3020128
+DTXSID3022667,Betamethasone,duplicate_canonical_structure,DTXSID3020384
+DTXSID1022687,Bromocriptine,duplicate_canonical_structure,DTXSID6020197
+DTXSID1022843,Clomiphene,duplicate_canonical_structure,DTXSID8020337
+DTXSID3022902,Dexamethasone dipropionate,duplicate_canonical_structure,DTXSID2022672
+DTXSID3022904,Dexamethasone valerate,duplicate_canonical_structure,DTXSID7022673
+DTXSID4022949,Diphenhydramine,duplicate_canonical_structure,DTXSID4020537
+DTXSID3022956,Sodium diethyldithiocarbamate,duplicate_canonical_structure,DTXSID3021275
+DTXSID5022980,Emetine,duplicate_canonical_structure,DTXSID7020558
+DTXSID8023054,Flecainide,duplicate_canonical_structure,DTXSID8020626
+DTXSID7023067,Fluoxetine,duplicate_canonical_structure,DTXSID7020635
+DTXSID0023088,D-​Galactose,duplicate_canonical_structure,DTXSID7022910
+DTXSID4023177,13-cis Retinoic acid,duplicate_canonical_structure,DTXSID7021239
+DTXSID7023192,Lactic acid,duplicate_canonical_structure,DTXSID0020236
+DTXSID5023295,(-)-Methyldopa,duplicate_canonical_structure,DTXSID5020863
+DTXSID4023412,Oxytetracycline dihydrate,duplicate_canonical_structure,DTXSID5021097
+DTXSID0023458,Phenoxybenzamine,duplicate_canonical_structure,DTXSID0021127
+DTXSID7023518,Promethazine,duplicate_canonical_structure,DTXSID3021192
+DTXSID9023542,Pyrilamine,duplicate_canonical_structure,DTXSID4021216
+DTXSID5023588,D-Glucitol,duplicate_canonical_structure,DTXSID1023235
+DTXSID0023589,Sotalol,duplicate_canonical_structure,DTXSID8021278
+DTXSID6023600,Strychnine,duplicate_canonical_structure,DTXSID8021721
+DTXSID7023645,Tetracycline,duplicate_canonical_structure,DTXSID6021321
+DTXSID3023718,Triprolidine,duplicate_canonical_structure,DTXSID0021410
+DTXSID2023775,Diphenylhydantoin sodium,duplicate_canonical_structure,DTXSID8020541
+DTXSID7023853,Acifluorfen sodium,duplicate_canonical_structure,DTXSID0020022
+DTXSID5023877,2-Anisidine,duplicate_canonical_structure,DTXSID8020092
+DTXSID1023996,Cyclohexylamine,duplicate_canonical_structure,DTXSID0020361
+DTXSID5024001,Dalapon-sodium,duplicate_canonical_structure,DTXSID2021575
+DTXSID7024031,"(E)-1,2-Dichloroethylene",duplicate_canonical_structure,DTXSID2024030
+DTXSID5024059,"3,3'-Dimethylbenzidine",duplicate_canonical_structure,DTXSID6020511
+DTXSID5024134,delta-Hexachlorocyclohexane,duplicate_canonical_structure,DTXSID2020684
+DTXSID6024331,Thallium(I) acetate,duplicate_canonical_structure,DTXSID4020327
+DTXSID3024364,Cresol,duplicate_canonical_structure,DTXSID5021124
+DTXSID5024394,Acetic acid,duplicate_canonical_structure,DTXSID4020327
+DTXSID7024532,4-Methoxybenzenamine,duplicate_canonical_structure,DTXSID3020093
+DTXSID6024701,tert-Butylphenyl diphenyl phosphate,duplicate_canonical_structure,DTXSID1021952
+DTXSID4024721,D-Camphor,duplicate_canonical_structure,DTXSID8022036
+DTXSID9024726,Carbamide peroxide,duplicate_canonical_structure,DTXSID4021426
+DTXSID7024827,Chlorpromazine hydrochloride,duplicate_canonical_structure,DTXSID0022808
+DTXSID1024835,3-Phenylprop-2-enal,duplicate_canonical_structure,DTXSID6024834
+DTXSID4024858,"m,p-Cresol mixture",duplicate_canonical_structure,DTXSID5021124
+DTXSID3024861,Cresyl diphenyl phosphate,duplicate_canonical_structure,DTXSID1021952
+DTXSID5024891,Cytarabine hydrochloride,duplicate_canonical_structure,DTXSID3022877
+DTXSID0024896,"(2,4-Dichlorophenoxy)acetic acid dimethylamine",duplicate_canonical_structure,DTXSID0020442
+DTXSID8024991,"1,2-Dichloroethylene",duplicate_canonical_structure,DTXSID2024030
+DTXSID3024994,Sodium dichloroisocyanurate,duplicate_canonical_structure,DTXSID8024993
+DTXSID9025087,Dimenhydrinate,duplicate_canonical_structure,DTXSID4020537
+DTXSID3025091,C.I. Disperse Black 6,duplicate_canonical_structure,DTXSID1020485
+DTXSID7025130,Dimethylnaphthalene,duplicate_canonical_structure,DTXSID8020913
+DTXSID2025216,Divinylbenzene,duplicate_canonical_structure,DTXSID2021284
+DTXSID6025436,8-Hydroxyquinoline sulfate,duplicate_canonical_structure,DTXSID5020730
+DTXSID9025451,"4-(2,6,6-Trimethyl-cyclohex-1-enyl)-but-3-en-2-one",duplicate_canonical_structure,DTXSID4021769
+DTXSID6025486,Isoproterenol hydrochloride,duplicate_canonical_structure,DTXSID4023175
+DTXSID6025513,Malachite green oxalate,duplicate_canonical_structure,DTXSID1025512
+DTXSID0025600,Methylene Blue trihydrate,duplicate_canonical_structure,DTXSID0023296
+DTXSID3025881,"1,2-Phenylenediamine",duplicate_canonical_structure,DTXSID3021140
+DTXSID7025895,"N-Phenyl-1,4-benzenediamine",duplicate_canonical_structure,DTXSID9021132
+DTXSID8025961,Propionic acid,duplicate_canonical_structure,DTXSID7021996
+DTXSID5025998,Retinal,duplicate_canonical_structure,DTXSID0025997
+DTXSID1026035,Sodium 2-mercaptobenzothiolate,duplicate_canonical_structure,DTXSID1020807
+DTXSID4026050,trans-Stilbene,duplicate_canonical_structure,DTXSID5026049
+DTXSID1026164,2-Methylaniline,duplicate_canonical_structure,DTXSID7021364
+DTXSID0026171,Tolyltriazole,duplicate_canonical_structure,DTXSID6020147
+DTXSID5026178,Potassium dichloroisocyanurate,duplicate_canonical_structure,DTXSID8024993
+DTXSID9026219,Triethanolamine stearate,duplicate_canonical_structure,DTXSID8021642
+DTXSID9026267,Trixylyl phosphate,duplicate_canonical_structure,DTXSID1021952
+DTXSID6026292,Vinyltoluene,duplicate_canonical_structure,DTXSID2021284
+DTXSID3026302,Sodium xylenesulfonate,duplicate_canonical_structure,DTXSID9024568
+DTXSID8026305,"2,4-Dimethylaniline",duplicate_canonical_structure,DTXSID2021448
+DTXSID7026368,Salicylic acid,duplicate_canonical_structure,DTXSID5021708
+DTXSID6026373,Cobalt(II) acetate,duplicate_canonical_structure,DTXSID4020327
+DTXSID6026537,Isoascorbic acid,duplicate_canonical_structure,DTXSID0020105
+DTXSID3026728,(Z)-Nerol,duplicate_canonical_structure,DTXSID8026727
+DTXSID1026792,3-Methylaniline,duplicate_canonical_structure,DTXSID2021363
+DTXSID7027043,Potassium acetate,duplicate_canonical_structure,DTXSID4020327
+DTXSID2027044,Sodium acetate,duplicate_canonical_structure,DTXSID4020327
+DTXSID6027050,Sodium dimethyldithiocarbamate,duplicate_canonical_structure,DTXSID2020345
+DTXSID5027063,Calcium 2-ethylhexanoate,duplicate_canonical_structure,DTXSID9025293
+DTXSID4027072,Sodium phenolate,duplicate_canonical_structure,DTXSID5021124
+DTXSID4027076,Dodecyl sulfate triethanolamine salt,duplicate_canonical_structure,DTXSID1026031
+DTXSID7027097,Magnesium acetate,duplicate_canonical_structure,DTXSID4020327
+DTXSID8027163,N-Methylmethanamine hydrochloride,duplicate_canonical_structure,DTXSID5024057
+DTXSID7027170,Sodium D-gluconate,duplicate_canonical_structure,DTXSID8027169
+DTXSID6027214,"Ethanedioic acid, calcium salt",duplicate_canonical_structure,DTXSID0025816
+DTXSID1027219,Potassium benzoate,duplicate_canonical_structure,DTXSID1020140
+DTXSID5027229,Trimethylamine hydrochloride,duplicate_canonical_structure,DTXSID2026238
+DTXSID7027253,(2E)-2-Butenedioic acid diethyl ester,duplicate_canonical_structure,DTXSID8020464
+DTXSID6027262,Pyridine hydrochloride,duplicate_canonical_structure,DTXSID9021924
+DTXSID5027279,Manganese(II) acetate,duplicate_canonical_structure,DTXSID4020327
+DTXSID9027310,"1,4-Dichloro-2-butene",duplicate_canonical_structure,DTXSID6020434
+DTXSID3027320,Sodium 4-nitrophenolate,duplicate_canonical_structure,DTXSID0021834
+DTXSID1027342,Sodium benzenethiolate,duplicate_canonical_structure,DTXSID7026811
+DTXSID5027358,"Potassium 1,3-dioxo-1,3-dihydroisoindol-2-ide",duplicate_canonical_structure,DTXSID3026514
+DTXSID8027377,Dimethylaniline,duplicate_canonical_structure,DTXSID8020090
+DTXSID2027381,"1,2-Propylene glycol monostearate",duplicate_canonical_structure,DTXSID5026881
+DTXSID1027390,Phenolsulfonic acid,duplicate_canonical_structure,DTXSID9024568
+DTXSID3027405,"(2Z)-1,4-Dichlorobut-2-ene",duplicate_canonical_structure,DTXSID6020434
+DTXSID2027462,Ammonium dodecyl sulfate,duplicate_canonical_structure,DTXSID1026031
+DTXSID4027496,"2,4-D sodium salt",duplicate_canonical_structure,DTXSID0020442
+DTXSID4027525,Potassium 2-ethylhexanoate,duplicate_canonical_structure,DTXSID9025293
+DTXSID1027550,Sodium chloroacetate,duplicate_canonical_structure,DTXSID4020901
+DTXSID1027556,Calcium propionate,duplicate_canonical_structure,DTXSID7021996
+DTXSID2027599,Ammonium thioglycolate,duplicate_canonical_structure,DTXSID8026141
+DTXSID1027768,Zinc acrylate,duplicate_canonical_structure,DTXSID4027652
+DTXSID5027770,2-Acrylamido-2-methyl-1-propanesulfonic acid,duplicate_canonical_structure,DTXSID2027591
+DTXSID5027774,Ethylenediaminetetraacetic acid ferric sodium salt,duplicate_canonical_structure,DTXSID6022977
+DTXSID7027835,"Potassium (E,E)-hexa-2,4-dienoate",duplicate_canonical_structure,DTXSID3021277
+DTXSID7027837,Tripropylene glycol,duplicate_canonical_structure,DTXSID4021393
+DTXSID0027852,Chlorotoluene,duplicate_canonical_structure,DTXSID7021360
+DTXSID0027856,Dipropylene glycol,duplicate_canonical_structure,DTXSID8020462
+DTXSID0027858,Diisopropylbenzene,duplicate_canonical_structure,DTXSID1021827
+DTXSID4027866,Diethylbenzene,duplicate_canonical_structure,DTXSID3020596
+DTXSID2027884,(2Z)-2-Pentenenitrile,duplicate_canonical_structure,DTXSID6025850
+DTXSID6027921,"Dipropylene glycol, dibenzoate",duplicate_canonical_structure,DTXSID0026967
+DTXSID0027983,Dipropylene glycol monomethyl ether,duplicate_canonical_structure,DTXSID3025049
+DTXSID0028618,Diethylmethylbenzenediamine,duplicate_canonical_structure,DTXSID8020090
+DTXSID3029108,Tetramethylammonium hydroxide,duplicate_canonical_structure,DTXSID6021749
+DTXSID1029201,Potassium 6-hydroxynaphthalene-2-sulfonate,duplicate_canonical_structure,DTXSID7029166
+DTXSID8029232,Pentasodium nitrilotris(methylenephosphonate),duplicate_canonical_structure,DTXSID2027624
+DTXSID1029255,"Dimethyl trans-cyclohexane-1,4-dicarboxylate",duplicate_canonical_structure,DTXSID3026566
+DTXSID3029283,Antimony triacetate,duplicate_canonical_structure,DTXSID4020327
+DTXSID2029290,(-)-alpha-Pinene,duplicate_canonical_structure,DTXSID4026501
+DTXSID2029612,Limonene,duplicate_canonical_structure,DTXSID1020778
+DTXSID7029617,Potassium D-gluconate,duplicate_canonical_structure,DTXSID8027169
+DTXSID7029619,Potassium thiocyanate,duplicate_canonical_structure,DTXSID4021343
+DTXSID8029650,Menthol,duplicate_canonical_structure,DTXSID1020805
+DTXSID3029653,Ammonium isothiocyanate,duplicate_canonical_structure,DTXSID4021343
+DTXSID1029671,Etidronate disodium,duplicate_canonical_structure,DTXSID6023028
+DTXSID8029733,"(1S,2R,5S)-(+)-Menthol",duplicate_canonical_structure,DTXSID1020805
+DTXSID0029761,Sodium dichloroisocyanurate dihydrate,duplicate_canonical_structure,DTXSID8024993
+DTXSID1030319,3-Amino-9-ethylcarbazole,duplicate_canonical_structure,DTXSID2020054
+DTXSID5030955,Camphor,duplicate_canonical_structure,DTXSID8022036
+DTXSID1031096,D-alpha-Tocopheryl acetate,duplicate_canonical_structure,DTXSID3021356
+DTXSID1031626,Methyl trans-styryl ketone,duplicate_canonical_structure,DTXSID4025662
+DTXSID7031903,Picolinic acid,duplicate_canonical_structure,DTXSID1024831
+DTXSID0032029,Scopolamine hydrobromide,duplicate_canonical_structure,DTXSID0021258
+DTXSID1032305,(Z)-Dichloropropene,duplicate_canonical_structure,DTXSID1022057
+DTXSID2032421,Lithium perfluorooctanesulfonate,duplicate_canonical_structure,DTXSID3031864
+DTXSID6032431,S-Metolachlor,duplicate_canonical_structure,DTXSID4022448
+DTXSID7032559,lambda-Cyhalothrin,duplicate_canonical_structure,DTXSID6023997
+DTXSID1032648,Z-Tetrachlorvinphos,duplicate_canonical_structure,DTXSID1021320
+DTXSID4032667,Es-fenvalerate,duplicate_canonical_structure,DTXSID3020621
+DTXSID3032670,(R)-2-(4-Chloro-2-methylphenoxy)propionate,duplicate_canonical_structure,DTXSID9024194
+DTXSID8032671,Metalaxyl-M,duplicate_canonical_structure,DTXSID6024175
+DTXSID6032722,"1,2,4-Triazole, sodium salt",duplicate_canonical_structure,DTXSID6027131
+DTXSID6033247,(E)-beta-Nitrostyrene,duplicate_canonical_structure,DTXSID0025789
+DTXSID2033281,Cadmium acetate dihydrate,duplicate_canonical_structure,DTXSID4020327
+DTXSID2033314,Chlorhexidine,duplicate_canonical_structure,DTXSID7032345
+DTXSID0033382,Daunomycin hydrochloride,duplicate_canonical_structure,DTXSID7022883
+DTXSID1033539,Z-Guggulsterone,duplicate_canonical_structure,DTXSID6033538
+DTXSID1034181,Raloxifene hydrochloride,duplicate_canonical_structure,DTXSID3023550
+DTXSID1034187,Tamoxifen,duplicate_canonical_structure,DTXSID8021301
+DTXSID8034241,"2,4-D, isopropylamine salt",duplicate_canonical_structure,DTXSID0020442
+DTXSID1034260,Oxytetracycline,duplicate_canonical_structure,DTXSID5021097
+DTXSID6034265,Clopyralid-olamine,duplicate_canonical_structure,DTXSID9029221
+DTXSID8034376,Denatonium benzoate,duplicate_canonical_structure,DTXSID9034361
+DTXSID2034382,Bioresmethrin,duplicate_canonical_structure,DTXSID7022253
+DTXSID1034501,gamma-Cyhalothrin,duplicate_canonical_structure,DTXSID6023997
+DTXSID2034542,Dimethenamid-P,duplicate_canonical_structure,DTXSID4032376
+DTXSID2034598,Fenoxaprop-P-ethyl,duplicate_canonical_structure,DTXSID2032392
+DTXSID3034662,Imazalil sulfate,duplicate_canonical_structure,DTXSID8024151
+DTXSID2034700,"Acetic acid, 2-(4-chloro-2-methylphenoxy)-, sodium salt (1:1)",duplicate_canonical_structure,DTXSID4024195
+DTXSID2034833,Potassium 1-naphthaleneacetate,duplicate_canonical_structure,DTXSID8020915
+DTXSID0034851,Dichlorprop-P,duplicate_canonical_structure,DTXSID0020440
+DTXSID0034855,Butyl (2R)-2-(4-{[5-(trifluoromethyl)pyridin-2-yl]oxy}phenoxy)propanoate,duplicate_canonical_structure,DTXSID3034612
+DTXSID6034924,Sodium trichloroacetate,duplicate_canonical_structure,DTXSID1021378
+DTXSID1035286,(E)-11-Tetradecenyl acetate,duplicate_canonical_structure,DTXSID3035266
+DTXSID5035616,Sodium 2-nitrophenolate,duplicate_canonical_structure,DTXSID1021790
+DTXSID4035708,Methylbenzethonium chloride,duplicate_canonical_structure,DTXSID6023810
+DTXSID1035783,S-Methoprene,duplicate_canonical_structure,DTXSID8032627
+DTXSID2036409,Calcium disodium ethylenediaminetetraacetate,duplicate_canonical_structure,DTXSID6022977
+DTXSID2036827,"3,3'-Diaminobenzidine",duplicate_canonical_structure,DTXSID7021312
+DTXSID5037028,Hexadecyltrimethylammonium bromide,duplicate_canonical_structure,DTXSID6026901
+DTXSID5037072,Sodium valproate,duplicate_canonical_structure,DTXSID6023733
+DTXSID3037094,4-Hydroxytamoxifen,duplicate_canonical_structure,DTXSID7022384
+DTXSID7037131,Rosiglitazone,duplicate_canonical_structure,DTXSID2023569
+DTXSID7037185,Amiodarone hydrochloride,duplicate_canonical_structure,DTXSID7022592
+DTXSID8037207,Sodium dichloroacetate,duplicate_canonical_structure,DTXSID2020428
+DTXSID1037224,Erythromycin estolate,duplicate_canonical_structure,DTXSID9022994
+DTXSID5037236,Glucosamine hydrochloride,duplicate_canonical_structure,DTXSID4031356
+DTXSID9037246,Metformin hydrochloride,duplicate_canonical_structure,DTXSID2023270
+DTXSID9037248,Metoprolol tartrate,duplicate_canonical_structure,DTXSID2023309
+DTXSID1037272,Tacrine,duplicate_canonical_structure,DTXSID1026112
+DTXSID9037535,Demeton-S,duplicate_canonical_structure,DTXSID5022306
+DTXSID7037555,tau-Fluvalinate,duplicate_canonical_structure,DTXSID7024110
+DTXSID4037611,trans-Permethrin,duplicate_canonical_structure,DTXSID8022292
+DTXSID3037672,Sodium butyrate,duplicate_canonical_structure,DTXSID8021515
+DTXSID8037706,Potassium perfluorooctanesulfonate,duplicate_canonical_structure,DTXSID3031864
+DTXSID3037707,Potassium perfluorobutanesulfonate,duplicate_canonical_structure,DTXSID5030030
+DTXSID8037708,Ammonium perfluorooctanoate,duplicate_canonical_structure,DTXSID8031865
+DTXSID6038326,cis-Chlordane,duplicate_canonical_structure,DTXSID7020267
+DTXSID4038346,trans-Chlordane,duplicate_canonical_structure,DTXSID7020267
+DTXSID8038770,Zinc acetate,duplicate_canonical_structure,DTXSID4020327
+DTXSID0038887,Fluorescein,duplicate_canonical_structure,DTXSID9025328
+DTXSID0039229,Acrylic acid,duplicate_canonical_structure,DTXSID4027652
+DTXSID2039336,S-Bioallethrin,duplicate_canonical_structure,DTXSID8035180
+DTXSID7040150,Perfluorohexanesulfonic acid,duplicate_canonical_structure,DTXSID3037709
+DTXSID4040264,Sodium pentachlorophenate,duplicate_canonical_structure,DTXSID7021106
+DTXSID1040295,Propamocarb,duplicate_canonical_structure,DTXSID6034849
+DTXSID1040326,8-Hydroxyquinoline citrate,duplicate_canonical_structure,DTXSID5020079
+DTXSID2040361,Metam-sodium hydrate,duplicate_canonical_structure,DTXSID2029167
+DTXSID6040404,9-cis- Retinoic acid,duplicate_canonical_structure,DTXSID7021239
+DTXSID6040614,Sodium pyruvate,duplicate_canonical_structure,DTXSID2021650
+DTXSID0040622,Thiamine hydrochloride,duplicate_canonical_structure,DTXSID4038762
+DTXSID3040647,Dexrazone,duplicate_canonical_structure,DTXSID0020733
+DTXSID1040740,2-Methyl-3-isothiazolone hydrochloride,duplicate_canonical_structure,DTXSID2034259
+DTXSID0040755,Fenoxaprop-(2S)-ethyl,duplicate_canonical_structure,DTXSID2032392
+DTXSID3040770,"(Z,E)-Diethylstilbestrol",duplicate_canonical_structure,DTXSID3020465
+DTXSID3040774,"alpha,beta-Thujone",duplicate_canonical_structure,DTXSID3026148
+DTXSID8040779,Diheptyl phthalate,duplicate_canonical_structure,DTXSID0027933
+DTXSID2040783,trans-Nerolidol,duplicate_canonical_structure,DTXSID3022247
+DTXSID2040787,Benzalkonium chloride C12 (BAC C12),duplicate_canonical_structure,DTXSID6028492
+DTXSID1040792,Pyridoxine hydrochloride,duplicate_canonical_structure,DTXSID4023541
+DTXSID1040794,Sodium 2-phenylphenate tetrahydrate,duplicate_canonical_structure,DTXSID2021151
+DTXSID8040800,Etidronic acid monohydrate,duplicate_canonical_structure,DTXSID6023028
+DTXSID3040801,(+/-)-Indoxacarb,duplicate_canonical_structure,DTXSID1032690
+DTXSID9041152,(+/-)-Verapamil,duplicate_canonical_structure,DTXSID2034095
+DTXSID1041184,(-)-beta-Pinene,duplicate_canonical_structure,DTXSID7027049
+DTXSID0041197,(Z)-Hexadec-9-enoic acid,duplicate_canonical_structure,DTXSID7021603
+DTXSID7041201,alpha-Cypermethrin,duplicate_canonical_structure,DTXSID1023998
+DTXSID0041220,"cis-1,2,3,6-Tetrahydrophthalimide",duplicate_canonical_structure,DTXSID8026513
+DTXSID7041336,"2,4,5-Trichlorophenol sodium salt",duplicate_canonical_structure,DTXSID4024359
+DTXSID5041356,"2,4-DB-sodium",duplicate_canonical_structure,DTXSID7024035
+DTXSID7041413,R-(-)-Carvone,duplicate_canonical_structure,DTXSID8020256
+DTXSID1041508,4-Chloro-2-methylaniline,duplicate_canonical_structure,DTXSID0020288
+DTXSID1041550,(S)-(-)-beta-Citronellol,duplicate_canonical_structure,DTXSID3026726
+DTXSID7041671,(+)-alpha-Pinene,duplicate_canonical_structure,DTXSID4026501
+DTXSID6041761,Cetylpyridinium chloride,duplicate_canonical_structure,DTXSID3033307
+DTXSID5041809,Cyclamic acid,duplicate_canonical_structure,DTXSID6020355
+DTXSID0041981,2-Fluoroacetic acid,duplicate_canonical_structure,DTXSID8024311
+DTXSID7042011,N-Dodecanoyl-N-methylglycine,duplicate_canonical_structure,DTXSID0027066
+DTXSID2042060,Isoborneol,duplicate_canonical_structure,DTXSID3022035
+DTXSID4042123,Mercury(II) acetate,duplicate_canonical_structure,DTXSID4020327
+DTXSID0042167,Monopotassium phthalate,duplicate_canonical_structure,DTXSID8021484
+DTXSID5042322,Potassium ricinoleate,duplicate_canonical_structure,DTXSID0041567
+DTXSID5042324,Potassium warfarin,duplicate_canonical_structure,DTXSID7035010
+DTXSID4042335,Butyl (2S)-2-hydroxypropanoate,duplicate_canonical_structure,DTXSID7042196
+DTXSID9042336,(L)-(-)-Ethyl lactate,duplicate_canonical_structure,DTXSID6029127
+DTXSID9042415,Sodium 4-methylbenzenesulfonate,duplicate_canonical_structure,DTXSID0026701
+DTXSID2042517,Zinc dioctanoate,duplicate_canonical_structure,DTXSID3021645
+DTXSID0042583,N-{[(2S)-1-Ethylpyrrolidin-2-yl]methyl}-2-methoxy-5-sulfamoylbenzamide,duplicate_canonical_structure,DTXSID1042574
+DTXSID3042633,Clomipramine hydrochloride,duplicate_canonical_structure,DTXSID6022844
+DTXSID0043761,"4,4'-Dinitrodiphenylurea",duplicate_canonical_structure,DTXSID6034762
+DTXSID4043777,Proflavin hemisulfate,duplicate_canonical_structure,DTXSID8021191
+DTXSID7043829,"2,4-Dimethoxyaniline",duplicate_canonical_structure,DTXSID1020483
+DTXSID9043853,Amiloride,duplicate_canonical_structure,DTXSID2024452
+DTXSID7043873,Octopamine,duplicate_canonical_structure,DTXSID8033803
+DTXSID2043874,Tyramine,duplicate_canonical_structure,DTXSID8034087
+DTXSID1043881,Imipramine,duplicate_canonical_structure,DTXSID7040738
+DTXSID6043917,D-Ribose,duplicate_canonical_structure,DTXSID8041610
+DTXSID1044198,Perindopril erbumine,duplicate_canonical_structure,DTXSID6023440
+DTXSID3044201,Quetiapine fumarate,duplicate_canonical_structure,DTXSID9023546
+DTXSID7044215,Pantoprazole sodium,duplicate_canonical_structure,DTXSID4023416
+DTXSID1044227,Pramipexole dihydrochloride monohydrate,duplicate_canonical_structure,DTXSID6023496
+DTXSID0044280,Quinine,duplicate_canonical_structure,DTXSID4023549
+DTXSID0044288,"5,5'-Indigotindisulfonic acid",duplicate_canonical_structure,DTXSID1020190
+DTXSID6044303,Atorvastatin calcium,duplicate_canonical_structure,DTXSID8029868
+DTXSID6044307,(1R)-endo-(+)-Fenchyl alcohol,duplicate_canonical_structure,DTXSID1041970
+DTXSID6044309,"1,10-Phenanthroline hydrochloride hydrate",duplicate_canonical_structure,DTXSID1025857
+DTXSID5044314,Methyl (E)-cinnamate,duplicate_canonical_structure,DTXSID6042151
+DTXSID5044316,4-Methylbenzenesulfonic acid hydrate,duplicate_canonical_structure,DTXSID0026701
+DTXSID9044320,Diethylamine hydrochloride,duplicate_canonical_structure,DTXSID6021909
+DTXSID9044322,Dodecylamine hydrochloride,duplicate_canonical_structure,DTXSID3021984
+DTXSID3044332,Benzyltrimethylammonium hydroxide,duplicate_canonical_structure,DTXSID8024600
+DTXSID8044337,Diquat-d4 dibromide,duplicate_canonical_structure,DTXSID7031248
+DTXSID5044366,Dodecyltrimethylammonium bromide,duplicate_canonical_structure,DTXSID1026900
+DTXSID0044367,Tetradonium bromide,duplicate_canonical_structure,DTXSID9041289
+DTXSID4044373,Tromethamine hydrochloride,duplicate_canonical_structure,DTXSID2023723
+DTXSID2044420,Phenol Red sodium salt,duplicate_canonical_structure,DTXSID8022408
+DTXSID9044457,Tetraethylammonium bromide,duplicate_canonical_structure,DTXSID6041137
+DTXSID7044475,"rel-(2R,5R)-5-Methyl-2-(1-methylethyl)cyclohexanone",duplicate_canonical_structure,DTXSID3044384
+DTXSID2044476,(S)-(-)-Citronellal,duplicate_canonical_structure,DTXSID3041790
+DTXSID0044521,Diatrizoic acid,duplicate_canonical_structure,DTXSID7022912
+DTXSID5044570,"1,2-Ethanediamine dihydroiodide",duplicate_canonical_structure,DTXSID5021881
+DTXSID5044578,"Sodium 2,5-dimethylbenzenesulfonate",duplicate_canonical_structure,DTXSID5041641
+DTXSID3044590,"2',4',5',7'-Tetrabromofluorescein",duplicate_canonical_structure,DTXSID0025234
+DTXSID3044598,Panthenol,duplicate_canonical_structure,DTXSID3022906
+DTXSID8044670,Clonidine hydrochloride,duplicate_canonical_structure,DTXSID6022846
+DTXSID8044678,Orphenadrine dihydrogen citrate,duplicate_canonical_structure,DTXSID5025815
+DTXSID2044684,"Sodium 5-oxo-1-(4-sulfophenyl)-4,5-dihydro-1H-pyrazole-3-carboxylate",duplicate_canonical_structure,DTXSID5041273
+DTXSID6044692,Scopolamine hydrochloride,duplicate_canonical_structure,DTXSID0021258
+DTXSID1044693,Magnesium dibenzoate,duplicate_canonical_structure,DTXSID1020140
+DTXSID0044733,Sodium 3-nitrobenzoate,duplicate_canonical_structure,DTXSID0025737
+DTXSID3044758,Fluvastatin sodium,duplicate_canonical_structure,DTXSID2020636
+DTXSID5044782,"1-Amino-4-bromo-9,10-dioxo-9,10-dihydroanthracene-2-sulfonic acid",duplicate_canonical_structure,DTXSID9029277
+DTXSID5044788,Naphthalene-2-sulfonic acid,duplicate_canonical_structure,DTXSID4041442
+DTXSID6044800,Sodium dibutylcarbamodithioate,duplicate_canonical_structure,DTXSID2020927
+DTXSID1044801,SEX,duplicate_canonical_structure,DTXSID6042315
+DTXSID5044811,Chlordimeform hydrochloride,duplicate_canonical_structure,DTXSID2037508
+DTXSID0044816,"(2Z)-3,7-Dimethylocta-2,6-dienenitrile",duplicate_canonical_structure,DTXSID3036286
+DTXSID5044819,Lithium 3-carboxy-5-sulfobenzoate,duplicate_canonical_structure,DTXSID9029279
+DTXSID9044823,Sodium methacrylate,duplicate_canonical_structure,DTXSID3025542
+DTXSID7044843,C.I. Solvent Red 140,duplicate_canonical_structure,DTXSID7021233
+DTXSID8044888,Barium bis(2-ethylhexanoate),duplicate_canonical_structure,DTXSID9025293
+DTXSID2044894,"Trimethylhexane-1,6-diamine",duplicate_canonical_structure,DTXSID5024922
+DTXSID4044955,Sodium nicotinate,duplicate_canonical_structure,DTXSID1020932
+DTXSID7045029,Maprotiline,duplicate_canonical_structure,DTXSID2044507
+DTXSID1045033,Minocycline,duplicate_canonical_structure,DTXSID8044545
+DTXSID9045053,"N,N,N,N',N',N'-Hexamethylhexane-1,6-diaminium",duplicate_canonical_structure,DTXSID3044700
+DTXSID7045079,"D-Gluconic acid, barium salt",duplicate_canonical_structure,DTXSID8027169
+DTXSID1045081,8-Quinolinol salicylic acid (1:1),duplicate_canonical_structure,DTXSID5020730
+DTXSID0045094,Cholic acid piperazine (1:1),duplicate_canonical_structure,DTXSID9033979
+DTXSID0045096,Benztropine methylsulfonate,duplicate_canonical_structure,DTXSID9022659
+DTXSID5045099,Homatropine hydrobromide,duplicate_canonical_structure,DTXSID6044014
+DTXSID5045178,Masoprocol,duplicate_canonical_structure,DTXSID5022437
+DTXSID3045304,Dexpropranolol,duplicate_canonical_structure,DTXSID3021198
+DTXSID5045384,Atropine-N-oxide hydrochloride,duplicate_canonical_structure,DTXSID6022632
+DTXSID0045543,Methylatropine nitrate,duplicate_canonical_structure,DTXSID2045103
+DTXSID4045559,Ethamsylate,duplicate_canonical_structure,DTXSID8044410
+DTXSID7045576,Naproxen sodium,duplicate_canonical_structure,DTXSID4040686
+DTXSID1045582,Dinoprost tromethamine,duplicate_canonical_structure,DTXSID9022946
+DTXSID2045608,Rauwolscine,duplicate_canonical_structure,DTXSID9040130
+DTXSID1045611,"(1S,9R)-beta-Hydrastine",duplicate_canonical_structure,DTXSID9025409
+DTXSID5045679,Formoterol hemifumarate dihydrate,duplicate_canonical_structure,DTXSID5044239
+DTXSID0045751,3-Aminopropionitrile fumarate,duplicate_canonical_structure,DTXSID8021517
+DTXSID0045753,R-(+)-Atenolol,duplicate_canonical_structure,DTXSID2022628
+DTXSID8045779,Cysteamine hydrochloride,duplicate_canonical_structure,DTXSID3022875
+DTXSID1045790,"8-Ammonio-1,2,3,4-tetrahydro-2-methyl-4-phenylisoquinolinium maleate",duplicate_canonical_structure,DTXSID0023377
+DTXSID1045798,Salmeterol xinafoate,duplicate_canonical_structure,DTXSID6023571
+DTXSID2045812,Urapidil hydrochloride,duplicate_canonical_structure,DTXSID9021425
+DTXSID4045979,D-Arabinitol,duplicate_canonical_structure,DTXSID7042514
+DTXSID0046016,Aminoguanidine hemisulfate,duplicate_canonical_structure,DTXSID9044405
+DTXSID9046231,Bromebric acid,duplicate_canonical_structure,DTXSID5020368
+DTXSID8046325,Naloxone methyliodide,duplicate_canonical_structure,DTXSID8023349
+DTXSID0046351,D-Nicotine,duplicate_canonical_structure,DTXSID1020930
+DTXSID1046421,4-Hydroxyphenylsulfonic acid,duplicate_canonical_structure,DTXSID8027321
+DTXSID1046477,Floxacillin sodium hydrate,duplicate_canonical_structure,DTXSID6045115
+DTXSID9046528,Didecyldimethylammonium bromide,duplicate_canonical_structure,DTXSID9032537
+DTXSID3046530,L-Alloisoleucine,duplicate_canonical_structure,DTXSID1046346
+DTXSID3046538,(-)-Camphene,duplicate_canonical_structure,DTXSID8026488
+DTXSID8046539,Calcium levulinate,duplicate_canonical_structure,DTXSID8021648
+DTXSID7046540,D-Lyxose,duplicate_canonical_structure,DTXSID8041610
+DTXSID5046562,(S)-(+)-1-Dimethylamino-2-propanol,duplicate_canonical_structure,DTXSID5031210
+DTXSID4046575,beta-Chloralose,duplicate_canonical_structure,DTXSID4020088
+DTXSID8046824,Selenium-L-methionine,duplicate_canonical_structure,DTXSID7040609
+DTXSID8046828,Monosodium urate,duplicate_canonical_structure,DTXSID3042508
+DTXSID2046830,Strychnine benzyl chloride,duplicate_canonical_structure,DTXSID7045108
+DTXSID7046831,Disodium 2-hydroxybutanedioate,duplicate_canonical_structure,DTXSID0027640
+DTXSID2046882,DL-Isoleucine,duplicate_canonical_structure,DTXSID1046346
+DTXSID7046887,Pentisomicin,duplicate_canonical_structure,DTXSID9045479
+DTXSID6046896,"Magnesium, bis(salicylato)-, tetrahydrate",duplicate_canonical_structure,DTXSID5021708
+DTXSID5046938,"Caffeine, citrated",duplicate_canonical_structure,DTXSID0020232
+DTXSID1046976,4-Methylumbelliferone hydrate,duplicate_canonical_structure,DTXSID8025670
+DTXSID5046980,"Monosodium 8-amino-1-naphthol-3,6-disulfonate monohydrate",duplicate_canonical_structure,DTXSID4027600
+DTXSID5046988,DL-Cysteine,duplicate_canonical_structure,DTXSID0020367
+DTXSID0046989,D-Tryptophan,duplicate_canonical_structure,DTXSID0021418
+DTXSID0047030,D-Lactic acid,duplicate_canonical_structure,DTXSID0020236
+DTXSID2047068,"cis-3,7-Dimethyl-2,6-octadien-1-yl acetate",duplicate_canonical_structure,DTXSID0020654
+DTXSID6047078,(S)-Limonene,duplicate_canonical_structure,DTXSID1020778
+DTXSID4047096,Piperazine dihydrochloride,duplicate_canonical_structure,DTXSID1021164
+DTXSID7047144,Chlorhexidine dihydrochloride,duplicate_canonical_structure,DTXSID7032345
+DTXSID6047155,L-Glutamic acid hydrochloride,duplicate_canonical_structure,DTXSID5020659
+DTXSID4047173,Sodium pantothenate,duplicate_canonical_structure,DTXSID8040438
+DTXSID8047183,Triethanolamine Laurate,duplicate_canonical_structure,DTXSID5021590
+DTXSID9047205,2-Ethylhexyl trans-4-methoxycinnamate,duplicate_canonical_structure,DTXSID1025302
+DTXSID4047206,trans-2-Methoxycinnamaldehyde,duplicate_canonical_structure,DTXSID2025551
+DTXSID2047222,Farnesol acetate,duplicate_canonical_structure,DTXSID5047110
+DTXSID6047236,(S)-Citronellene,duplicate_canonical_structure,DTXSID8029234
+DTXSID1047239,cis-Nerolidol,duplicate_canonical_structure,DTXSID3022247
+DTXSID5047243,Ammonium glycyrrhizinate trihydrate,duplicate_canonical_structure,DTXSID8047006
+DTXSID8047397,Venlafaxine hydrochloride,duplicate_canonical_structure,DTXSID6023737
+DTXSID0047404,Methapyrilene fumarate,duplicate_canonical_structure,DTXSID0020818
+DTXSID8047426,dl-Carvone,duplicate_canonical_structure,DTXSID8020256
+DTXSID3047429,Dexamethasone sodium phosphate,duplicate_canonical_structure,DTXSID8047137
+DTXSID0047454,Diprogulic acid,duplicate_canonical_structure,DTXSID2034540
+DTXSID5047459,Calcium saccharin hydrate,duplicate_canonical_structure,DTXSID5021251
+DTXSID9047467,Choline hydroxide,duplicate_canonical_structure,DTXSID4020325
+DTXSID8047470,Methoxybenzyl acetate,duplicate_canonical_structure,DTXSID0020151
+DTXSID3047477,dl-Norgestrel,duplicate_canonical_structure,DTXSID3036496
+DTXSID3047504,Timolol maleate salt,duplicate_canonical_structure,DTXSID4023674
+DTXSID8047505,"3,5,3′-Triiodo-L-thyronine monosodium salt",duplicate_canonical_structure,DTXSID8023216
+DTXSID6047523,Sodium 4-isopropylbenzenesulfonate,duplicate_canonical_structure,DTXSID1044932
+DTXSID5047530,Hydroxyzine hydrochloride,duplicate_canonical_structure,DTXSID8023137
+DTXSID1047570,"rel-(1S,5S)-3,3,5-Trimethylcyclohexanol",duplicate_canonical_structure,DTXSID9041815
+DTXSID4047593,alpha-Phellandrene,duplicate_canonical_structure,DTXSID3047053
+DTXSID1047607,3-Phenyl-2-propen-1-yl propionate,duplicate_canonical_structure,DTXSID6047606
+DTXSID3047687,Calcium L-ascorbate dihydrate,duplicate_canonical_structure,DTXSID0020105
+DTXSID2047694,Quinine hydrochloride dihydrate,duplicate_canonical_structure,DTXSID4023549
+DTXSID4047707,(Methylthio)methylpyrazine,duplicate_canonical_structure,DTXSID1047491
+DTXSID2047727,2-Ethoxy-5-(1-propenyl)phenol,duplicate_canonical_structure,DTXSID7047726
+DTXSID1047788,Ciprofloxacin hydrochloride,duplicate_canonical_structure,DTXSID8022824
+DTXSID2047804,Benzathine penicillin G,duplicate_canonical_structure,DTXSID7045106
+DTXSID2047806,Norepinephrine bitartrate monohydrate,duplicate_canonical_structure,DTXSID5023378
+DTXSID6047810,Esketamine,duplicate_canonical_structure,DTXSID8023187
+DTXSID4047884,1-Ethyl-3-methylimidazolium thiocyanate,duplicate_canonical_structure,DTXSID1041180
+DTXSID3047897,D-Tagatose,duplicate_canonical_structure,DTXSID5023081
+DTXSID5047902,2-Hydroxyethylammonium formate,duplicate_canonical_structure,DTXSID6022000
+DTXSID5047904,Methyltrioctylammonium trifluoromethanesulfonate,duplicate_canonical_structure,DTXSID1044487
+DTXSID0047905,Tributylmethylammonium bis(trifluoromethylsulfonyl)imide,duplicate_canonical_structure,DTXSID4047888
+DTXSID0047907,"1-Butyl-2,3-dimethylimidazolium hexafluorophosphate",duplicate_canonical_structure,DTXSID5047906
+DTXSID5047908,"1-Butyl-2,3-dimethylimidazolium iodide",duplicate_canonical_structure,DTXSID5047906
+DTXSID0047909,"1-Butyl-2,3-dimethylimidazolium tetrafluoroborate",duplicate_canonical_structure,DTXSID5047906
+DTXSID4047911,1-Butyl-3-methylimidazolium hexafluorophosphate,duplicate_canonical_structure,DTXSID6031461
+DTXSID9047912,1-Butyl-3-methylimidazolium methanesulfonate,duplicate_canonical_structure,DTXSID6031461
+DTXSID9047914,1-Butyl-3-methylimidazolium thiocyanate,duplicate_canonical_structure,DTXSID6031461
+DTXSID4047915,1-Decyl-3-methylimidazolium tetrafluoroborate,duplicate_canonical_structure,DTXSID4047913
+DTXSID9047916,1-Decyl-3-methylimidazolium trifluoromethanesulfonate,duplicate_canonical_structure,DTXSID4047913
+DTXSID9047918,1-Dodecyl-3-methylimidazolium chloride,duplicate_canonical_structure,DTXSID4047917
+DTXSID4047919,1-Dodecyl-3-methylimidazolium hexafluorophosphate,duplicate_canonical_structure,DTXSID4047917
+DTXSID3047920,Butyltrimethylammonium bis(trifluoromethylsulfonyl)imide,duplicate_canonical_structure,DTXSID4047888
+DTXSID8047921,1-Ethyl-3-methylimidazolium hexafluorophosphate,duplicate_canonical_structure,DTXSID1041180
+DTXSID8047925,1-Hexyl-3-methylimidazolium bromide,duplicate_canonical_structure,DTXSID5047871
+DTXSID3047926,Methyltrioctylammonium bis(trifluoromethylsulfonyl)imide,duplicate_canonical_structure,DTXSID1044487
+DTXSID7047930,"1-Butyl-2,3-dimethylimidazolium bis(trifluoromethylsulfonyl)imide",duplicate_canonical_structure,DTXSID4047888
+DTXSID2047931,"1-Butyl-2,3-dimethylimidazolium bromide",duplicate_canonical_structure,DTXSID5047906
+DTXSID7047932,1-Butylpyridinium hexafluorophosphate,duplicate_canonical_structure,DTXSID1031462
+DTXSID2047933,1-Butylpyridinium bromide,duplicate_canonical_structure,DTXSID1031462
+DTXSID2047935,1-Hexylpyridinium chloride,duplicate_canonical_structure,DTXSID7047934
+DTXSID7047936,1-Hexylpyridinium hexafluorophosphate,duplicate_canonical_structure,DTXSID7047934
+DTXSID2047937,1-Butyl-1-methylpyrrolidinium hexafluorophosphate,duplicate_canonical_structure,DTXSID1031460
+DTXSID7047938,1-Butyl-1-methylpyrrolidinium iodide,duplicate_canonical_structure,DTXSID1031460
+DTXSID2047939,1-Butyl-1-methylpyrrolidinium dicyanamide,duplicate_canonical_structure,DTXSID1031460
+DTXSID1047940,1-Ethyl-1-methylpyrrolidinium bis(trifluoromethylsulfonyl)imide,duplicate_canonical_structure,DTXSID4047888
+DTXSID6047941,1-Ethyl-1-methylpyrrolidinium iodide,duplicate_canonical_structure,DTXSID5047877
+DTXSID1047942,1-Methyl-1-propylpyrrolidinium bis(trifluoromethylsulfonyl)imide,duplicate_canonical_structure,DTXSID4047888
+DTXSID6047943,1-Methyl-3-octylimidazolium tetrafluoroborate,duplicate_canonical_structure,DTXSID5047873
+DTXSID6047945,Tetrabutylphosphonium bromide,duplicate_canonical_structure,DTXSID4044616
+DTXSID1047946,1-Methyl-3-octylimidazolium trifluoromethanesulfonate,duplicate_canonical_structure,DTXSID5047873
+DTXSID6047947,1-Methyl-3-propylimidazolium bis(trifluoromethylsulfonyl)imide,duplicate_canonical_structure,DTXSID4047888
+DTXSID1047948,1-Hexyl-3-methylimidazolium chloride,duplicate_canonical_structure,DTXSID5047871
+DTXSID6047949,1-Hexyl-3-methylimidazolium hexafluorophosphate,duplicate_canonical_structure,DTXSID5047871
+DTXSID5047950,Trihexyltetradecylphosphonium hexafluorophosphate,duplicate_canonical_structure,DTXSID1047944
+DTXSID0047951,1-Hexyl-3-methylimidazolium iodide,duplicate_canonical_structure,DTXSID5047871
+DTXSID5047952,1-Methyl-3-octylimidazolium hexafluorophosphate,duplicate_canonical_structure,DTXSID5047873
+DTXSID0047953,Trihexyltetradecylphosphonium bromide,duplicate_canonical_structure,DTXSID1047944
+DTXSID5047954,Diethylmethylsulfonium bis(trifluoromethylsulfonyl)imide,duplicate_canonical_structure,DTXSID4047888
+DTXSID0047955,1-Methyl-3-octylimidazolium bis(trifluoromethylsulfonyl)imide,duplicate_canonical_structure,DTXSID4047888
+DTXSID9047964,"1H-​Imidazolium, 3-​ethyl-​1-​methyl-​, salt with N-​cyanocyanamide (1:1)",duplicate_canonical_structure,DTXSID1041180
+DTXSID4047965,1-Ethyl-3-methylimidazolium trifluoromethanesulfonate,duplicate_canonical_structure,DTXSID1041180
+DTXSID9047966,"1,2-Benzenedicarboxylic acid, dinonyl ester",duplicate_canonical_structure,DTXSID4025082
+DTXSID4047967,1-Ethyl-3-methylimidazolium bis(trifluoromethanesulfonyl)imide,duplicate_canonical_structure,DTXSID4047888
+DTXSID9047968,1-Butyl-1-methylpyrrolidinium bis(trifluoromethanesulfonyl)imide,duplicate_canonical_structure,DTXSID4047888
+DTXSID4047969,Trolamine salicylate,duplicate_canonical_structure,DTXSID5021708
+DTXSID8047971,1-Butyl-3-methylimidazolium hydrogensulfate,duplicate_canonical_structure,DTXSID6031461
+DTXSID2048169,Fabesetron,duplicate_canonical_structure,DTXSID7048168
+DTXSID0048185,Apomorphine hydrochloride,duplicate_canonical_structure,DTXSID8022614
+DTXSID1048259,Desmopressin,duplicate_canonical_structure,DTXSID4046864
+DTXSID7048291,Iodophthalein,duplicate_canonical_structure,DTXSID1046768
+DTXSID6048333,Mivacurium,duplicate_canonical_structure,DTXSID5046649
+DTXSID0048349,Vasopressin tannate,duplicate_canonical_structure,DTXSID2046597
+DTXSID3048449,Naphazoline,duplicate_canonical_structure,DTXSID7045788
+DTXSID8048494,Sarafloxacin,duplicate_canonical_structure,DTXSID8045939
+DTXSID3048522,HMR1171 trifluoroacetate (1:1),duplicate_canonical_structure,DTXSID6047367
+DTXSID2048589,Butenafine hydrochloride,duplicate_canonical_structure,DTXSID7040657
+DTXSID8048602,Fursultiamine hydrochloride,duplicate_canonical_structure,DTXSID0023084
+DTXSID6048624,Zinc salicylate,duplicate_canonical_structure,DTXSID5021708
+DTXSID1048625,Zofenopril calcium,duplicate_canonical_structure,DTXSID0046640
+DTXSID4048646,Sulfadiazine silver,duplicate_canonical_structure,DTXSID7044130
+DTXSID1048675,D-Glutamic acid,duplicate_canonical_structure,DTXSID5020659
+DTXSID4048698,Benzyldodecyldimethylammonium bromide,duplicate_canonical_structure,DTXSID6028492
+DTXSID6048703,"(7S)-7-(Hexadecanoyloxy)-4-hydroxy-N,N,N-trimethyl-10-oxo-3,5,9-trioxa-4-phosphapentacosan-1-aminium 4-oxide",duplicate_canonical_structure,DTXSID5046720
+DTXSID1048704,L-(-)-Sorbose,duplicate_canonical_structure,DTXSID5023081
+DTXSID6048709,Potassium pentanoate,duplicate_canonical_structure,DTXSID7021655
+DTXSID0048711,N-Acetylgalactosamine,duplicate_canonical_structure,DTXSID3045855
+DTXSID9048724,Dexibuprofen,duplicate_canonical_structure,DTXSID5020732
+DTXSID9048726,Metoprolol succinate,duplicate_canonical_structure,DTXSID2023309
+DTXSID4048729,DL-Glucose,duplicate_canonical_structure,DTXSID7022910
+DTXSID8048731,Dithiazanine chloride,duplicate_canonical_structure,DTXSID8022955
+DTXSID8048739,Bekanamycin sulfate,duplicate_canonical_structure,DTXSID8023185
+DTXSID2048747,(+)-Ketamine,duplicate_canonical_structure,DTXSID8023187
+DTXSID5048766,Sodium decanehydroxamate,duplicate_canonical_structure,DTXSID7046883
+DTXSID0048767,Phentoloxamine PAS,duplicate_canonical_structure,DTXSID5047790
+DTXSID0048769,Phenacaine hydrochloride,duplicate_canonical_structure,DTXSID0046062
+DTXSID4048771,Levomequitazine,duplicate_canonical_structure,DTXSID8023262
+DTXSID3048786,"N-[(3R)-1-(2-Fluorophenyl)-4-oxo-3,4,6,7-tetrahydro[1,4]diazepino[6,7,1-hi]indol-3-yl]-1H-indole-2-carboxamide",duplicate_canonical_structure,DTXSID8048785
+DTXSID9048857,Ondansetron hydrochloride dihydrate,duplicate_canonical_structure,DTXSID8023393
+DTXSID3048865,dl-Methamphetamine hydrochloride,duplicate_canonical_structure,DTXSID8048864
+DTXSID3048867,(R)-(+)-Cathinone hydrochloride,duplicate_canonical_structure,DTXSID8048866
+DTXSID7048871,Dexfenfluramine hydrochloride,duplicate_canonical_structure,DTXSID4023044
+DTXSID2048872,(-)-Fenfluramine hydrochloride,duplicate_canonical_structure,DTXSID4023044
+DTXSID2048874,R-(+)-Secobarbital,duplicate_canonical_structure,DTXSID7048873
+DTXSID2048876,Etryptamine acetate,duplicate_canonical_structure,DTXSID1046764
+DTXSID6048882,"R-(-)-2,5-Dimethoxy-4-bromoamphetamine hydrochloride",duplicate_canonical_structure,DTXSID1048881
+DTXSID1048883,"4-Bromo-2,5-dimethoxyamphetamine hydrochloride",duplicate_canonical_structure,DTXSID1048881
+DTXSID1048885,"(S)-(+)-2,5-Dimethoxy-4-methylamphetamine hydrochloride",duplicate_canonical_structure,DTXSID6048884
+DTXSID1048887,"(2S)-1-(2,5-Dimethoxyphenyl)propan-2-amine hydrogen chloride (1:1)",duplicate_canonical_structure,DTXSID6048886
+DTXSID1048889,"(-)-2,5-Dimethoxy-4-ethylamphetamine hydrochloride",duplicate_canonical_structure,DTXSID6048888
+DTXSID2048903,(-)-Cocaine hydrochloride,duplicate_canonical_structure,DTXSID5046063
+DTXSID7048904,Codeine hydrochloride,duplicate_canonical_structure,DTXSID2020341
+DTXSID7048906,N-Norcodeine hydrochloride,duplicate_canonical_structure,DTXSID8046327
+DTXSID2048909,(-)-Heroin hydrochloride,duplicate_canonical_structure,DTXSID6046761
+DTXSID6048911,(-)-Metazocine fumarate (1:1),duplicate_canonical_structure,DTXSID1048910
+DTXSID6048913,Propoxyphene hydrochloride,duplicate_canonical_structure,DTXSID8045563
+DTXSID6048917,(+)-alpha-Methadol hydrochloride,duplicate_canonical_structure,DTXSID1048916
+DTXSID5048924,(-)-Pentazocine succinate,duplicate_canonical_structure,DTXSID0048923
+DTXSID5048926,(-)-Phenazocine hydrobromide,duplicate_canonical_structure,DTXSID0048925
+DTXSID2048953,Estramustine phosphate sodium,duplicate_canonical_structure,DTXSID7048667
+DTXSID1048960,Diatrizoic acid dihydrate,duplicate_canonical_structure,DTXSID7022912
+DTXSID0048979,Quinine hemisulfate salt monohydrate,duplicate_canonical_structure,DTXSID4023549
+DTXSID3048990,Cholin acetate,duplicate_canonical_structure,DTXSID4020325
+DTXSID8048995,Cefoxitin sodium salt,duplicate_canonical_structure,DTXSID1022764
+DTXSID7049001,Brolamfetamine hydrobromide,duplicate_canonical_structure,DTXSID1048881
+DTXSID6049012,Choline bromide,duplicate_canonical_structure,DTXSID4020325
+DTXSID1049019,Normorphine,duplicate_canonical_structure,DTXSID6048915
+DTXSID5049025,"Glycyrrhizic acid, monosodium salt",duplicate_canonical_structure,DTXSID8047006
+DTXSID4049030,Hydroxymethanesulfinic acid monosodium salt dihydrate,duplicate_canonical_structure,DTXSID7027120
+DTXSID4049036,Dexchlorpheniramine hydrochloride,duplicate_canonical_structure,DTXSID4020321
+DTXSID9049037,Zamifenacin fumarate,duplicate_canonical_structure,DTXSID9047257
+DTXSID1049063,Moxifloxacin hydrochloride monohydrate,duplicate_canonical_structure,DTXSID4045921
+DTXSID0049072,Varenicline tartrate,duplicate_canonical_structure,DTXSID8048941
+DTXSID5049073,Vatalanib dihydrochloride,duplicate_canonical_structure,DTXSID2046919
+DTXSID9049083,Anilinium nitrate,duplicate_canonical_structure,DTXSID8020090
+DTXSID2049135,Atipamezole,duplicate_canonical_structure,DTXSID2048583
+DTXSID8049206,1-Ethyl-1-methylpyrrolidinium tetrafluoroborate,duplicate_canonical_structure,DTXSID5047877
+DTXSID2049214,1-Butyl-2-methylpyridinium iodide,duplicate_canonical_structure,DTXSID8049204
+DTXSID7049217,1-Ethyl-3-methylimidazolium nitrate,duplicate_canonical_structure,DTXSID1041180
+DTXSID2049218,1-Ethyl-3-methylimidazolium tetrafluoroborate,duplicate_canonical_structure,DTXSID1041180
+DTXSID7049219,1-Ethyl-3-methylimidazolium methanesulfonate,duplicate_canonical_structure,DTXSID1041180
+DTXSID1049227,"1,2-Dimethyl-3-propylimidazolium bis(trifluoromethylsulfonyl)imide",duplicate_canonical_structure,DTXSID4047888
+DTXSID6049228,1-Decyl-3-methylimidazolium chloride,duplicate_canonical_structure,DTXSID4047913
+DTXSID5049231,1-Butyl-3-methylimidazolium tetrafluoroborate,duplicate_canonical_structure,DTXSID6031461
+DTXSID0049232,1-Butyl-3-methylimidazolium trifluoromethanesulfonate,duplicate_canonical_structure,DTXSID6031461
+DTXSID0049234,1-Butyl-3-methylimidazolium bis(trifluoromethylsulfonyl)imide,duplicate_canonical_structure,DTXSID4047888
+DTXSID5049235,"1-Ethyl-2,3-dimethylimidazolium bis(trifluoromethylsulfonyl)imide",duplicate_canonical_structure,DTXSID4047888
+DTXSID5049237,1-Decyl-3-methylimidazolium bromide,duplicate_canonical_structure,DTXSID4047913
+DTXSID0049238,1-Ethylpyridinium bromide,duplicate_canonical_structure,DTXSID5047875
+DTXSID5049239,DL-Glutamic acid monohydrate,duplicate_canonical_structure,DTXSID5020659
+DTXSID9049241,1-Butylpyridinium tetrafluoroborate,duplicate_canonical_structure,DTXSID1031462
+DTXSID4049246,1-Methyl-3-propylimidazolium hexafluorophosphate,duplicate_canonical_structure,DTXSID3049207
+DTXSID4049248,1-Methyl-3-tetradecylimidazolium hexafluorophosphate,duplicate_canonical_structure,DTXSID1049229
+DTXSID9049249,1-Hexadecyl-3-methylimidazolium hexafluorophosphate,duplicate_canonical_structure,DTXSID8047923
+DTXSID3049251,1-Methyl-3-propylimidazolium tetrafluoroborate,duplicate_canonical_structure,DTXSID3049207
+DTXSID8049252,1-Hexyl-3-methylimidazolium tetrafluoroborate,duplicate_canonical_structure,DTXSID5047871
+DTXSID3049253,1-Dodecyl-3-methylimidazolium tetrafluoroborate,duplicate_canonical_structure,DTXSID4047917
+DTXSID8049254,1-Hexadecyl-3-methylimidazolium tetrafluoroborate,duplicate_canonical_structure,DTXSID8047923
+DTXSID3049257,1-Butyl-3-methylpyridinium iodide,duplicate_canonical_structure,DTXSID2049212
+DTXSID8049258,1-Butyl-2-methylpyridinium bromide,duplicate_canonical_structure,DTXSID8049204
+DTXSID3049259,1-Butyl-3-methylpyridinium bromide,duplicate_canonical_structure,DTXSID2049212
+DTXSID7049263,1-Butyl-2-methylpyridinium tetrafluoroborate,duplicate_canonical_structure,DTXSID8049204
+DTXSID2049264,"1-Ethyl-2,3-dimethylimidazolium hexafluorophosphate",duplicate_canonical_structure,DTXSID5049233
+DTXSID2049266,"1-Ethyl-2,3-dimethylimidazolium tetrafluoroborate",duplicate_canonical_structure,DTXSID5049233
+DTXSID7049267,1-Butyl-4-methylpyridinium iodide,duplicate_canonical_structure,DTXSID3049205
+DTXSID6049274,1-Ethyl-3-methylimidazolium ethyl sulfate,duplicate_canonical_structure,DTXSID1041180
+DTXSID1049275,1-Butyl-4-methylpyridinium tetrafluoroborate,duplicate_canonical_structure,DTXSID3049205
+DTXSID6049276,1-Butyl-1-methylpyrrolidinium tetrafluoroborate,duplicate_canonical_structure,DTXSID1031460
+DTXSID1049279,1-Ethylpyridinium tetrafluoroborate,duplicate_canonical_structure,DTXSID5047875
+DTXSID5049281,1-Ethyl-3-methylimidazolium iodide,duplicate_canonical_structure,DTXSID1041180
+DTXSID0049282,1-Butyl-3-methylimidazolium tetrachloroferrate (III),duplicate_canonical_structure,DTXSID6031461
+DTXSID5049283,1-Decyl-3-methylimidazolium hexafluorophosphate,duplicate_canonical_structure,DTXSID4047913
+DTXSID5049285,1-Butyl-1-methylpyrrolidinium trifluoromethanesulfonate,duplicate_canonical_structure,DTXSID1031460
+DTXSID0049286,1-(2-Hydroxyethyl)-3-methylimidazolium tetrafluoroborate,duplicate_canonical_structure,DTXSID0047872
+DTXSID4049290,1-Hexyl-3-methylimidazolium bis(trifluoromethylsulfonyl)imide,duplicate_canonical_structure,DTXSID4047888
+DTXSID9049291,1-Ethylpyridinium trifluoromethanesulfonate,duplicate_canonical_structure,DTXSID5047875
+DTXSID4049292,1-Butylpyridinium trifluoromethanesulfonate,duplicate_canonical_structure,DTXSID1031462
+DTXSID4049296,1-Butyl-4-methylpyridinium hexafluorophosphate,duplicate_canonical_structure,DTXSID3049205
+DTXSID9049297,1-Methyl-3-tetradecylimidazolium bis(trifluoromethylsulfonyl)imide,duplicate_canonical_structure,DTXSID1049229
+DTXSID4049298,1-Hexadecyl-3-methylimidazolium bis(trifluoromethylsulfonyl)imide,duplicate_canonical_structure,DTXSID8047923
+DTXSID9049299,1-Dodecyl-3-methylimidazolium trifluoromethanesulfonate,duplicate_canonical_structure,DTXSID4047917
+DTXSID1049300,1-Ethyl-3-methylimidazolium hydrogen sulfate,duplicate_canonical_structure,DTXSID1041180
+DTXSID6049305,1-Hexylpyridinium tetrafluoroborate,duplicate_canonical_structure,DTXSID7047934
+DTXSID5049310,1-Ethyl-3-methylimidazolium methyl sulfate,duplicate_canonical_structure,DTXSID1041180
+DTXSID5049314,1-Methyl-1-propylpyrrolidinium chloride,duplicate_canonical_structure,DTXSID7049269
+DTXSID9049320,1-Methyl-1-propylpyrrolidinium iodide,duplicate_canonical_structure,DTXSID7049269
+DTXSID4049325,1-Butyl-3-methylpyridinium tetrafluoroborate,duplicate_canonical_structure,DTXSID2049212
+DTXSID9049328,1-Methyl-1-propylpyrrolidinium bromide,duplicate_canonical_structure,DTXSID7049269
+DTXSID4049329,1-Methyl-1-propylpiperidinium bis(trifluoromethylsulfonyl)imide,duplicate_canonical_structure,DTXSID4047888
+DTXSID8049333,1-Dodecyl-3-methylimidazolium bromide,duplicate_canonical_structure,DTXSID4047917
+DTXSID8049335,1-Hexylpyridinium trifluoromethanesulfonate,duplicate_canonical_structure,DTXSID7047934
+DTXSID3049338,1-Butyl-1-methylpiperidinium bis(trifluoromethylsulfonyl)imide,duplicate_canonical_structure,DTXSID4047888
+DTXSID7049342,1-Butyl-3-methylimidazolium iodide,duplicate_canonical_structure,DTXSID6031461
+DTXSID2049343,1-Ethyl-3-methylmidazolium bromide,duplicate_canonical_structure,DTXSID1041180
+DTXSID2049345,1-Butyl-4-methylpyridinium bromide,duplicate_canonical_structure,DTXSID3049205
+DTXSID2049347,1-Ethyl-1-methylpyrrolidinium bromide,duplicate_canonical_structure,DTXSID5047877
+DTXSID6049351,Trihexyltetradecylphosphonium dicyanamide,duplicate_canonical_structure,DTXSID1049304
+DTXSID6049353,1-Hexylpyridinium iodide,duplicate_canonical_structure,DTXSID7047934
+DTXSID1049356,"1-Butyl-2,3-dimethylimidazolium trifluoromethanesulfonate",duplicate_canonical_structure,DTXSID5047906
+DTXSID6049359,1-Dodecyl-3-methylimidazolium iodide,duplicate_canonical_structure,DTXSID4047917
+DTXSID5049360,1-Butyl-3-methylpyridinium hexafluorophosphate,duplicate_canonical_structure,DTXSID2049212
+DTXSID0049361,1-Methyl-3-propylimidazolium bromide,duplicate_canonical_structure,DTXSID1049358
+DTXSID0049363,1-Butyl-3-methylpyridinium trifluoromethanesulfonate,duplicate_canonical_structure,DTXSID2049212
+DTXSID5049364,1-Ethylpyridinium iodide,duplicate_canonical_structure,DTXSID5047875
+DTXSID5049366,1-Butylpyridinium iodide,duplicate_canonical_structure,DTXSID1031462
+DTXSID0049367,1-Methyl-1-propylpiperidinium tetrafluoroborate,duplicate_canonical_structure,DTXSID0049236
+DTXSID5049368,1-Butyl-4-methylpyridinium trifluoromethanesulfonate,duplicate_canonical_structure,DTXSID3049205
+DTXSID0049369,1-Butyl-1-methylpiperidinium tetrafluoroborate,duplicate_canonical_structure,DTXSID5049289
+DTXSID9049370,1-Methyl-1-propylpiperidinium bromide,duplicate_canonical_structure,DTXSID0049236
+DTXSID9049372,1-Ethyl-1-methylpyrrolidinium trifluoromethanesulfonate,duplicate_canonical_structure,DTXSID5047877
+DTXSID4049375,1-Butyl-1-methylpyrrolidinium bromide,duplicate_canonical_structure,DTXSID1031460
+DTXSID9049378,1-Butyl-1-methylpiperidinium bromide,duplicate_canonical_structure,DTXSID5049289
+DTXSID3049384,1-Butyl-1-methylpiperidinium trifluoromethanesulfonate,duplicate_canonical_structure,DTXSID5049289
+DTXSID8049385,1-Butyl-1-methylpiperidinium hexafluorophosphate,duplicate_canonical_structure,DTXSID5049289
+DTXSID3049386,1-Methyl-1-propylpiperidinium hexafluorophosphate,duplicate_canonical_structure,DTXSID0049236
+DTXSID8049387,1-Methyl-1-propylpiperidinium trifluoromethanesulfonate,duplicate_canonical_structure,DTXSID0049236
+DTXSID3049388,1-Butyl-2-methylpyridinium trifluoromethanesulfonate,duplicate_canonical_structure,DTXSID8049204
+DTXSID8049389,1-Butyl-2-methylpyridinium hexafluorophosphate,duplicate_canonical_structure,DTXSID8049204
+DTXSID7049390,1-Methyl-1-propylpyrrolidinium trifluoromethanesulfonate,duplicate_canonical_structure,DTXSID7049269
+DTXSID9049401,Thioridazine hydrochloride,duplicate_canonical_structure,DTXSID6023656
+DTXSID4049408,Fluorescein 5(6)-isothiocyanate,duplicate_canonical_structure,DTXSID9025328
+DTXSID3049415,Epinephrine bitartrate,duplicate_canonical_structure,DTXSID5022986
+DTXSID3049419,Atropine sulfate anhydrous (2:1) salt,duplicate_canonical_structure,DTXSID3040724
+DTXSID7049421,Betaine monohydrate,duplicate_canonical_structure,DTXSID8022666
+DTXSID2049422,Procainamide hydrochloride,duplicate_canonical_structure,DTXSID7023512
+DTXSID3051707,Iron(III) acetylacetonate,duplicate_canonical_structure,DTXSID8051704
+DTXSID6051724,Sulfathiazole sodium,duplicate_canonical_structure,DTXSID8026068
+DTXSID0051863,Chromic acetylacetonate,duplicate_canonical_structure,DTXSID4021979
+DTXSID0052124,(T-4)-Trihydro(morpholine-κN4)boron,duplicate_canonical_structure,DTXSID2025688
+DTXSID3052228,(-)Bornyl acetate,duplicate_canonical_structure,DTXSID7042061
+DTXSID5052672,(L)-alpha-Terpineol,duplicate_canonical_structure,DTXSID5026625
+DTXSID2057603,R-Lotrafiban,duplicate_canonical_structure,DTXSID7057602
+DTXSID9057717,"(R,S)-Epinephrine hydrochloride",duplicate_canonical_structure,DTXSID5022986
+DTXSID4057847,Ecabet sodium,duplicate_canonical_structure,DTXSID7046881
+DTXSID70880215,Perfluoro-2-methyl-3-oxahexanoic acid,duplicate_canonical_structure,DTXSID40108559

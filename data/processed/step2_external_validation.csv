@@ -1,0 +1,2 @@
+n,n_active,auroc,balanced_accuracy,agreement_rate,tn,fp,fn,tp
+26,25,0.72,0.6799999999999999,0.38461538461538464,1,0,16,9

@@ -1,8 +1,8 @@
-# data
+# data - raw downloads stay local-only (large third-party EPA/literature
+# dumps, fully reproducible via docs/source_data_manifest.md); processed
+# outputs are committed (results + fixed splits, per the reproducibility ask)
 data/raw/*
-data/processed/*
 !data/raw/.gitkeep
-!data/processed/.gitkeep
 
 # models - trained Step 2 artifacts are committed (fixed seed=42, reproducible
 # via scripts/07-09, but small enough and valuable enough as deliverables to

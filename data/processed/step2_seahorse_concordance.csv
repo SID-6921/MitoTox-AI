@@ -1,0 +1,10 @@
+seahorse_endpoint,membership,n,n_seahorse_active,mmp_model_vs_seahorse_auroc,agreement_rate_at_0.5
+primary_basal_resp_rate,"blended (all 253, includes in-sample train chemicals)",253,165,0.6275482093663912,0.5533596837944664
+primary_max_resp_rate,"blended (all 253, includes in-sample train chemicals)",253,134,0.6216606045403237,0.549407114624506
+primary_inhib_resp_rate,"blended (all 253, includes in-sample train chemicals)",253,28,0.5195238095238096,0.5731225296442688
+primary_basal_resp_rate,"in_scaffold_train (in-sample, not a true validation)",153,101,0.6724105102817974,0.6535947712418301
+primary_max_resp_rate,"in_scaffold_train (in-sample, not a true validation)",153,70,0.6694492254733219,0.6209150326797386
+primary_inhib_resp_rate,"in_scaffold_train (in-sample, not a true validation)",153,14,0.5519013360739979,0.5032679738562091
+primary_basal_resp_rate,held_out (val+test+untested-on-primary - genuine orthogonal signal),100,64,0.4698350694444445,0.4
+primary_max_resp_rate,held_out (val+test+untested-on-primary - genuine orthogonal signal),100,64,0.5579427083333333,0.44
+primary_inhib_resp_rate,held_out (val+test+untested-on-primary - genuine orthogonal signal),100,14,0.507890365448505,0.68
