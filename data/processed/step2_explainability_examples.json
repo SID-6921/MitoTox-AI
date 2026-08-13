@@ -1,0 +1,130 @@
+[
+  {
+    "key": "correct_toxicant",
+    "description": "Correctly predicted mitochondrial liability (true positive)",
+    "DTXSID": "DTXSID3042631",
+    "canonical_smiles": "CNC1CC(c2ccc(Cl)c(Cl)c2)c2ccccc21",
+    "label": 1,
+    "predicted_proba": 0.9,
+    "uncertainty_std": 0.3000000000000001,
+    "top_features": [
+      {
+        "feature": "logp",
+        "shap_value": 0.10078840820180318,
+        "feature_value": 4.789500000000003
+      },
+      {
+        "feature": "aromatic_rings",
+        "shap_value": 0.06615872305533131,
+        "feature_value": 2.0
+      },
+      {
+        "feature": "mol_weight",
+        "shap_value": 0.05392595038269292,
+        "feature_value": 292.20899999999995
+      },
+      {
+        "feature": "heavy_atoms",
+        "shap_value": 0.04549219628749981,
+        "feature_value": 19.0
+      },
+      {
+        "feature": "ecfp4_875",
+        "shap_value": 0.034479586691265635,
+        "feature_value": 1.0
+      }
+    ],
+    "rendered_substructures": [
+      {
+        "feature": "ecfp4_875",
+        "bit": 875,
+        "image": "results/figures/explain_correct_toxicant_bit875.png"
+      }
+    ]
+  },
+  {
+    "key": "correct_low_liability",
+    "description": "Correctly predicted low liability (true negative)",
+    "DTXSID": "DTXSID8025969",
+    "canonical_smiles": "C1COC1",
+    "label": 0,
+    "predicted_proba": 0.002,
+    "uncertainty_std": 0.0446766158073773,
+    "top_features": [
+      {
+        "feature": "mol_weight",
+        "shap_value": -0.043695271224555084,
+        "feature_value": 58.07999999999999
+      },
+      {
+        "feature": "logp",
+        "shap_value": -0.02655658016521599,
+        "feature_value": 0.4067
+      },
+      {
+        "feature": "heavy_atoms",
+        "shap_value": -0.02167637429569055,
+        "feature_value": 4.0
+      },
+      {
+        "feature": "aromatic_rings",
+        "shap_value": -0.013648072185266997,
+        "feature_value": 0.0
+      },
+      {
+        "feature": "fraction_csp3",
+        "shap_value": -0.013417891063920849,
+        "feature_value": 1.0
+      }
+    ],
+    "rendered_substructures": []
+  },
+  {
+    "key": "uncertain_case",
+    "description": "Highest-uncertainty prediction (most disagreement across trees)",
+    "DTXSID": "DTXSID9048984",
+    "canonical_smiles": "O=C(O)c1cc2ccccc2c(Cc2c(O)c(C(=O)O)cc3ccccc23)c1O",
+    "label": 1,
+    "predicted_proba": 0.5,
+    "uncertainty_std": 0.5,
+    "top_features": [
+      {
+        "feature": "logp",
+        "shap_value": 0.0713200889746998,
+        "feature_value": 4.391400000000003
+      },
+      {
+        "feature": "aromatic_rings",
+        "shap_value": 0.06152642421978577,
+        "feature_value": 4.0
+      },
+      {
+        "feature": "ecfp4_1602",
+        "shap_value": 0.0430063997195645,
+        "feature_value": 1.0
+      },
+      {
+        "feature": "mol_weight",
+        "shap_value": 0.042659180226608126,
+        "feature_value": 388.3750000000001
+      },
+      {
+        "feature": "ecfp4_202",
+        "shap_value": 0.037785851497679344,
+        "feature_value": 1.0
+      }
+    ],
+    "rendered_substructures": [
+      {
+        "feature": "ecfp4_1602",
+        "bit": 1602,
+        "image": "results/figures/explain_uncertain_case_bit1602.png"
+      },
+      {
+        "feature": "ecfp4_202",
+        "bit": 202,
+        "image": "results/figures/explain_uncertain_case_bit202.png"
+      }
+    ]
+  }
+]

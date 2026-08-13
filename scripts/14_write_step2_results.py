@@ -2,6 +2,7 @@
 every number fresh from disk (same pattern as 06_write_data_summary.py) so
 it can't go stale or be hand-edited out of sync with the actual results.
 """
+import json
 import pandas as pd
 from scipy.stats import mannwhitneyu
 
@@ -13,11 +14,16 @@ UNCERTAINTY_PATH = "data/processed/step2_uncertainty_ad.csv"
 SEAHORSE_PATH = "data/processed/step2_seahorse_concordance.csv"
 CALIBRATION_PATH = "data/processed/step2_calibration_bins.csv"
 EXTERNAL_PATH = "data/processed/step2_external_validation.csv"
+THRESHOLD_TRADEOFF_PATH = "data/processed/step2_threshold_tradeoff.csv"
+EXPLAINABILITY_PATH = "data/processed/step2_explainability_examples.json"
 OUT_PATH = "docs/step2_results.md"
 
 
 def main():
     selection = pd.read_csv(SELECTION_LOG_PATH)
+    threshold_tradeoff = pd.read_csv(THRESHOLD_TRADEOFF_PATH)
+    with open(EXPLAINABILITY_PATH) as f:
+        explainability = json.load(f)
     metrics = pd.read_csv(TEST_METRICS_PATH)
     external = pd.read_csv(EXTERNAL_PATH)
     cytotox = pd.read_csv(CYTOTOX_PATH)
@@ -101,6 +107,28 @@ def main():
         "![ROC curve](../results/figures/roc_curve.png)",
         "![Precision-recall curve](../results/figures/pr_curve.png)",
         "",
+        "### Threshold tradeoff (scaffold Random Forest, locked test set)",
+        "",
+        "0.5 was the pre-declared default threshold used for every headline metric above,",
+        "chosen before any evaluation ran. The table below shows the same locked predictions",
+        "at other thresholds, to demonstrate the operating point is tunable rather than fixed",
+        "to a single number - no result above was re-computed or re-selected based on this:",
+        "",
+        "| threshold | sensitivity | specificity | balanced acc | F1 |",
+        "|---|---|---|---|---|",
+    ]
+    for _, row in threshold_tradeoff.iterrows():
+        lines.append(
+            f"| {row['threshold']:.1f} | {row['sensitivity']:.3f} | {row['specificity']:.3f} | "
+            f"{row['balanced_accuracy']:.3f} | {row['f1']:.3f} |"
+        )
+    lines += [
+        "",
+        "Lower thresholds trade specificity for sensitivity (0.3: catches 85% of actives at the",
+        "cost of a 40% false-positive rate among inactives); higher thresholds do the reverse.",
+        "0.4 happens to edge out 0.5 on both balanced accuracy and F1 here - reported for",
+        "completeness, not adopted as a new headline number after the fact.",
+        "",
         "## Calibration",
         "",
         f"10-bin calibration table for the best model ({best_model}, scaffold-test set) - mean",
@@ -150,6 +178,8 @@ def main():
         f"(AUROC {best_overall['auroc']:.3f} overall vs {best_below['auroc']:.3f} below-threshold, "
         f"n={int(best_below['n'])}) - evidence the signal is not simply tracking general cytotoxicity.",
         "",
+        "![Cytotoxicity robustness plot](../results/figures/cytotox_robustness_plot.png)",
+        "",
         "## Uncertainty and domain of applicability",
         "",
         f"Best model ({best_model}, scaffold split). Uncertainty = std of predicted probability",
@@ -173,6 +203,15 @@ def main():
         "  the training set alone does not predict errors as well as the model's own internal",
         "  disagreement does. Reported as-is; not every diagnostic needs to show a signal to be honest.",
         "",
+        "![Chemical space plot](../results/figures/chemical_space_plot.png)",
+        "",
+        "PCA over ECFP4 fingerprints (fit on train, test chemicals projected in) - note PC1+PC2",
+        "explain only ~8.9% of variance, typical for sparse high-dimensional fingerprints, so this",
+        "is a coarse 2D view of a much higher-dimensional space. Consistent with the statistical",
+        "finding above: test errors (orange x) don't visually separate into a distinct region from",
+        "correct predictions (blue) - the model's own uncertainty is a better error signal than",
+        "position in this projection.",
+        "",
         "### Risk-coverage (selective prediction)",
         "",
         "Ranking test chemicals by ascending uncertainty (most confident first) and referring the",
@@ -194,6 +233,31 @@ def main():
         "",
         "![Risk-coverage plot](../results/figures/risk_coverage_plot.png)",
         "",
+        "## Explainability examples",
+        "",
+        "SHAP (TreeExplainer, interventional mode against a train background sample) on the",
+        "scaffold Random Forest, for three representative chemicals. Fingerprint-bit features are",
+        "rendered as the actual substructure driving that bit, not left as an opaque bit index.",
+        "",
+    ]
+    for ex in explainability:
+        lines += [
+            f"### {ex['description']}",
+            f"DTXSID `{ex['DTXSID']}` - predicted probability {ex['predicted_proba']:.3f}, "
+            f"true label {'active' if ex['label'] else 'inactive'}, "
+            f"uncertainty (tree-disagreement std) {ex['uncertainty_std']:.3f}",
+            "",
+            "Top contributing features (SHAP value, feature value):",
+            "",
+        ]
+        for feat in ex["top_features"]:
+            lines.append(f"- `{feat['feature']}`: SHAP={feat['shap_value']:.3f}, value={feat['feature_value']:.3g}")
+        for sub in ex["rendered_substructures"]:
+            rel_path = sub["image"].replace("results/figures/", "../results/figures/")
+            lines.append(f"\n![{ex['key']} bit {sub['bit']}]({rel_path})")
+        lines.append("")
+
+    lines += [
         "## Seahorse orthogonal concordance",
         "",
         f"The {best_model} model applied to all 253 chemicals with Seahorse respirometry data,",
@@ -225,7 +289,12 @@ def main():
         "chemicals is simply too small to detect a real but modest effect - this analysis cannot",
         "distinguish between those two explanations.",
         "",
-        "## External validation",
+        "## External validation (exploratory only - not a Phase I substitute)",
+        "",
+        "Per Kolliputi: report the overlap analysis transparently, but this is an **exploratory**",
+        "analysis, not definitive external validation - the class balance below is too extreme for",
+        "that. Rigorous external validation (a larger, better-balanced, structure-checked",
+        "independent set, or a prospective panel) is reserved for Phase I.",
         "",
         "See `docs/external_validation_search.md` for the full source-by-source breakdown.",
         "Summary: a literature-curated membrane-potential dataset independent of Tox21 was",
@@ -236,9 +305,9 @@ def main():
         f"**{int(external['n'].iloc[0])} genuinely unseen chemicals** that remained, the label balance "
         f"was {int(external['n_active'].iloc[0])} active / "
         f"{int(external['n'].iloc[0]) - int(external['n_active'].iloc[0])} inactive - too few negatives "
-        f"for a reliable estimate. Result recorded for completeness (AUROC "
-        f"{external['auroc'].iloc[0]:.3f}, balanced accuracy {external['balanced_accuracy'].iloc[0]:.3f}), "
-        "but **no confident external-validation claim is drawn from it** given the sample size.",
+        f"for a reliable estimate. Exploratory result (AUROC "
+        f"{external['auroc'].iloc[0]:.3f}, balanced accuracy {external['balanced_accuracy'].iloc[0]:.3f}) "
+        "is reported for transparency, not presented as a validated finding.",
         "",
         "## Repro notes",
         "- All models trained with fixed random_state=42.",

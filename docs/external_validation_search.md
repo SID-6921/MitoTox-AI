@@ -4,7 +4,11 @@ Per Kolliputi: "look for a genuinely independent mitochondrial-toxicity dataset 
 external validation... do not force an external-validation claim if an appropriate
 independent dataset is unavailable." This is that search, done honestly.
 
-## Outcome: obtained and applied, but statistically underpowered after overlap removal
+## Outcome: obtained and applied as an exploratory analysis, not a validation claim
+
+Per Kolliputi (2026-08-13): report this transparently, but don't present it as definitive
+external validation given the extreme class imbalance after overlap removal - call it
+exploratory, and reserve rigorous external validation for Phase I.
 
 **Source:** Garcia de Lomana, Marin Zapata & Montanari, "Predicting the Mitochondrial
 Toxicity of Small Molecules: Insights from Mechanistic Assays and Cell Painting Data,"
@@ -57,5 +61,6 @@ read is that this attempt is underpowered, not that it succeeded or failed.
 The 82% overlap finding is itself useful: it suggests future "independent" validation
 sourcing should check structure-level overlap against training data explicitly (as done
 here) rather than assume a differently-named source is actually a disjoint chemical
-set. A larger literature-curated, non-overlapping, better-balanced set would be needed
-for a confident external-validation claim; 26 chemicals with 1 negative isn't it.
+set. Rigorous external validation - a larger, better-balanced, structure-checked
+independent set, or a prospective panel - is scoped for Phase I, not this preliminary
+package; 26 chemicals with 1 negative was never going to be that.

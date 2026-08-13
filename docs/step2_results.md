@@ -63,6 +63,25 @@ metrics are reported above regardless of which one is picked.)*
 ![ROC curve](../results/figures/roc_curve.png)
 ![Precision-recall curve](../results/figures/pr_curve.png)
 
+### Threshold tradeoff (scaffold Random Forest, locked test set)
+
+0.5 was the pre-declared default threshold used for every headline metric above,
+chosen before any evaluation ran. The table below shows the same locked predictions
+at other thresholds, to demonstrate the operating point is tunable rather than fixed
+to a single number - no result above was re-computed or re-selected based on this:
+
+| threshold | sensitivity | specificity | balanced acc | F1 |
+|---|---|---|---|---|
+| 0.3 | 0.852 | 0.602 | 0.727 | 0.510 |
+| 0.4 | 0.639 | 0.785 | 0.712 | 0.523 |
+| 0.5 | 0.352 | 0.914 | 0.633 | 0.421 |
+| 0.6 | 0.126 | 0.969 | 0.547 | 0.203 |
+
+Lower thresholds trade specificity for sensitivity (0.3: catches 85% of actives at the
+cost of a 40% false-positive rate among inactives); higher thresholds do the reverse.
+0.4 happens to edge out 0.5 on both balanced accuracy and F1 here - reported for
+completeness, not adopted as a new headline number after the fact.
+
 ## Calibration
 
 10-bin calibration table for the best model (random_forest, scaffold-test set) - mean
@@ -111,6 +130,8 @@ applies to actives.
 
 **For the best model (random_forest, scaffold split): predictive performance persists** when restricted to hits below the cytotoxicity burst threshold (AUROC 0.796 overall vs 0.797 below-threshold, n=940) - evidence the signal is not simply tracking general cytotoxicity.
 
+![Cytotoxicity robustness plot](../results/figures/cytotox_robustness_plot.png)
+
 ## Uncertainty and domain of applicability
 
 Best model (random_forest, scaffold split). Uncertainty = std of predicted probability
@@ -122,6 +143,15 @@ similarity to the scaffold-train fingerprints.
 - AD novelty is *not* significantly different between errors and correct predictions (mean 0.5931 vs 0.6010, p=0.5667) - structural distance to
   the training set alone does not predict errors as well as the model's own internal
   disagreement does. Reported as-is; not every diagnostic needs to show a signal to be honest.
+
+![Chemical space plot](../results/figures/chemical_space_plot.png)
+
+PCA over ECFP4 fingerprints (fit on train, test chemicals projected in) - note PC1+PC2
+explain only ~8.9% of variance, typical for sparse high-dimensional fingerprints, so this
+is a coarse 2D view of a much higher-dimensional space. Consistent with the statistical
+finding above: test errors (orange x) don't visually separate into a distinct region from
+correct predictions (blue) - the model's own uncertainty is a better error signal than
+position in this projection.
 
 ### Risk-coverage (selective prediction)
 
@@ -147,6 +177,51 @@ of magnitude (20.4% -> 1.4%) - concrete evidence that the uncertainty score iden
 unreliable predictions rather than being noise.
 
 ![Risk-coverage plot](../results/figures/risk_coverage_plot.png)
+
+## Explainability examples
+
+SHAP (TreeExplainer, interventional mode against a train background sample) on the
+scaffold Random Forest, for three representative chemicals. Fingerprint-bit features are
+rendered as the actual substructure driving that bit, not left as an opaque bit index.
+
+### Correctly predicted mitochondrial liability (true positive)
+DTXSID `DTXSID3042631` - predicted probability 0.900, true label active, uncertainty (tree-disagreement std) 0.300
+
+Top contributing features (SHAP value, feature value):
+
+- `logp`: SHAP=0.101, value=4.79
+- `aromatic_rings`: SHAP=0.066, value=2
+- `mol_weight`: SHAP=0.054, value=292
+- `heavy_atoms`: SHAP=0.045, value=19
+- `ecfp4_875`: SHAP=0.034, value=1
+
+![correct_toxicant bit 875](../results/figures/explain_correct_toxicant_bit875.png)
+
+### Correctly predicted low liability (true negative)
+DTXSID `DTXSID8025969` - predicted probability 0.002, true label inactive, uncertainty (tree-disagreement std) 0.045
+
+Top contributing features (SHAP value, feature value):
+
+- `mol_weight`: SHAP=-0.044, value=58.1
+- `logp`: SHAP=-0.027, value=0.407
+- `heavy_atoms`: SHAP=-0.022, value=4
+- `aromatic_rings`: SHAP=-0.014, value=0
+- `fraction_csp3`: SHAP=-0.013, value=1
+
+### Highest-uncertainty prediction (most disagreement across trees)
+DTXSID `DTXSID9048984` - predicted probability 0.500, true label active, uncertainty (tree-disagreement std) 0.500
+
+Top contributing features (SHAP value, feature value):
+
+- `logp`: SHAP=0.071, value=4.39
+- `aromatic_rings`: SHAP=0.062, value=4
+- `ecfp4_1602`: SHAP=0.043, value=1
+- `mol_weight`: SHAP=0.043, value=388
+- `ecfp4_202`: SHAP=0.038, value=1
+
+![uncertain_case bit 1602](../results/figures/explain_uncertain_case_bit1602.png)
+
+![uncertain_case bit 202](../results/figures/explain_uncertain_case_bit202.png)
 
 ## Seahorse orthogonal concordance
 
@@ -177,12 +252,17 @@ be more mechanistically distinct than initially assumed, or n=100 held-out Seaho
 chemicals is simply too small to detect a real but modest effect - this analysis cannot
 distinguish between those two explanations.
 
-## External validation
+## External validation (exploratory only - not a Phase I substitute)
+
+Per Kolliputi: report the overlap analysis transparently, but this is an **exploratory**
+analysis, not definitive external validation - the class balance below is too extreme for
+that. Rigorous external validation (a larger, better-balanced, structure-checked
+independent set, or a prospective panel) is reserved for Phase I.
 
 See `docs/external_validation_search.md` for the full source-by-source breakdown.
 Summary: a literature-curated membrane-potential dataset independent of Tox21 was
 identified (147 compounds), and the locked model was applied to it without retraining.
-82% (120/146) turned out to already be in our own training population - itself a useful finding about how much apparent 'independent' datasets can overlap with ToxCast once checked at the structure level. Of the **26 genuinely unseen chemicals** that remained, the label balance was 25 active / 1 inactive - too few negatives for a reliable estimate. Result recorded for completeness (AUROC 0.720, balanced accuracy 0.680), but **no confident external-validation claim is drawn from it** given the sample size.
+82% (120/146) turned out to already be in our own training population - itself a useful finding about how much apparent 'independent' datasets can overlap with ToxCast once checked at the structure level. Of the **26 genuinely unseen chemicals** that remained, the label balance was 25 active / 1 inactive - too few negatives for a reliable estimate. Exploratory result (AUROC 0.720, balanced accuracy 0.680) is reported for transparency, not presented as a validated finding.
 
 ## Repro notes
 - All models trained with fixed random_state=42.
