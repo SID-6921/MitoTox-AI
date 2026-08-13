@@ -60,16 +60,20 @@ def main():
     )
 
     hitcalls.to_csv(OUT_LONG_PATH, index=False)
-    n_hits = int((hitcalls["hitcall"] >= 0.9).sum())
-    n_confound = int(hitcalls["likely_cytotox_confound"].sum())
-    print(f"wrote {len(hitcalls):,} rows -> {OUT_LONG_PATH}")
-    print(f"active hits: {n_hits:,}; of those, at/above the chemical's cytotoxicity burst threshold: "
-          f"{n_confound:,} ({100*n_confound/n_hits:.1f}%)")
+    print(f"wrote {len(hitcalls):,} rows (includes test replicates) -> {OUT_LONG_PATH}")
 
-    # add potency (ac50) and cytotox-confound flag per endpoint into the wide modeling table
+    # dedup to one row per chemical-endpoint pair (keep highest hitcall) before
+    # computing any aggregate stat or building the wide table - 61,664 raw rows
+    # include 10,186 replicate retests, which would otherwise double-count hits
     dedup = hitcalls.sort_values("hitcall", ascending=False).drop_duplicates(subset=["dsstox_substance_id", "aeid"])
     dedup = dedup.copy()
     dedup["endpoint"] = dedup["aeid"].map(ENDPOINT_LABELS)
+
+    n_hits = int((dedup["hitcall"] >= 0.9).sum())
+    n_confound = int(dedup["likely_cytotox_confound"].sum())
+    print(f"unique chemical-endpoint pairs: {len(dedup):,}; active hits: {n_hits:,}; "
+          f"of those, at/above the chemical's cytotoxicity burst threshold: "
+          f"{n_confound:,} ({100*n_confound/n_hits:.1f}%)")
 
     ac50_wide = dedup.pivot_table(index="dsstox_substance_id", columns="endpoint", values="ac50", aggfunc="first")
     ac50_wide.columns = [f"{c}_ac50_um" for c in ac50_wide.columns]

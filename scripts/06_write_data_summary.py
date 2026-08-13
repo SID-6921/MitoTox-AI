@@ -67,8 +67,14 @@ def main():
         pct = 100 * active / tested if tested else float("nan")
         lines.append(f"| {name} (aeid {aeid}) | {tested} | {active} | {pct:.1f}% |")
 
-    n_hits = int((enriched["hitcall"] >= HITCALL_THRESHOLD).sum())
-    n_confound = int(enriched["likely_cytotox_confound"].sum())
+    # dedup to one row per chemical-endpoint pair first - the raw enriched
+    # table includes test replicates, which would double-count hits otherwise
+    enriched_dedup = (
+        enriched.sort_values("hitcall", ascending=False)
+        .drop_duplicates(subset=["dsstox_substance_id", "aeid"])
+    )
+    n_hits = int((enriched_dedup["hitcall"] >= HITCALL_THRESHOLD).sum())
+    n_confound = int(enriched_dedup["likely_cytotox_confound"].sum())
     pct_confound = 100 * n_confound / n_hits if n_hits else float("nan")
 
     lines += [

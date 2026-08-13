@@ -44,7 +44,7 @@ Endpoint definitions: see `docs/endpoint_definitions.md`.
   long-format `data/processed/mito_hitcalls_enriched.csv`.
 - **Cytotoxicity sensitivity check:** joined each chemical's cytotoxicity burst
   threshold (`cytotox_invitrodb_v4_3_AUG2024.xlsx`, median AC50 across all
-  `burst_assay=1` endpoints minus 3x global MAD). Of the 9,795 active hits across all 19 endpoints, **65.6% occur at or above the chemical's own cytotoxicity burst threshold** - meaning a majority of
+  `burst_assay=1` endpoints minus 3x global MAD). Of the 8,505 active hits across all 19 endpoints, **64.8% occur at or above the chemical's own cytotoxicity burst threshold** - meaning a majority of
   raw hits in this endpoint set are plausibly driven by general cytotoxicity rather
   than a mitochondria-specific mechanism. Flagged per-hit (`likely_cytotox_confound`)
   and per-chemical/endpoint (`<endpoint>_cytotox_confound`) so Step 2 modeling can
