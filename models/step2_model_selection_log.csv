@@ -1,0 +1,7 @@
+regime,model,params,val_auroc,seed
+scaffold,logistic_regression,"{""C"": 0.01}",0.6889210039970775,42
+scaffold,random_forest,"{""max_depth"": null}",0.7773294795203507,42
+scaffold,xgboost,"{""max_depth"": 9}",0.7790916319250442,42
+random,logistic_regression,"{""C"": 0.01}",0.797063810742494,42
+random,random_forest,"{""max_depth"": null}",0.8913805384484464,42
+random,xgboost,"{""max_depth"": 3}",0.8805794214610347,42

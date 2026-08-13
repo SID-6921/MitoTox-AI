@@ -4,9 +4,9 @@ data/processed/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 
-# models
-models/*
-!models/.gitkeep
+# models - trained Step 2 artifacts are committed (fixed seed=42, reproducible
+# via scripts/07-09, but small enough and valuable enough as deliverables to
+# track directly rather than regenerate-only like data/raw and data/processed)
 
 # python
 __pycache__/
