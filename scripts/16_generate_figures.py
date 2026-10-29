@@ -73,11 +73,18 @@ def main():
              label=f"Random split, comparison only (AUROC = {roc_auc_r:.3f})")
     ax.plot([0, 1], [0, 1], color=INK_MUTED, linewidth=1.5, linestyle="--", label="Chance")
 
+    fixed_thresholds = {0.3, 0.4, 0.5, 0.6}
     for _, row in thresholds_df.iterrows():
         idx = np.argmin(np.abs(roc_thresh - row["threshold"]))
+        is_screening = row["threshold"] not in fixed_thresholds
+        marker_color = ORANGE if is_screening else BLUE
+        label_suffix = " (screening mode)" if is_screening else ""
+        # 3 significant figures: distinguishes 0.382 from 0.4 without cluttering
+        # the round thresholds with trailing zeros (0.3 stays "0.3", not "0.300")
+        t_str = f"{row['threshold']:.3g}"
         ax.plot(fpr[idx], tpr[idx], marker="o", markersize=7, color=INK_PRIMARY,
-                markerfacecolor=BLUE, zorder=5)
-        ax.annotate(f"  t={row['threshold']:.1f}", (fpr[idx], tpr[idx]),
+                markerfacecolor=marker_color, zorder=5)
+        ax.annotate(f"  t={t_str}{label_suffix}", (fpr[idx], tpr[idx]),
                     fontsize=8, color=INK_SECONDARY, va="center")
 
     ax.set_xlabel("False positive rate")

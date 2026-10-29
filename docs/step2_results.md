@@ -70,17 +70,22 @@ chosen before any evaluation ran. The table below shows the same locked predicti
 at other thresholds, to demonstrate the operating point is tunable rather than fixed
 to a single number - no result above was re-computed or re-selected based on this:
 
-| threshold | sensitivity | specificity | balanced acc | F1 |
-|---|---|---|---|---|
-| 0.3 | 0.852 | 0.602 | 0.727 | 0.510 |
-| 0.4 | 0.639 | 0.785 | 0.712 | 0.523 |
-| 0.5 | 0.352 | 0.914 | 0.633 | 0.421 |
-| 0.6 | 0.126 | 0.969 | 0.547 | 0.203 |
+| threshold | sensitivity | specificity | balanced acc | F1 | notes |
+|---|---|---|---|---|---|
+| 0.300 | 0.852 | 0.602 | 0.727 | 0.510 |  |
+| 0.382 | 0.704 | 0.763 | 0.734 | 0.544 | high-sensitivity screening mode (Aim 1 milestone target) |
+| 0.400 | 0.639 | 0.785 | 0.712 | 0.523 |  |
+| 0.500 | 0.352 | 0.914 | 0.633 | 0.421 |  |
+| 0.600 | 0.126 | 0.969 | 0.547 | 0.203 |  |
 
 Lower thresholds trade specificity for sensitivity (0.3: catches 85% of actives at the
 cost of a 40% false-positive rate among inactives); higher thresholds do the reverse.
 0.4 happens to edge out 0.5 on both balanced accuracy and F1 here - reported for
 completeness, not adopted as a new headline number after the fact.
+
+**Screening-mode target (sensitivity >= 0.7):** reachable at threshold 0.382 -> sensitivity 0.704, specificity 0.763 (independently re-derived from raw
+predictions with plain boolean indexing, not just the confusion-matrix helper function,
+before reporting here).
 
 **Per Kolliputi:** 0.5 is not to be treated as the required product threshold. Since
 MitoTox AI is intended as a screening/prioritization tool, a final operating threshold

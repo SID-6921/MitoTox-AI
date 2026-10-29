@@ -116,13 +116,16 @@ def main():
         "at other thresholds, to demonstrate the operating point is tunable rather than fixed",
         "to a single number - no result above was re-computed or re-selected based on this:",
         "",
-        "| threshold | sensitivity | specificity | balanced acc | F1 |",
-        "|---|---|---|---|---|",
+        "| threshold | sensitivity | specificity | balanced acc | F1 | notes |",
+        "|---|---|---|---|---|---|",
     ]
-    for _, row in threshold_tradeoff.iterrows():
+    screening_target = 0.70
+    for _, row in threshold_tradeoff.sort_values("threshold").iterrows():
+        is_screening = abs(row["sensitivity"] - screening_target) < 0.05 and row["threshold"] not in (0.3, 0.4, 0.5, 0.6)
+        note = "high-sensitivity screening mode (Aim 1 milestone target)" if is_screening else ""
         lines.append(
-            f"| {row['threshold']:.1f} | {row['sensitivity']:.3f} | {row['specificity']:.3f} | "
-            f"{row['balanced_accuracy']:.3f} | {row['f1']:.3f} |"
+            f"| {row['threshold']:.3f} | {row['sensitivity']:.3f} | {row['specificity']:.3f} | "
+            f"{row['balanced_accuracy']:.3f} | {row['f1']:.3f} | {note} |"
         )
     lines += [
         "",
@@ -130,6 +133,17 @@ def main():
         "cost of a 40% false-positive rate among inactives); higher thresholds do the reverse.",
         "0.4 happens to edge out 0.5 on both balanced accuracy and F1 here - reported for",
         "completeness, not adopted as a new headline number after the fact.",
+        "",
+    ]
+    screening_rows = threshold_tradeoff[~threshold_tradeoff["threshold"].isin([0.3, 0.4, 0.5, 0.6])]
+    assert len(screening_rows) > 0, "expected an extra screening-mode threshold row beyond the 4 fixed ones"
+    screening_row = screening_rows.iloc[(screening_rows["sensitivity"] - screening_target).abs().argsort().iloc[0]]
+    lines += [
+        f"**Screening-mode target (sensitivity >= {screening_target}):** reachable at threshold "
+        f"{screening_row['threshold']:.3f} -> sensitivity {screening_row['sensitivity']:.3f}, "
+        f"specificity {screening_row['specificity']:.3f} (independently re-derived from raw",
+        "predictions with plain boolean indexing, not just the confusion-matrix helper function,",
+        "before reporting here).",
         "",
         "**Per Kolliputi:** 0.5 is not to be treated as the required product threshold. Since",
         "MitoTox AI is intended as a screening/prioritization tool, a final operating threshold",

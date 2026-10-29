@@ -9,6 +9,7 @@ TEST_METRICS_PATH = "data/processed/step2_test_metrics.csv"
 CYTOTOX_PATH = "data/processed/step2_cytotox_sensitivity.csv"
 SEAHORSE_PATH = "data/processed/step2_seahorse_concordance.csv"
 FULL_COVERAGE_PATH = "data/processed/step2_full_coverage_table.csv"
+THRESHOLD_TRADEOFF_PATH = "data/processed/step2_threshold_tradeoff.csv"
 OUT_PATH = "docs/step2_summary_tables.md"
 
 
@@ -17,6 +18,7 @@ def main():
     cytotox = pd.read_csv(CYTOTOX_PATH)
     seahorse = pd.read_csv(SEAHORSE_PATH)
     full_coverage = pd.read_csv(FULL_COVERAGE_PATH)
+    thresholds = pd.read_csv(THRESHOLD_TRADEOFF_PATH).sort_values("threshold")
 
     lines = [
         "# Step 2 summary tables (condensed, for the preliminary-data package)",
@@ -84,6 +86,24 @@ def main():
             f"| {int(row['coverage_pct'])}% | {int(row['n_retained'])} | {int(row['n_referred'])} | "
             f"{row['pct_referred']:.1f}% | {auroc_str} | {auprc_str} | {row['sensitivity']:.3f} | "
             f"{row['specificity']:.3f} | {row['balanced_accuracy']:.3f} | {row['error_rate']:.3f} |"
+        )
+
+    lines += [
+        "",
+        "## Threshold tradeoff, including the Aim 1 high-sensitivity screening mode",
+        "",
+        "0.5 is the pre-declared default used for all headline metrics; it is not the final",
+        "product threshold. The Aim 1 milestone target (sensitivity >= 0.70) is reachable.",
+        "",
+        "| Threshold | Sensitivity | Specificity | Balanced accuracy | F1 | Note |",
+        "|---|---|---|---|---|---|",
+    ]
+    fixed = {0.3, 0.4, 0.5, 0.6}
+    for _, row in thresholds.iterrows():
+        note = "meets the sensitivity >= 0.70 milestone target" if row["threshold"] not in fixed else ""
+        lines.append(
+            f"| {row['threshold']:.3g} | {row['sensitivity']:.3f} | {row['specificity']:.3f} | "
+            f"{row['balanced_accuracy']:.3f} | {row['f1']:.3f} | {note} |"
         )
 
     with open(OUT_PATH, "w", encoding="utf-8") as f:

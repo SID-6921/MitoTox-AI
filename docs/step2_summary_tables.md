@@ -50,3 +50,16 @@ one.
 | 40% | 436 | 655 | 60.0% | 0.785 | 0.280 | 0.269 | 0.993 | 0.631 | 0.050 |
 | 30% | 327 | 764 | 70.0% | 0.848 | 0.327 | 0.267 | 0.990 | 0.629 | 0.043 |
 | 20% | 218 | 873 | 80.0% | 0.909 | 0.482 | 0.667 | 0.995 | 0.831 | 0.014 |
+
+## Threshold tradeoff, including the Aim 1 high-sensitivity screening mode
+
+0.5 is the pre-declared default used for all headline metrics; it is not the final
+product threshold. The Aim 1 milestone target (sensitivity >= 0.70) is reachable.
+
+| Threshold | Sensitivity | Specificity | Balanced accuracy | F1 | Note |
+|---|---|---|---|---|---|
+| 0.3 | 0.852 | 0.602 | 0.727 | 0.510 |  |
+| 0.382 | 0.704 | 0.763 | 0.734 | 0.544 | meets the sensitivity >= 0.70 milestone target |
+| 0.4 | 0.639 | 0.785 | 0.712 | 0.523 |  |
+| 0.5 | 0.352 | 0.914 | 0.633 | 0.421 |  |
+| 0.6 | 0.126 | 0.969 | 0.547 | 0.203 |  |
