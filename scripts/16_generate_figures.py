@@ -9,7 +9,7 @@ from sklearn.metrics import roc_curve, precision_recall_curve, auc, average_prec
 
 PREDICTIONS_PATH = "data/processed/step2_predictions.csv"
 CALIBRATION_PATH = "data/processed/step2_calibration_bins.csv"
-RISK_COVERAGE_PATH = "data/processed/step2_risk_coverage.csv"
+FULL_COVERAGE_PATH = "data/processed/step2_full_coverage_table.csv"
 THRESHOLD_TRADEOFF_PATH = "data/processed/step2_threshold_tradeoff.csv"
 CYTOTOX_PATH = "data/processed/step2_cytotox_sensitivity.csv"
 OUT_DIR = "results/figures"
@@ -139,19 +139,43 @@ def main():
     fig.savefig(f"{OUT_DIR}/calibration_plot.png")
     plt.close(fig)
 
-    # Risk-coverage plot
-    risk_cov = pd.read_csv(RISK_COVERAGE_PATH)
-    fig, ax = plt.subplots(figsize=(6, 5), dpi=150)
-    ax.plot(risk_cov["coverage_pct"], risk_cov["auroc"], color=BLUE, linewidth=2,
+    # Risk-coverage plot + embedded table (coverage vs AUROC/error rate at
+    # 20/40/60/80/100%), so a reader can pick an operating point without
+    # cross-referencing a separate table - per Kolliputi's request
+    full_cov = pd.read_csv(FULL_COVERAGE_PATH).sort_values("coverage_pct")
+    fig, (ax, ax_table) = plt.subplots(
+        1, 2, figsize=(11, 5), dpi=150, gridspec_kw={"width_ratios": [1.3, 1]}
+    )
+    ax.plot(full_cov["coverage_pct"], full_cov["auroc"], color=BLUE, linewidth=2,
             marker="o", markersize=5, label="AUROC (retained subset)")
-    ax.plot(risk_cov["coverage_pct"], risk_cov["error_rate"], color=ORANGE, linewidth=2,
+    ax.plot(full_cov["coverage_pct"], full_cov["error_rate"], color=ORANGE, linewidth=2,
             marker="o", markersize=5, label="Error rate (retained subset)")
     ax.set_xlabel("Coverage (% of test chemicals retained, most confident first)")
     ax.set_ylabel("Value")
-    ax.set_title("Risk-coverage (selective prediction) - primary endpoint\nreferring the most uncertain chemicals out")
+    ax.set_title("Risk-coverage (selective prediction)\nprimary endpoint, referring the most uncertain chemicals out")
     ax.legend(loc="center right", frameon=False)
     ax.set_ylim(0, 1)
     style_axes(ax)
+
+    table_levels = [100, 80, 60, 40, 20]
+    table_rows = full_cov[full_cov["coverage_pct"].isin(table_levels)].sort_values(
+        "coverage_pct", ascending=False
+    )
+    cell_text = [
+        [f"{int(r['coverage_pct'])}%", f"{int(r['n_referred'])}", f"{r['auroc']:.3f}", f"{r['error_rate']:.3f}"]
+        for _, r in table_rows.iterrows()
+    ]
+    ax_table.axis("off")
+    tbl = ax_table.table(
+        cellText=cell_text,
+        colLabels=["Coverage\n(retained)", "N\nreferred", "AUROC", "Error\nrate"],
+        loc="center", cellLoc="center",
+    )
+    tbl.auto_set_font_size(False)
+    tbl.set_fontsize(10)
+    tbl.scale(1, 2.2)
+    ax_table.set_title("Pick an operating point", fontsize=11, color=INK_SECONDARY)
+
     fig.tight_layout()
     fig.savefig(f"{OUT_DIR}/risk_coverage_plot.png")
     plt.close(fig)

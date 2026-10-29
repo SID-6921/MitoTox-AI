@@ -34,6 +34,12 @@ attempted against a literature-curated Tox21-independent dataset (147 compounds)
 overlapped with our own training data, leaving only 26 unseen chemicals (25 active / 1
 inactive) - too small to draw a confident conclusion from (`docs/external_validation_search.md`).
 
+Step 3 (preliminary-data package) in progress for a 2026-11-06 freeze deadline (Kolliputi's
+Specific Aims page). Added a high-sensitivity screening-mode threshold (0.382 -> sensitivity
+0.704, specificity 0.763), meeting the Aim 1 milestone target. Aim 2 prospective-AUROC
+confidence intervals and a panel-design recommendation (current ~120-compound budget vs. a
+recommended ~150) are in `docs/aim2_power_analysis.md`.
+
 ## Plan (from project brief, 2026-08-12; Step 2 refined per Kolliputi's 2026-08-12 reply)
 
 ### Step 1 — Dataset (done)

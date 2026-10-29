@@ -136,6 +136,10 @@ def main():
         "depending on target effect size, since class imbalance inflates the variance of the AUC",
         "estimator. This is provided to size the compound panel, not as a claim about what the",
         "true effect actually is.",
+        "",
+        "**Follow-up (2026-10-29):** `docs/aim2_power_analysis.md` extends this into prospective-",
+        "AUROC confidence intervals at the actual proposed panel size (~120) and a concrete panel",
+        "composition recommendation.",
     ]
 
     with open(OUT_PATH, "w", encoding="utf-8") as f:
