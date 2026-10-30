@@ -100,6 +100,13 @@ a single pipeline re-run twice.
 
 ### 4a. Prospective AUROC 95% CI at n=150, 25% and 30% active prevalence
 
+**These are tighter than the section 1 intervals (n=120, 15.9% training prevalence)
+specifically because they assume the Aim 2 panel runs 25-30% active, not because of the
+larger n alone.** That higher active rate is Kolliputi's stated expectation for this panel,
+not something measured yet - the panel hasn't been assembled. If the real active rate comes
+in closer to Tox21's 15.9% training rate, the wider intervals in section 1 (rescaled from
+n=120 to n=150) are the more realistic ones to cite, not these.
+
 | Prevalence | True AUROC | Subset | n (active/inactive) | Analytic 95% CI | Simulated 95% CI |
 |---|---|---|---|---|---|
 | 25% | 0.75 | Full panel (100% coverage) | 150 (38/112) | [0.653, 0.847] | [0.659, 0.836] |
