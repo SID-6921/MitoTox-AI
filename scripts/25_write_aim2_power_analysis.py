@@ -16,7 +16,7 @@ _spec24.loader.exec_module(ci_analysis)
 OUT_PATH = "docs/aim2_power_analysis.md"
 
 
-def main():
+def build_sections_1_to_3():
     lines = [
         "# Aim 2 power analysis and panel design (response to Kolliputi, 2026-10-29)",
         "",
@@ -110,7 +110,11 @@ def main():
         "the discordance analysis's power. If 150 is not affordable, 120 should proceed with the",
         "AUROC CI width above stated explicitly as a limitation, not left as an implicit assumption.",
     ]
+    return lines
 
+
+def main():
+    lines = build_sections_1_to_3()
     with open(OUT_PATH, "w", encoding="utf-8") as f:
         f.write("\n".join(lines) + "\n")
     print(f"wrote {OUT_PATH}")

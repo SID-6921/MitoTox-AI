@@ -75,6 +75,62 @@ def required_n(target_auc, ratio_active, ratio_inactive, max_total=200_000):
     return n1 + n0, n1, n0
 
 
+def simulate_auroc_samples(true_auc, n1, n0, n_sims=20_000, seed=42):
+    """Binormal-model Monte Carlo: positives ~ N(mu,1), negatives ~ N(0,1),
+    with mu chosen so the population AUROC equals true_auc exactly
+    (AUROC = Phi(mu/sqrt(2)) for equal-variance binormal). Returns an array
+    of n_sims simulated sample AUROCs - the empirical distribution a real
+    study of this size would draw from if the model's true discrimination
+    were exactly true_auc."""
+    from scipy.stats import norm as _norm
+    from sklearn.metrics import roc_auc_score
+    rng = np.random.default_rng(seed)
+    mu = _norm.ppf(true_auc) * np.sqrt(2)
+    aurocs = np.empty(n_sims)
+    for i in range(n_sims):
+        pos = rng.normal(mu, 1, n1)
+        neg = rng.normal(0, 1, n0)
+        y = np.concatenate([np.ones(n1), np.zeros(n0)])
+        s = np.concatenate([pos, neg])
+        aurocs[i] = roc_auc_score(y, s)
+    return aurocs
+
+
+def simulated_ci(true_auc, n1, n0, n_sims=20_000, seed=42):
+    """95% CI via the 2.5/97.5 percentiles of the simulated AUROC distribution."""
+    samples = simulate_auroc_samples(true_auc, n1, n0, n_sims, seed)
+    return np.percentile(samples, 2.5), np.percentile(samples, 97.5)
+
+
+def simulated_power(target_auc, n1, n0, alpha=ALPHA, n_sims=20_000, seed=42):
+    """Simulation-based power: fraction of simulated samples (true AUROC =
+    target_auc) whose AUROC exceeds the same analytic critical value used
+    in power_for_n - i.e. P(reject H0: AUC=0.5 | true AUC=target_auc),
+    estimated empirically rather than via the analytic alternative-variance
+    approximation."""
+    var0 = hanley_mcneil_var(0.5, n1, n0)
+    z_alpha = norm.ppf(1 - alpha / 2)
+    auc_crit = 0.5 + z_alpha * np.sqrt(var0)
+    samples = simulate_auroc_samples(target_auc, n1, n0, n_sims, seed)
+    return (samples > auc_crit).mean()
+
+
+def minimum_detectable_auc(n1, n0, target_power=TARGET_POWER, lo=0.5001, hi=0.999, tol=1e-5):
+    """Inverse of required_n: fix n1/n0, find the smallest AUC (closest to
+    0.5) whose power still clears target_power. Power is monotonically
+    increasing in |AUC-0.5|, so binary search on AUC converges on the
+    smallest detectable value."""
+    if power_for_n(hi, n1, n0, ) < target_power:
+        return None
+    while hi - lo > tol:
+        mid = (lo + hi) / 2
+        if power_for_n(mid, n1, n0) >= target_power:
+            hi = mid
+        else:
+            lo = mid
+    return hi
+
+
 def main():
     print(f"Power analysis: detecting AUC != 0.5 at alpha={ALPHA}, power={TARGET_POWER}\n")
     for endpoint, n_active, n_inactive in ENDPOINTS:

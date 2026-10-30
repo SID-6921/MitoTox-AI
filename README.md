@@ -36,9 +36,11 @@ inactive) - too small to draw a confident conclusion from (`docs/external_valida
 
 Step 3 (preliminary-data package) in progress for a 2026-11-06 freeze deadline (Kolliputi's
 Specific Aims page). Added a high-sensitivity screening-mode threshold (0.382 -> sensitivity
-0.704, specificity 0.763), meeting the Aim 1 milestone target. Aim 2 prospective-AUROC
-confidence intervals and a panel-design recommendation (current ~120-compound budget vs. a
-recommended ~150) are in `docs/aim2_power_analysis.md`.
+0.704, specificity 0.763), meeting the Aim 1 milestone target. Aim 2 panel size set to ~150
+compounds (pending budget confirmation), 25-30% flagged uncertain by the locked model.
+Prospective-AUROC confidence intervals (multiple prevalence assumptions), panel-design
+reasoning, and discordance-detection limits at n=150 (both analytic and Monte Carlo
+simulation methods) are in `docs/aim2_power_analysis.md`.
 
 ## Plan (from project brief, 2026-08-12; Step 2 refined per Kolliputi's 2026-08-12 reply)
 
